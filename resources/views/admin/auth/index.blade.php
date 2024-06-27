@@ -55,6 +55,13 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
         </div>
         <div class="card p-4 border-top-left-radius-0 border-top-right-radius-0">
             <form action="/dashboard">
+                <div class="mb-3 alert alert-danger alert-dismissible fade show border-faded border-left-0 border-right-0 border-top-0 rounded-0 m-0"
+                    role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true"><i class="fal fa-times"></i></span>
+                    </button>
+                    <strong>Username atau Password</strong> - Kurang Tepat.
+                </div>
                 <div class="form-group">
                     <label class="form-label" for="username">Username</label>
                     <input type="email" id="username" class="form-control" placeholder="your id or email"
@@ -88,9 +95,9 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
     </div>
     <div class="login-footer p-2">
         <div class="row">
-            <div class="col col-sm-12 text-center">
-                <i><strong>System Message:</strong> You were logged out from 198.164.246.1 on Saturday, March, 2017 at
-                    10.56AM</i>
+            <div class="col col-sm-12 text-center text-primary">
+                <i><strong>System By:</strong> Laravel
+                    v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</i>
             </div>
         </div>
     </div>
