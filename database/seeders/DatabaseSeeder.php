@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             AppFiturSeeder::class,
             AppProfileSeeder::class,
+            UserSeeder::class,
         ]);
     }
 }

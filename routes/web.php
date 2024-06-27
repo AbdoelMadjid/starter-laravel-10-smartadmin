@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\GuestController;
 use App\Http\Controllers\temp\TemplateController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,7 +24,9 @@ use Illuminate\Support\Facades\Route;
 Route::fallback([ErrorController::class, 'index']);
 
 
-Route::get('/', [AuthController::class, 'index'])->name('login');
+Route::get('/', [GuestController::class, 'index'])->name('guest');
+
+Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::get('/dashboard', [TemplateController::class, 'index'])->name('dashboard');
 Route::get('/about', [TemplateController::class, 'about'])->name('about');
 
