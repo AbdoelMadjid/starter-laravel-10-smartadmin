@@ -11,8 +11,16 @@
             <span class="nav-link-text" data-i18n="nav.application_about">About</span>
         </a>
     </li>
-    @include('admin.inc.mainmenu._menu_master')
-    @include('admin.inc.mainmenu._menu_walikelas')
-    @include('admin.inc.mainmenu._menu_gurumapel')
-    @include('admin.inc.mainmenu._menu_siswa')
+    @if (auth()->user()->role == 'Admin')
+        @include('admin.inc.mainmenu._menu_master')
+    @endif
+    @if (auth()->user()->role == 'Wali Kelas')
+        @include('admin.inc.mainmenu._menu_walikelas')
+    @endif
+    @if (auth()->user()->role == 'Guru Mapel')
+        @include('admin.inc.mainmenu._menu_gurumapel')
+    @endif
+    @if (auth()->user()->role == 'Siswa')
+        @include('admin.inc.mainmenu._menu_siswa')
+    @endif
 </ul>

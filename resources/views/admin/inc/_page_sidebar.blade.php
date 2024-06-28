@@ -22,15 +22,19 @@
             </div>
         </div>
         <div class="info-card">
-            <img src="/admin/img/demo/avatars/avatar-admin.png" class="profile-image rounded-circle"
-                alt="Dr. Codex Lantern">
+            @if (auth()->user()->image)
+                <img src="/admin/img/{{ auth()->user()->image }}" class="profile-image rounded-circle"
+                    alt="{{ auth()->user()->name }}">
+            @else
+                <img src="/admin/img/user.jpg" class="profile-image rounded-circle" alt="{{ auth()->user()->name }}">
+            @endif
             <div class="info-card-text">
                 <a href="#" class="d-flex align-items-center text-white">
                     <span class="text-truncate text-truncate-sm d-inline-block">
-                        Dr. Codex Lantern
+                        {{ auth()->user()->name }}
                     </span>
                 </a>
-                <span class="d-inline-block text-truncate text-truncate-sm">Toronto, Canada</span>
+                <span class="d-inline-block text-truncate text-truncate-sm">{{ auth()->user()->role }}</span>
             </div>
             <img src="/admin/img/card-backgrounds/cover-2-lg.png" class="cover" alt="cover">
             <a href="#" onclick="return false;" class="pull-trigger-btn" data-action="toggle"

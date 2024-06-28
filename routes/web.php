@@ -24,10 +24,13 @@ use Illuminate\Support\Facades\Route;
 Route::fallback([ErrorController::class, 'index']);
 
 
-Route::get('/', [GuestController::class, 'index'])->name('guest');
+Route::get('/', [GuestController::class, 'index'])->middleware('guest');
 
-Route::get('/login', [AuthController::class, 'index'])->name('login');
-Route::get('/dashboard', [TemplateController::class, 'index'])->name('dashboard');
+Route::get('/login', [AuthController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [AuthController::class, 'authenticate']);
+Route::post('/logout', [AuthController::class, 'logout']);
+
+Route::get('/dashboard', [TemplateController::class, 'index'])->middleware('auth');
 Route::get('/about', [TemplateController::class, 'about'])->name('about');
 
 require __DIR__ . '/mainmenu-master.php';

@@ -54,29 +54,47 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
             </a>
         </div>
         <div class="card p-4 border-top-left-radius-0 border-top-right-radius-0">
-            <form action="/dashboard">
+
+            @if (session()->has('message'))
                 <div class="mb-3 alert alert-danger alert-dismissible fade show border-faded border-left-0 border-right-0 border-top-0 rounded-0 m-0"
                     role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true"><i class="fal fa-times"></i></span>
                     </button>
-                    <strong>Username atau Password</strong> - Kurang Tepat.
+                    {{ session('message') }}
                 </div>
+            @endif
+            @if (session()->has('error'))
+                <div class="mb-3 alert alert-danger alert-dismissible fade show border-faded border-left-0 border-right-0 border-top-0 rounded-0 m-0"
+                    role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true"><i class="fal fa-times"></i></span>
+                    </button>
+                    {{ session('error') }}
+                </div>
+            @endif
+
+            <form action="/login" method="post">
+                @csrf
                 <div class="form-group">
                     <label class="form-label" for="username">Username</label>
-                    <input type="email" id="username" class="form-control" placeholder="your id or email"
-                        value="drlantern@gotbootstrap.com">
-                    <span class="help-block">
-                        Your unique username to app
-                    </span>
+                    <input class="form-control @error('email') is-invalid @enderror" type="email" name="email"
+                        id="email" value="{{ old('email') }}" placeholder="Masukkan email Anda" />
+                    @error('email')
+                        <span class="help-block">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="password">Password</label>
-                    <input type="password" id="password" class="form-control" placeholder="password"
-                        value="password123">
-                    <span class="help-block">
-                        Your password
-                    </span>
+                    <input class="form-control @error('password') is-invalid @enderror" type="password" name="password"
+                        id="password" placeholder="Masukkan kata kunci" />
+                    @error('password')
+                        <span class="help-block">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
                 <div class="form-group text-left">
                     <div class="custom-control custom-checkbox">
@@ -84,12 +102,11 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                         <label class="custom-control-label" for="rememberme"> Remember me for the next 30 days</label>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-default float-right">Secure login</button>
+                <button type="submit" class="btn btn-default float-right">Masuk</button>
             </form>
         </div>
         <div class="blankpage-footer text-center">
-            <a href="/page_auth_forget"><strong>Recover Password</strong></a> | <a
-                href="/page_auth_register"><strong>Register
+            <a href="/"><strong>Kembali</strong></a> | <a href="/page_auth_register"><strong>Register
                     Account</strong></a>
         </div>
     </div>

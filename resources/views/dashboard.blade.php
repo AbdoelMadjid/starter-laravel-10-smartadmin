@@ -13,9 +13,6 @@
             @component('admin.inc._page_heading', [
                 'icon' => 'home',
                 'heading1' => 'Dashboard',
-                'heading2' => 'Admin',
-                'sup' => 'ADDON',
-                'pagedescription' => 'Administration with dashboard',
             ])
                 <div class="subheader-block d-lg-flex align-items-center">
                     <div class="d-inline-flex flex-column justify-content-center mr-3">
@@ -23,7 +20,7 @@
                             <small>Selamat Datang</small>
                         </span>
                         <span class="fw-500 fs-xl d-block color-primary-500">
-                            Abdul Madjid
+                            {{ auth()->user()->name }}
                         </span>
                     </div>
                 </div>
@@ -34,7 +31,7 @@
                             <small>Status</small>
                         </span>
                         <span class="fw-500 fs-xl d-block color-danger-500">
-                            MASTER
+                            {{ auth()->user()->role }}
                         </span>
                     </div>
                 </div>
