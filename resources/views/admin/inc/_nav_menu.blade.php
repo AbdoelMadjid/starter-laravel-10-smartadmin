@@ -5,12 +5,7 @@
             <span class="nav-link-text" data-i18n="nav.application_dashboard">Dashboard</span>
         </a>
     </li>
-    <li class="{{ Request::is('about') ? 'active' : '' }}">
-        <a href="/about" title="About" data-filter-tags="application about">
-            <i class="fal fa-info-circle"></i>
-            <span class="nav-link-text" data-i18n="nav.application_about">About</span>
-        </a>
-    </li>
+
     @if (auth()->user()->role == 'Admin')
         @include('admin.inc.mainmenu._menu_master')
     @endif
@@ -23,4 +18,11 @@
     @if (auth()->user()->role == 'Siswa')
         @include('admin.inc.mainmenu._menu_siswa')
     @endif
+    <div class="m-0 w-100 p-2"></div>
+    <li class="{{ Request::is('about') ? 'active' : '' }}">
+        <a href="/about" title="About" data-filter-tags="application about">
+            <i class="fal fa-info-circle"></i>
+            <span class="nav-link-text" data-i18n="nav.application_about">About</span>
+        </a>
+    </li>
 </ul>
