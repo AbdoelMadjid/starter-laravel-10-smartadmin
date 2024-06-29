@@ -17,6 +17,7 @@
     <script src="/admin/js/app.bundle.js"></script>
     <script src="/admin/js/confirmRedirect.js"></script>
     <script src="/admin/js/customAlert.js"></script>
+    {{-- <script src="/admin/js/logout.js"></script> --}}
     {{--
     <script type="text/javascript">
         /* Activate smart panels */

@@ -27,7 +27,10 @@
                 </div>
             </div>
             <div class="position-absolute pos-bottom pos-left pos-right p-3 text-center text-white">
-                {{ $profileApp->app_tahun ?? '' }} © {{ $profileApp->app_nama ?? '' }}
+                {{ $profileApp->app_tahun ?? '' }} © {{ $profileApp->app_nama ?? '' }} <a
+                    href="https://laravel.com/docs/10.x" title='laravel.com' class="text-white opacity-90"
+                    target="_blank">Laravel
+                    v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</a>
             </div>
         </div>
     </div>

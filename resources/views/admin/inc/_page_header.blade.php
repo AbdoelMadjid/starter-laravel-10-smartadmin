@@ -95,47 +95,53 @@
                     </div>
                 </div>
                 <div class="dropdown-divider m-0"></div>
-                <a href="#" class="dropdown-item" data-action="app-reset">
-                    <span data-i18n="drpdwn.reset_layout">Reset Layout</span>
-                </a>
-                <a href="#" class="dropdown-item" data-toggle="modal" data-target=".js-modal-settings">
-                    <span data-i18n="drpdwn.settings">Settings</span>
-                </a>
-                <div class="dropdown-divider m-0"></div>
-                <a href="#" class="dropdown-item" data-action="app-fullscreen">
-                    <span data-i18n="drpdwn.fullscreen">Fullscreen</span>
-                    <i class="float-right text-muted fw-n">F11</i>
-                </a>
-                <a href="#" class="dropdown-item" data-action="app-print">
-                    <span data-i18n="drpdwn.print">Print</span>
-                    <i class="float-right text-muted fw-n">Ctrl + P</i>
-                </a>
-                <div class="dropdown-multilevel dropdown-multilevel-left">
-                    <div class="dropdown-item">
-                        Language
+                @if (auth()->user()->role == 'Admin')
+                    <a href="#" class="dropdown-item" data-action="app-reset">
+                        <span data-i18n="drpdwn.reset_layout">Reset Layout</span>
+                    </a>
+                    <a href="#" class="dropdown-item" data-action="app-fullscreen">
+                        <span data-i18n="drpdwn.fullscreen">Fullscreen</span>
+                        <i class="float-right text-muted fw-n">F11</i>
+                    </a>
+                    <a href="#" class="dropdown-item" data-action="app-print">
+                        <span data-i18n="drpdwn.print">Print</span>
+                        <i class="float-right text-muted fw-n">Ctrl + P</i>
+                    </a>
+                    <div class="dropdown-multilevel dropdown-multilevel-left">
+                        <div class="dropdown-item">
+                            Language
+                        </div>
+                        <div class="dropdown-menu">
+                            <a href="#?lang=fr" class="dropdown-item" data-action="lang" data-lang="fr">Français</a>
+                            <a href="#?lang=en" class="dropdown-item active" data-action="lang"
+                                data-lang="en">English
+                                (US)</a>
+                            <a href="#?lang=es" class="dropdown-item" data-action="lang" data-lang="es">Español</a>
+                            <a href="#?lang=ru" class="dropdown-item" data-action="lang" data-lang="ru">Русский
+                                язык</a>
+                            <a href="#?lang=jp" class="dropdown-item" data-action="lang" data-lang="jp">日本語</a>
+                            <a href="#?lang=ch" class="dropdown-item" data-action="lang" data-lang="ch">中文</a>
+                        </div>
                     </div>
-                    <div class="dropdown-menu">
-                        <a href="#?lang=fr" class="dropdown-item" data-action="lang" data-lang="fr">Français</a>
-                        <a href="#?lang=en" class="dropdown-item active" data-action="lang" data-lang="en">English
-                            (US)</a>
-                        <a href="#?lang=es" class="dropdown-item" data-action="lang" data-lang="es">Español</a>
-                        <a href="#?lang=ru" class="dropdown-item" data-action="lang" data-lang="ru">Русский язык</a>
-                        <a href="#?lang=jp" class="dropdown-item" data-action="lang" data-lang="jp">日本語</a>
-                        <a href="#?lang=ch" class="dropdown-item" data-action="lang" data-lang="ch">中文</a>
-                    </div>
-                </div>
-                <div class="dropdown-divider m-0"></div>
-                <form action="/logout" method="post">
+                @endif
+                @if (auth()->user()->role !== 'Admin')
+                    <div class="dropdown-divider m-0"></div>
+                    <a href="#" class="dropdown-item" data-action="app-fullscreen">
+                        <span data-i18n="drpdwn.fullscreen">Fullscreen</span>
+                        <i class="float-right text-muted fw-n">F11</i>
+                    </a>
+                    <div class="dropdown-divider m-0"></div>
+                @endif
+                <form id="logout-form" action="/logout" method="post">
                     @csrf
-                    <button type="submit" class="dropdown-item"><i class="align-middle me-1"
-                            data-feather="log-out"></i> Log out</button>
-                    {{--                     <a href="/logout" id="ya-atau-tidak" class="dropdown-item fw-500 pt-3 pb-3"
-                        data-title="Konfirmasi" data-message="Apakah Anda yakin ingin logout?" data-redirect-url="/"
-                        title="Logout">
-                        <span data-i18n="drpdwn.page-logout">Logout</span>
-                        <span class="float-right fw-n">&commat;codexlantern</span>
-                    </a> --}}
+                    {{-- <button type="submit" id="logout" class="dropdown-item fw-500 pt-3 pb-3"
+                        data-title="Konfirmasi" data-message="Apakah Anda yakin ingin logout?" title="Logout">Log
+                        out</button> --}}
+                    <button type="button" id="ya-atau-tidak" class="dropdown-item fw-500 pt-3 pb-3"
+                        data-title="Konfirmasi" data-message="Apakah Anda yakin ingin logout?"
+                        title="Logout">Keluar</button>
                 </form>
+
             </div>
         </div>
     </div>
