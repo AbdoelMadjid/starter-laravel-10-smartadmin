@@ -27,4 +27,12 @@ class Handler extends ExceptionHandler
             //
         });
     }
+
+    /*     public function render($request, Throwable $e)
+    {
+        if ($e instanceof UnauthorizedException) {
+            return response()->view('page_error_404', ['exception' => $e->getMessage()], 403);
+        }
+        return parent::render($request, $e);
+    } */
 }

@@ -5,7 +5,7 @@
 @endsection
 @section('pages-content')
     @component('admin.inc._auth_header')
-        <a href="/page_auth_register" class="btn-link text-white ml-auto"></a>
+        <a href="/" class="btn-link text-white ml-auto">Dashboard</a>
     @endcomponent
     <div class="d-flex flex-1"
         style="background: url(/admin/img/svg/pattern-1.svg) no-repeat center bottom fixed; background-size: cover;">
@@ -21,10 +21,7 @@
                     </small>
                 </h1>
                 <div class="mt-2">
-                    <a href="/" class="btn btn-success">
-                        <span class="fw-700">Back To Guest</span>
-                    </a>
-                    <a href="/dashboard" class="btn btn-primary">
+                    <a href="/" class="btn btn-primary">
                         <span class="fw-700">Dashboard</span>
                     </a>
                 </div>

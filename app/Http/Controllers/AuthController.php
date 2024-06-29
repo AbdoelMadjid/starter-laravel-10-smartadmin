@@ -30,6 +30,6 @@ class AuthController extends Controller
         Auth::logout();
         request()->session()->invalidate();
         request()->session()->regenerate();
-        return redirect('/dashboard');
+        return redirect('/');
     }
 }
