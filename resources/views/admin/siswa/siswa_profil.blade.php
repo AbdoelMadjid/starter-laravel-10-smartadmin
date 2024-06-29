@@ -13,134 +13,138 @@
                 'icon' => 'user-circle',
                 'heading1' => 'Profil',
                 'heading2' => 'Siswa',
-                'sup' => 'ADDON',
             ])
             @endcomponent
         </div>
 
-        <div class="fs-lg fw-300 p-5 bg-white border-faded rounded mb-g">
-            <h3 class="mb-g">
-                Hi Master Abdul Madjid,
-            </h3>
-            <p>
-                Some time ago we asked for your input, whether you were a seasoned SmartAdmin user or just peeking around
-                the corner, and WOW, did you deliver! After reading each and everyone of your replies on the survey, we have
-                taken each piece of praise and criticism to heart to scope out our plans for SmartAdmin. All feedback will
-                be used to make your favorite theme that much better, but these were some of the highlights.
-            </p>
-            <p>
-                A whopping 72% of you said you were ready for a fresh new design, while SmartAdmin is and a revolutionary
-                view on what a good bootstrap based template should be, having something new to look at can make anyone feel
-                invigorated. And let's be honest, who doesn't like a modern update of your favorite theme! While most you
-                are still happy with the current variations, around 50% of you have asked for vue.js support. With this
-                framework rapidly gaining popularity it is surely one to include in the family of frameworks! And, last, but
-                certainly not least, a very large majority of a staggering 90% wanted more plugins and regular updates.
-            </p>
-            <p>
-                SmartAdmin takes great care to ensure that valuable and popular plugins are supported as much as possible on
-                a drop-in basis, meaning without doing heavy modifications to extend the look and feel of your favorite
-                admin template :) . And if the plugin is in demand enough, we won't hesitate to put in the hours to support
-                the look and feel of SmartAdmin.
-            </p>
-            <p>
-                But how you ask? Well in order to make the next version of SmartAdmin the best ever and to re-deliver on our
-                promise of continued support and quality, we wrote the theme from the ground-up using the latest Bootstrap
-                practises. As a result we are better able to support new frameworks as they come up and ensure that plugin
-                support is quick and reliable. In addition we have partnered up with some of the communities best developers
-                to ensure that our tailor made variations are of top-notch quality and follow the principles that we at
-                SmartAdmin take to heart.
-            </p>
-            <p>
-                We're really confident that SmartAdmin 4.0 will bring back that first theme experience while still keeping
-                the familiarity that you have grown used to. It's a brand new theme, but with all the things you love and
-                then some. And to ensure that you our loyal customers get this experience first-hand, we will be publishing
-                the HTML update free-of-charge as an update to your current SmartAdmin license!
-            </p>
-            <p>
-                Last but not least, we would like to thank each and everyone of you, our loyal customers, for your patience
-                and continued support in SmartAdmin. Without you this would not have been possible!
-            </p>
-            <p>
-                Sincerely,<br>
-                The SmartAdmin Team<br>
-            </p>
-        </div>
-        <h3>
-            SmartAdmin Team
-            <small class="mb-0">We build cool things...</small>
-        </h3>
-        <div class="d-flex flex-wrap demo demo-h-spacing mt-3 mb-3">
-            <div
-                class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
-                <img src="/admin/img/demo/authors/sunny.png" alt="Sunny A."
-                    class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
-                <div class="ml-2 mr-3">
-                    <h5 class="m-0">
-                        Sunny A. (UI/UX Expert)
-                        <small class="m-0 fw-300">
-                            Lead Author
-                        </small>
-                    </h5>
-                    <a href="https://twitter.com/@myplaneticket" class="text-info fs-sm" target="_blank">@myplaneticket</a>
-                    -
-                    <a href="https://wrapbootstrap.com/user/myorange" class="text-info fs-sm" target="_blank"
-                        title="Contact Sunny"><i class="fal fa-envelope"></i></a>
-                </div>
-            </div>
-            <div
-                class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
-                <img src="/admin/img/demo/authors/josh.png" alt="Jos K."
-                    class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
-                <div class="ml-2 mr-3">
-                    <h5 class="m-0">
-                        Jos K. (ASP.NET Developer)
-                        <small class="m-0 fw-300">
-                            Partner &amp; Contributor
-                        </small>
-                    </h5>
-                    <a href="https://twitter.com/@atlantez" class="text-info fs-sm" target="_blank">@atlantez</a> -
-                    <a href="https://wrapbootstrap.com/user/Walapa" class="text-info fs-sm" target="_blank"
-                        title="Contact Jos"><i class="fal fa-envelope"></i></a>
-                </div>
-            </div>
-            <div
-                class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
-                <img src="/admin/img/demo/authors/jovanni.png" alt="Jovanni Lo"
-                    class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
-                <div class="ml-2 mr-3">
-                    <h5 class="m-0">
-                        Jovanni L. (PHP Developer)
-                        <small class="m-0 fw-300">
-                            Partner &amp; Contributor
-                        </small>
-                    </h5>
-                    <a href="https://twitter.com/@lodev09" class="text-info fs-sm" target="_blank">@lodev09</a> -
-                    <a href="https://wrapbootstrap.com/user/lodev09" class="text-info fs-sm" target="_blank"
-                        title="Contact Jovanni"><i class="fal fa-envelope"></i></a>
-                </div>
-            </div>
-            <div
-                class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
-                <img src="/admin/img/demo/authors/roberto.png" alt="Jovanni Lo"
-                    class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
-                <div class="ml-2 mr-3">
-                    <h5 class="m-0">
-                        Roberto R. (Rails Developer)
-                        <small class="m-0 fw-300">
-                            Partner &amp; Contributor
-                        </small>
-                    </h5>
-                    <a href="https://twitter.com/@sildur" class="text-info fs-sm" target="_blank">@sildur</a> -
-                    <a href="https://wrapbootstrap.com/user/sildur" class="text-info fs-sm" target="_blank"
-                        title="Contact Roberto"><i class="fal fa-envelope"></i></a>
-                </div>
-            </div>
-        </div>
-        <p class="fs-lg">
-            <a href="#" class="fw-500 fs-xl">> Ready to join our dedicated team?</a><br>
-            We are always on the lookout to expand and add unique app flavors to SmartAdmin. If you think you can contribute
-            and create your very own flavors, get in touch with us or <a href="#" target="_blank">click here to learn
-                more</a> about our partnership program.
-        </p>
+        <x-row-column :column="2">
+            <x-slot name='column1'>
+                <x-panel.show title="Profil" subtitle="{{ auth()->user()->role }}">
+                    <x-slot name="paneltoolbar">
+                        <x-panel.tool-bar class="ml-2">
+                            <button class="btn btn-toolbar-master" type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="fal fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right">
+                                <a class="dropdown-item" href="/dashboard">Kembali</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider m-0"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </x-panel.tool-bar>
+                    </x-slot>
+                    <div class="row no-gutters row-grid">
+                        <div class="col-12">
+                            <div class="d-flex flex-column align-items-center justify-content-center p-4">
+                                <img src="/admin/img/user.jpg" class="rounded-circle shadow-2 img-thumbnail" alt="">
+                                <h5 class="mb-0 fw-700 text-center mt-3">
+                                    {{ auth()->user()->name }}
+                                    <small class="text-muted mb-0">{{ auth()->user()->email }}</small>
+                                </h5>
+                                <div class="mt-4 text-center demo">
+                                    <a href="javascript:void(0);" class="fs-xl" style="color:#3b5998">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="javascript:void(0);" class="fs-xl" style="color:#38A1F3">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="javascript:void(0);" class="fs-xl" style="color:#db3236">
+                                        <i class="fab fa-google-plus"></i>
+                                    </a>
+                                    <a href="javascript:void(0);" class="fs-xl" style="color:#0077B5">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="javascript:void(0);" class="fs-xl" style="color:#000000">
+                                        <i class="fab fa-reddit-alien"></i>
+                                    </a>
+                                    <a href="javascript:void(0);" class="fs-xl" style="color:#00AFF0">
+                                        <i class="fab fa-skype"></i>
+                                    </a>
+                                    <a href="javascript:void(0);" class="fs-xl" style="color:#0063DC">
+                                        <i class="fab fa-flickr"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center py-3">
+                                <h5 class="mb-0 fw-700">
+                                    764
+                                    <small class="text-muted mb-0">Connections</small>
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center py-3">
+                                <h5 class="mb-0 fw-700">
+                                    1,673
+                                    <small class="text-muted mb-0">Followers</small>
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="p-3 text-center">
+                                <a href="javascript:void(0);" class="btn-link font-weight-bold">Follow</a> <span
+                                    class="text-primary d-inline-block mx-3">&#9679;</span>
+                                <a href="javascript:void(0);" class="btn-link font-weight-bold">Message</a> <span
+                                    class="text-primary d-inline-block mx-3">&#9679;</span>
+                                <a href="javascript:void(0);" class="btn-link font-weight-bold">Connect</a>
+                            </div>
+                        </div>
+                    </div>
+                </x-panel.show>
+            </x-slot>
+            <x-slot name='column2'>
+                <x-panel.show title="Default" subtitle="Example">
+                    <x-slot name="paneltoolbar">
+                        <x-panel.tool-bar>
+                            <select class="custom-select custom-select-sm">
+                                <option selected="">Select</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </x-panel.tool-bar>
+                        <x-panel.tool-bar class="ml-2">
+                            <div class="d-flex position-relative ml-auto" style="max-width: 8rem;">
+                                <i class="fal fa-search position-absolute pos-left fs-lg px-2 py-1 mt-1 fs-xs"></i>
+                                <input type="text" class="form-control form-control-sm pl-5" placeholder="Search">
+                            </div>
+                        </x-panel.tool-bar>
+                        <x-panel.tool-bar class="ml-2">
+                            <button class="btn btn-toolbar-master" type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="fal fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right">
+                                <a class="dropdown-item" href="/dashboard">Kembali</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider m-0"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </x-panel.tool-bar>
+                    </x-slot>
+                    <x-slot name="tagpanel">
+                        All panels needs to have an unique ID in order to use the panel funtions.
+                        <code>.panel</code> is a container with no padding, <code>.panel-hdr</code> has a
+                        <code>min-height</code> value and default <code>flexbox</code> properties. The
+                        <code>.panel-toolbar</code> is inserted into <code>.panel-hdr</code> for extra elements. The
+                        <code>.panel-container</code> wraps <code>.panel-content</code> which has a predefined
+                        padding.
+                    </x-slot>
+                    <p>
+                        ini content panel
+                    </p>
+                    <x-slot name="panelcontentfoot">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="demoCheck">
+                            <label class="custom-control-label" for="demoCheck">Checkbox</label>
+                        </div>
+                        <x-button href="/dev_component" size="sm" :label="__('Small')" class="ml-auto" />
+                    </x-slot>
+                </x-panel.show>
+            </x-slot>
+        </x-row-column>
     </main>
 @endsection
