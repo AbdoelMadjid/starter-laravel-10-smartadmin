@@ -1,5 +1,5 @@
 @extends('admin.inc.main_auth')
-@section('title', 'Auto Locked')
+@section('title', 'Error 404')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/fa-brands.css">
 @endsection
@@ -17,7 +17,7 @@
                 <h1 class="page-error color-fusion-50">
                     ERROR 404
                     <small class="fw-500">
-                        Something <u>went</u> wrong!
+                        Route / FIle tidak di temukan !!
                     </small>
                 </h1>
                 <div class="mt-2">
