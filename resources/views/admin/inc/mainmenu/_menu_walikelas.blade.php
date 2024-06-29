@@ -1,10 +1,10 @@
-<li class="nav-title">Wali Kelas</li>
 <li class="{{ Request::is('walikelas_profil*') ? 'active' : '' }}">
     <a href="/walikelas_profil" title="Profil Wali Kelas" data-filter-tags="walikelas profil">
         <i class="fal fa-user-circle"></i>
         <span class="nav-link-text" data-i18n="nav.walikelas_profil">Profil Wali Kelas</span>
     </a>
 </li>
+<li class="nav-title">Wali Kelas</li>
 <li class="{{ Request::is('walikelas_data_kelas*') ? 'active' : '' }}">
     <a href="/walikelas_data_kelas" title="Data Kelas" data-filter-tags="walikelas data kelas">
         <i class="fal fa-house-user"></i>

@@ -1,8 +1,9 @@
 <footer class="page-footer" role="contentinfo">
     <div class="d-flex align-items-center flex-1 text-muted">
         <span class="hidden-md-down fw-700">{{ $profileApp->app_tahun ?? '' }} © {{ $profileApp->app_nama ?? '' }}
-            by&nbsp;<a href='https://www.gotbootstrap.com' class='text-primary fw-500' title='gotbootstrap.com'
-                target='_blank'>gotbootstrap.com</a></span>
+            by&nbsp;<a href="https://laravel.com/docs/10.x" title='laravel.com' class="btn-link font-weight-bold"
+                target="_blank">Laravel
+                v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</a></span>
     </div>
     <div>
         <ul class="list-table m-0">

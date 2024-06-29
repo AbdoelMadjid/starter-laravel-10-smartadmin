@@ -1,10 +1,10 @@
-<li class="nav-title">Peserta Didik</li>
 <li class="{{ Request::is('siswa_profil*') ? 'active' : '' }}">
     <a href="/siswa_profil" title="Profil Peserta Didik" data-filter-tags="siswa profil">
         <i class="fal fa-user-circle"></i>
         <span class="nav-link-text" data-i18n="nav.siswa_profil">Profil Peserta Didik</span>
     </a>
 </li>
+<li class="nav-title">Peserta Didik</li>
 <li class="{{ Request::is('siswa_lcks*') ? 'active open' : '' }}">
     <a href="javascript:void(0);" title="Capaian Pembelajaran" data-filter-tags="siswa capaian pembelajaran">
         <i class="fal fa-address-book"></i>

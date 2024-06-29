@@ -13,7 +13,6 @@
                 'icon' => 'user-circle',
                 'heading1' => 'Profil',
                 'heading2' => 'Master',
-                'sup' => 'ADDON',
             ])
             @endcomponent
         </div>
@@ -37,11 +36,10 @@
                     <div class="row no-gutters row-grid">
                         <div class="col-12">
                             <div class="d-flex flex-column align-items-center justify-content-center p-4">
-                                <img src="/admin/img/demo/avatars/avatar-admin-lg.png"
-                                    class="rounded-circle shadow-2 img-thumbnail" alt="">
+                                <img src="/admin/img/user.jpg" class="rounded-circle shadow-2 img-thumbnail" alt="">
                                 <h5 class="mb-0 fw-700 text-center mt-3">
-                                    Dr. Codex Lantern
-                                    <small class="text-muted mb-0">Toronto, Canada</small>
+                                    {{ auth()->user()->name }}
+                                    <small class="text-muted mb-0">{{ auth()->user()->email }}</small>
                                 </h5>
                                 <div class="mt-4 text-center demo">
                                     <a href="javascript:void(0);" class="fs-xl" style="color:#3b5998">

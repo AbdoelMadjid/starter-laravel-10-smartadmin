@@ -15,7 +15,7 @@
             ])
             @endcomponent
         </div>
-        <div class="fs-lg fw-300 p-5 bg-white border-faded rounded mb-g">
+        <div class="fs-lg fw-300 p-5 bg-white border-faded rounded mb-g shadow-5">
             <h3>
                 SmartAdmin Team
                 <small class="mb-0">We build cool things...</small>

@@ -1,10 +1,10 @@
-<li class="nav-title">Master</li>
 <li class="{{ Request::is('master_profil*') ? 'active' : '' }}">
     <a href="/master_profil" title="Profil Master" data-filter-tags="master profil">
         <i class="fal fa-user-circle"></i>
         <span class="nav-link-text" data-i18n="nav.master_profil">Profil Master</span>
     </a>
 </li>
+<li class="nav-title">Master</li>
 <li class="{{ Request::is('tools*') ? 'active open' : '' }}">
     <a href="#" title="Tools" data-filter-tags="tools">
         <i class="fal fa-cogs"></i>
