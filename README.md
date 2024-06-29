@@ -7,9 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Installer
+## Installer Laravel v10.42.0 (PHP v8.2.3)
 ```console
-git clone https://github.com/AbdoelMadjid/laravel-lcks-2024.git
+git clone https://github.com/AbdoelMadjid/template-lcks.git
 ```
 ```console
 composer install
