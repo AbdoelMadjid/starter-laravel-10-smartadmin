@@ -12,13 +12,13 @@
             @component('admin.inc._page_heading', [
                 'icon' => 'user-circle',
                 'heading1' => 'Profil',
-                'heading2' => 'Master',
+                'heading2' => 'Admin',
             ])
             @endcomponent
         </div>
         <x-row-column :column="2">
             <x-slot name='column1'>
-                <x-panel.show title="Profil" subtitle="Master">
+                <x-panel.show title="Profil" subtitle="{{ auth()->user()->role }}">
                     <x-slot name="paneltoolbar">
                         <x-panel.tool-bar class="ml-2">
                             <button class="btn btn-toolbar-master" type="button" data-toggle="dropdown"
