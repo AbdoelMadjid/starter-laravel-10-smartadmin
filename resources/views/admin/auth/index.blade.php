@@ -10,7 +10,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    @include('admin.inc._head')
+    @include('admin.inc._auth_head')
     <link rel="stylesheet" media="screen, print" href="/admin/css/page-login-alt.css">
 </head>
 <!-- BEGIN Body -->
@@ -65,12 +65,14 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                 </div>
             @endif
             @if (session()->has('error'))
-                <div class="mb-3 alert alert-danger alert-dismissible fade show border-faded border-left-0 border-right-0 border-top-0 rounded-0 m-0"
-                    role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true"><i class="fal fa-times"></i></span>
-                    </button>
-                    {{ session('error') }}
+                <div class="alert bg-danger-400 text-white fade show" role="alert">
+                    <div class="d-flex align-items-center">
+                        <div class="flex-1">
+                            <span class="h5">Login Gagal !!</span>
+                            <br>
+                            {{ session('error') }}
+                        </div>
+                    </div>
                 </div>
             @endif
 
@@ -106,15 +108,16 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
             </form>
         </div>
         <div class="blankpage-footer text-center">
-            <a href="/"><strong>Kembali</strong></a> | <a href="/page_auth_register"><strong>Register
-                    Account</strong></a>
+            <a href="/"><strong>Kembali</strong></a> | <a
+                href="/page_auth_register"><strong>Registrasi</strong></a>
         </div>
     </div>
-    <div class="login-footer p-2">
+    <div class="position-absolute pos-bottom pos-left pos-right p-3 text-center text-white">
         <div class="row">
             <div class="col col-sm-12 text-center text-primary">
-                <i><strong>System By:</strong> Laravel
-                    v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</i>
+                {{ $profileApp->app_tahun ?? '' }} © {{ $profileApp->app_nama ?? '' }} by&nbsp;<a
+                    href="https://laravel.com/docs/10.x" title='laravel.com' class="opacity-90" target="_blank">Laravel
+                    v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</a>
             </div>
         </div>
     </div>

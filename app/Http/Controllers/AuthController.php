@@ -9,7 +9,9 @@ class AuthController extends Controller
 {
     public function index()
     {
-        return view('admin.auth.index');
+        return view('admin.auth.index', [
+            'title' => 'Login'
+        ]);
     }
 
     public function authenticate(Request $request)
@@ -22,7 +24,7 @@ class AuthController extends Controller
             $request->session()->regenerate();
             return redirect()->intended('/dashboard');
         }
-        return back()->with('error', 'Login gagal! Email dan Password tidak cocok.');
+        return back()->with('error', 'Email dan Password tidak cocok.');
     }
 
     public function logout()

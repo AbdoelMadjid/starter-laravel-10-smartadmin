@@ -5,7 +5,7 @@
 @endsection
 @section('pages-content')
     @component('admin.inc._auth_header')
-        <a href="/" class="btn-link text-white ml-auto">Dashboard</a>
+        <a href="/" class="btn-link text-white ml-auto"></a>
     @endcomponent
     <div class="d-flex flex-1"
         style="background: url(/admin/img/svg/pattern-1.svg) no-repeat center bottom fixed; background-size: cover;">
