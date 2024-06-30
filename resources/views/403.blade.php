@@ -18,12 +18,9 @@
 
         <div class="subheader"></div>
         <div class="h-alt-hf d-flex flex-column align-items-center justify-content-center text-center">
-            <h1 class="page-error color-fusion-500">
-                ERROR <span class="text-gradient">403</span>
-                <small class="fw-500">
-                    FORBIDDEN!
-                </small>
-            </h1>
+            <div class="py-3">
+                <img src="/admin/img/5.png" class="display-3 img-responsive" height="300" alt="thumbnail">
+            </div>
             <h3 class="fw-500 mb-5">
                 Anda tidak berhak untuk masuk ke halaman ini.
             </h3>
