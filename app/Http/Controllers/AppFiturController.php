@@ -40,4 +40,13 @@ class AppFiturController extends Controller
         $appFitur->delete();
         return redirect()->route('app_fiturs.index')->with('success', 'Fitur deleted successfully.');
     }
+
+    public function toggleAktif(Request $request)
+    {
+        $fitur = AppFitur::find($request->id);
+        $fitur->aktif = $request->aktif;
+        $fitur->save();
+
+        return response()->json(['message' => 'Status updated successfully.']);
+    }
 }

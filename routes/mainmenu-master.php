@@ -25,6 +25,7 @@ use Illuminate\Support\Facades\Route;
 /* Route::fallback([TemplateController::class, 'error_pages']); */
 
 Route::resource('app_fiturs', AppFiturController::class)->middleware('admin');
+Route::post('app_fiturs/toggle-aktif', [AppFiturController::class, 'toggleAktif'])->name('app_fiturs.toggleAktif');
 
 Route::get('app_profiles', [AppProfileController::class, 'show'])->name('app_profiles.show');
 Route::get('app_profiles/edit', [AppProfileController::class, 'edit'])->name('app_profiles.edit');

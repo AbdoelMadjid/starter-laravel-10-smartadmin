@@ -37,18 +37,18 @@
             @endcomponent
         </div>
 
-        <div class="fs-lg fw-300 p-5 bg-white border-faded rounded mb-g shadow-5">
-            <div class="input-group input-group-lg mb-g">
-                <input type="text" class="form-control shadow-inset-2" placeholder="Search Threads">
-                <div class="input-group-append">
-                    <span class="input-group-text"><i class="fal fa-search"></i></span>
-                </div>
-            </div>
-            <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#createModal">Create New Fitur</button>
-
-            @if (session('success'))
-                <div>{{ session('success') }}</div>
-            @endif
+        <x-panel.show title="Fiturs" subtitle="Application">
+            <x-slot name="paneltoolbar">
+                <x-panel.tool-bar class="ml-2">
+                    <button class="btn btn-toolbar-master" type="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class="fal fa-ellipsis-v"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right">
+                        <a class="dropdown-item" href="/dashboard">Kembali</a>
+                    </div>
+                </x-panel.tool-bar>
+            </x-slot>
 
             <table class="table table-sm table-bordered table-striped table-hover m-0">
                 <thead>
@@ -64,7 +64,11 @@
                         <tr>
                             <td>{{ $fitur->id_fitur }}</td>
                             <td>{{ $fitur->nama_fitur }}</td>
-                            <td>{{ $fitur->aktif }}</td>
+                            <td>
+                                <input type="checkbox" id="toggle-aktif-{{ $fitur->id_fitur }}"
+                                    data-id="{{ $fitur->id_fitur }}" {{ $fitur->aktif == 'Y' ? 'checked' : '' }}>
+                                <span>{{ $fitur->aktif == 'Y' ? 'Di Tampilkan' : 'Di Sembunyikan' }}</span>
+                            </td>
                             <td>
                                 <button class="btn btn-info btn-sm" data-toggle="modal"
                                     data-target="#editModal{{ $fitur->id_fitur }}">Edit</button>
@@ -116,7 +120,11 @@
                     @endforeach
                 </tbody>
             </table>
-        </div>
+            <x-slot name="panelcontentfoot">
+                <button class="btn btn-primary ml-auto" data-toggle="modal" data-target="#createModal">Create New
+                    Fitur</button>
+            </x-slot>
+        </x-panel.show>
         <!-- Create Modal -->
         <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -150,6 +158,7 @@
     </main>
 @endsection
 @section('pages-script')
+    <script src="/admin/js/notifications/toastr/toastr.js"></script>
     <script>
         function confirmDelete(id) {
             bootbox.confirm({
@@ -171,5 +180,73 @@
                 }
             });
         }
+    </script>
+    <script>
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": true,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+
+        @if (session('success'))
+            toastr.success('{{ session('success') }}', null, {
+                iconClass: 'toast-success'
+            });
+        @endif
+
+        @if (session('error'))
+            toastr.error('{{ session('error') }}', null, {
+                iconClass: 'toast-error'
+            });
+        @endif
+
+        @if (session('info'))
+            toastr.info('{{ session('info') }}', null, {
+                iconClass: 'toast-info'
+            });
+        @endif
+
+        @if (session('warning'))
+            toastr.warning('{{ session('warning') }}', null, {
+                iconClass: 'toast-warning'
+            });
+        @endif
+        $(document).ready(function() {
+            $('input[id^="toggle-aktif-"]').change(function() {
+                var fiturId = $(this).data('id');
+                var isChecked = $(this).is(':checked');
+                var aktif = isChecked ? 'Y' : 'N';
+                var statusText = isChecked ? 'Di Tampilkan' : 'Di Sembunyikan';
+
+                $.ajax({
+                    url: '{{ route('app_fiturs.toggleAktif') }}',
+                    method: 'POST',
+                    data: {
+                        _token: '{{ csrf_token() }}',
+                        id: fiturId,
+                        aktif: aktif
+                    },
+                    success: function(response) {
+                        toastr.success(response.message);
+                        $(this).next('span').text(statusText);
+                    }.bind(this),
+                    error: function(xhr) {
+                        toastr.error('Something went wrong.');
+                    }
+                });
+            });
+        });
     </script>
 @endsection
