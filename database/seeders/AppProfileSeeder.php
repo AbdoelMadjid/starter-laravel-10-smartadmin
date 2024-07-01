@@ -20,7 +20,7 @@ class AppProfileSeeder extends Seeder
                 'app_tahun' => 2019,
                 'app_pengembang' => 'Repalogic',
                 'app_icon' => 'favicon-32x32.png',
-                'app_logo' => 'logo.png',
+                'app_logo' => 'topi-toga-putih-32.png',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

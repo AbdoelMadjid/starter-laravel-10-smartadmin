@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AppFiturController;
 use App\Http\Controllers\MasterController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +22,10 @@ use Illuminate\Support\Facades\Route;
 
 
 /* Route::fallback([TemplateController::class, 'error_pages']); */
+
+Route::resource('app_fiturs', AppFiturController::class)->middleware('admin');
+
+//Route::get('/app_fiturs', [AppFiturController::class, 'index'])->middleware('admin')->name('app_fiturs');
 
 Route::get('/master_profil', [MasterController::class, 'master_profil'])->middleware('admin')->name('master_profil');
 
