@@ -10,6 +10,12 @@
         <span class="nav-link-text" data-i18n="nav.tools_app_fiturs">App Fiturs</span>
     </a>
 </li>
+<li class="{{ Request::is('app_profiles*') ? 'active' : '' }}">
+    <a href="/app_profiles" title="App Fiturs" data-filter-tags="tools app profiles">
+        <i class="fal fa-cog"></i>
+        <span class="nav-link-text" data-i18n="nav.tools_app_profiles">App Profiles</span>
+    </a>
+</li>
 <li class="nav-title">Master</li>
 <li class="{{ Request::is('master/tools/tools*') ? 'active open' : '' }}">
     <a href="#" title="Tools" data-filter-tags="tools">

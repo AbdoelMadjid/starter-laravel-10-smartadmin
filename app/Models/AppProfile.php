@@ -9,5 +9,13 @@ class AppProfile extends Model
 {
     use HasFactory;
     protected $table = 'app_profiles';
-    protected $fillable = ['app_nama', 'app_deskripsi', 'app_tahun', 'app_pengembang', 'app_icon', 'app_logo'];
+    protected $primaryKey = 'id_profil';
+    protected $fillable = [
+        'app_nama',
+        'app_deskripsi',
+        'app_tahun',
+        'app_pengembang',
+        'app_icon',
+        'app_logo'
+    ];
 }

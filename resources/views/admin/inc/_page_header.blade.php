@@ -3,7 +3,7 @@
     <div class="page-logo">
         <a href="#" class="page-logo-link press-scale-down d-flex align-items-center position-relative"
             data-toggle="modal" data-target="#modal-shortcut">
-            <img src="/admin/img/{{ $profileApp->app_logo ?? '' }}" alt="{{ $profileApp->app_nama ?? '' }} WebApp"
+            <img src="/admin/img/{{ asset($profileApp->app_logo) ?? '' }}" alt="{{ $profileApp->app_nama ?? '' }} WebApp"
                 aria-roledescription="logo">
             <span class="page-logo-text mr-1">{{ $profileApp->app_nama ?? '' }} WebApp</span>
             <span class="position-absolute text-white opacity-50 small pos-top pos-right mr-2 mt-n2"></span>

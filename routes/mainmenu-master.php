@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AppFiturController;
+use App\Http\Controllers\AppProfileController;
 use App\Http\Controllers\MasterController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('app_fiturs', AppFiturController::class)->middleware('admin');
 
+Route::get('app_profiles', [AppProfileController::class, 'show'])->name('app_profiles.show');
+Route::get('app_profiles/edit', [AppProfileController::class, 'edit'])->name('app_profiles.edit');
+Route::put('app_profiles', [AppProfileController::class, 'update'])->name('app_profiles.update');
 //Route::get('/app_fiturs', [AppFiturController::class, 'index'])->middleware('admin')->name('app_fiturs');
 
 Route::get('/master_profil', [MasterController::class, 'master_profil'])->middleware('admin')->name('master_profil');
