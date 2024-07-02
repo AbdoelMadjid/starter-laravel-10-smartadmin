@@ -65,9 +65,13 @@
                             <td>{{ $fitur->id_fitur }}</td>
                             <td>{{ $fitur->nama_fitur }}</td>
                             <td>
-                                <input type="checkbox" id="toggle-aktif-{{ $fitur->id_fitur }}"
-                                    data-id="{{ $fitur->id_fitur }}" {{ $fitur->aktif == 'Y' ? 'checked' : '' }}>
-                                <span>{{ $fitur->aktif == 'Y' ? 'Di Tampilkan' : 'Di Sembunyikan' }}</span>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input"
+                                        id="toggle-aktif-{{ $fitur->id_fitur }}" data-id="{{ $fitur->id_fitur }}"
+                                        {{ $fitur->aktif == 'Y' ? 'checked' : '' }}>
+                                    <label class="custom-control-label"
+                                        for="toggle-aktif-{{ $fitur->id_fitur }}">{{ $fitur->aktif == 'Y' ? 'Di Tampilkan' : 'Di Sembunyikan' }}</label>
+                                </div>
                             </td>
                             <td>
                                 <button class="btn btn-info btn-sm" data-toggle="modal"
@@ -239,8 +243,15 @@
                         aktif: aktif
                     },
                     success: function(response) {
+                        toastr.options.timeOut = 2000; // Menunda toastr selama 2 detik
                         toastr.success(response.message);
                         $(this).next('span').text(statusText);
+
+                        // Menunda pengalihan halaman selama 2 detik sebelum mengarahkan ke halaman indeks
+                        setTimeout(function() {
+                            window.location.href =
+                                '{{ route('app_fiturs.index') }}'; // Redirect to index page
+                        }, 2000);
                     }.bind(this),
                     error: function(xhr) {
                         toastr.error('Something went wrong.');
