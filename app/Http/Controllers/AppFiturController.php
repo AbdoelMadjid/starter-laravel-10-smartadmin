@@ -21,7 +21,7 @@ class AppFiturController extends Controller
         ]);
 
         AppFitur::create($request->all());
-        return redirect()->route('app_fiturs.index')->with('success', 'Fitur created successfully.');
+        return redirect()->route('app_fiturs.index')->with('success', 'Fitur sukses di tambahkan.');
     }
 
     public function update(Request $request, AppFitur $appFitur)
@@ -32,13 +32,13 @@ class AppFiturController extends Controller
         ]);
 
         $appFitur->update($request->all());
-        return redirect()->route('app_fiturs.index')->with('success', 'Fitur updated successfully.');
+        return redirect()->route('app_fiturs.index')->with('success', 'Fitur sukses di update.');
     }
 
     public function destroy(AppFitur $appFitur)
     {
         $appFitur->delete();
-        return redirect()->route('app_fiturs.index')->with('success', 'Fitur deleted successfully.');
+        return redirect()->route('app_fiturs.index')->with('success', 'Fitur sukses di hapus.');
     }
 
     public function toggleAktif(Request $request)
@@ -47,6 +47,6 @@ class AppFiturController extends Controller
         $fitur->aktif = $request->aktif;
         $fitur->save();
 
-        return response()->json(['message' => 'Status updated successfully.']);
+        return response()->json(['message' => 'Fitur sukses di update.']);
     }
 }

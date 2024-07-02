@@ -1,5 +1,5 @@
 @extends('admin.inc.main')
-@section('title', 'App Fiturs')
+@section('title', 'Opsi Login')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/fa-solid.css">
     <link rel="stylesheet" media="screen, print" href="/admin/css/theme-demo.css">
@@ -10,8 +10,8 @@
         @include('admin.inc._page_breadcrumb')
         <div class="subheader">
             @component('admin.inc._page_heading', [
-                'icon' => 'cog',
-                'heading1' => 'App Fiturs',
+                'icon' => 'sign-in-alt',
+                'heading1' => 'Opsi Login',
             ])
                 <div class="subheader-block d-lg-flex align-items-center">
                     <div class="d-inline-flex flex-column justify-content-center mr-3">
@@ -37,7 +37,7 @@
             @endcomponent
         </div>
 
-        <x-panel.show title="Fiturs" subtitle="Application">
+        <x-panel.show title="Opsi" subtitle="Login">
             <x-slot name="paneltoolbar">
                 <x-panel.tool-bar class="ml-2">
                     <button class="btn btn-toolbar-master" type="button" data-toggle="dropdown" aria-haspopup="true"
@@ -54,32 +54,32 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Nama Fitur</th>
+                        <th>Peran</th>
                         <th>Aktif</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($appFiturs as $fitur)
+                    @foreach ($opsiLogins as $opsi)
                         <tr>
-                            <td>{{ $fitur->id_fitur }}</td>
-                            <td>{{ $fitur->nama_fitur }}</td>
+                            <td>{{ $opsi->id }}</td>
+                            <td>{{ $opsi->peran }}</td>
                             <td>
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input"
-                                        id="toggle-aktif-{{ $fitur->id_fitur }}" data-id="{{ $fitur->id_fitur }}"
-                                        {{ $fitur->aktif == 'Y' ? 'checked' : '' }}>
+                                        id="toggle-aktif-{{ $opsi->id }}" data-id="{{ $opsi->id }}"
+                                        {{ $opsi->aktif == 'Y' ? 'checked' : '' }}>
                                     <label class="custom-control-label"
-                                        for="toggle-aktif-{{ $fitur->id_fitur }}">{{ $fitur->aktif == 'Y' ? 'Di Tampilkan' : 'Di Sembunyikan' }}</label>
+                                        for="toggle-aktif-{{ $opsi->id }}">{{ $opsi->aktif == 'Y' ? 'On' : 'Off' }}</label>
                                 </div>
                             </td>
                             <td>
                                 <button class="btn btn-info btn-sm" data-toggle="modal"
-                                    data-target="#editModal{{ $fitur->id_fitur }}">Edit</button>
+                                    data-target="#editModal{{ $opsi->id }}">Edit</button>
                                 <button class="btn btn-danger btn-sm"
-                                    onclick="confirmDelete({{ $fitur->id_fitur }})">Delete</button>
-                                <form id="delete-form-{{ $fitur->id_fitur }}"
-                                    action="{{ route('app_fiturs.destroy', $fitur->id_fitur) }}" method="POST"
+                                    onclick="confirmDelete({{ $opsi->id }})">Delete</button>
+                                <form id="delete-form-{{ $opsi->id }}"
+                                    action="{{ route('opsi_logins.destroy', $opsi->id) }}" method="POST"
                                     style="display: none;">
                                     @csrf
                                     @method('DELETE')
@@ -87,31 +87,31 @@
                             </td>
                         </tr>
                         <!-- Edit Modal -->
-                        <div class="modal fade" id="editModal{{ $fitur->id_fitur }}" tabindex="-1"
-                            aria-labelledby="editModalLabel{{ $fitur->id_fitur }}" aria-hidden="true">
+                        <div class="modal fade" id="editModal{{ $opsi->id }}" tabindex="-1"
+                            aria-labelledby="editModalLabel{{ $opsi->id }}" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="editModalLabel{{ $fitur->id_fitur }}">Edit Fitur</h5>
+                                        <h5 class="modal-title" id="editModalLabel{{ $opsi->id }}">Edit Opsi</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <form action="{{ route('app_fiturs.update', $fitur->id_fitur) }}" method="POST">
+                                        <form action="{{ route('opsi_logins.update', $opsi->id) }}" method="POST">
                                             @csrf
                                             @method('PUT')
                                             <div class="form-group">
-                                                <label>Nama Fitur:</label>
-                                                <input type="text" name="nama_fitur" class="form-control"
-                                                    value="{{ $fitur->nama_fitur }}" required>
+                                                <label>Peran:</label>
+                                                <input type="text" name="peran" class="form-control"
+                                                    value="{{ $opsi->peran }}" required>
                                             </div>
                                             <div class="form-group">
                                                 <label>Aktif:</label>
                                                 <select name="aktif" class="form-control">
-                                                    <option value="Y" {{ $fitur->aktif == 'Y' ? 'selected' : '' }}>Y
+                                                    <option value="Y" {{ $opsi->aktif == 'Y' ? 'selected' : '' }}>Y
                                                     </option>
-                                                    <option value="N" {{ $fitur->aktif == 'N' ? 'selected' : '' }}>N
+                                                    <option value="N" {{ $opsi->aktif == 'N' ? 'selected' : '' }}>N
                                                     </option>
                                                 </select>
                                             </div>
@@ -125,8 +125,7 @@
                 </tbody>
             </table>
             <x-slot name="panelcontentfoot">
-                <button class="btn btn-primary ml-auto" data-toggle="modal" data-target="#createModal">Create New
-                    Fitur</button>
+                <button class="btn btn-primary ml-auto" data-toggle="modal" data-target="#createModal">Create</button>
             </x-slot>
         </x-panel.show>
         <!-- Create Modal -->
@@ -134,17 +133,17 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="createModalLabel">Create New Fitur</h5>
+                        <h5 class="modal-title" id="createModalLabel">Create Opsi Login</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="{{ route('app_fiturs.store') }}" method="POST">
+                        <form action="{{ route('opsi_logins.store') }}" method="POST">
                             @csrf
                             <div class="form-group">
-                                <label>Nama Fitur:</label>
-                                <input type="text" name="nama_fitur" class="form-control" required>
+                                <label>Peran:</label>
+                                <input type="text" name="peran" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Aktif:</label>
@@ -165,7 +164,7 @@
     <script>
         function confirmDelete(id) {
             bootbox.confirm({
-                message: "Apakah yakin akan di hapus fitur ini?",
+                message: "Apakah yakin akan di hapus opsi login ini?",
                 buttons: {
                     confirm: {
                         label: 'Yes',
@@ -190,10 +189,10 @@
                 var fiturId = $(this).data('id');
                 var isChecked = $(this).is(':checked');
                 var aktif = isChecked ? 'Y' : 'N';
-                var statusText = isChecked ? 'Di Tampilkan' : 'Di Sembunyikan';
+                var statusText = isChecked ? 'On' : 'Off';
 
                 $.ajax({
-                    url: '{{ route('app_fiturs.toggleAktif') }}',
+                    url: '{{ route('opsi_logins.toggleAktif') }}',
                     method: 'POST',
                     data: {
                         _token: '{{ csrf_token() }}',
@@ -208,7 +207,7 @@
                         // Menunda pengalihan halaman selama 2 detik sebelum mengarahkan ke halaman indeks
                         setTimeout(function() {
                             window.location.href =
-                                '{{ route('app_fiturs.index') }}'; // Redirect to index page
+                                '{{ route('opsi_logins.index') }}'; // Redirect to index page
                         }, 2000);
                     }.bind(this),
                     error: function(xhr) {

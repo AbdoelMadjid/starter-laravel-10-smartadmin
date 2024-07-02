@@ -86,48 +86,5 @@
     </main>
 @endsection
 @section('pages-script')
-    <script src="/admin/js/notifications/toastr/toastr.js"></script>
-    <script>
-        toastr.options = {
-            "closeButton": true,
-            "debug": false,
-            "newestOnTop": false,
-            "progressBar": true,
-            "positionClass": "toast-top-right",
-            "preventDuplicates": false,
-            "onclick": null,
-            "showDuration": "300",
-            "hideDuration": "1000",
-            "timeOut": "5000",
-            "extendedTimeOut": "1000",
-            "showEasing": "swing",
-            "hideEasing": "linear",
-            "showMethod": "fadeIn",
-            "hideMethod": "fadeOut"
-        };
 
-        @if (session('success'))
-            toastr.success('{{ session('success') }}', null, {
-                iconClass: 'toast-success'
-            });
-        @endif
-
-        @if (session('error'))
-            toastr.error('{{ session('error') }}', null, {
-                iconClass: 'toast-error'
-            });
-        @endif
-
-        @if (session('info'))
-            toastr.info('{{ session('info') }}', null, {
-                iconClass: 'toast-info'
-            });
-        @endif
-
-        @if (session('warning'))
-            toastr.warning('{{ session('warning') }}', null, {
-                iconClass: 'toast-warning'
-            });
-        @endif
-    </script>
 @endsection

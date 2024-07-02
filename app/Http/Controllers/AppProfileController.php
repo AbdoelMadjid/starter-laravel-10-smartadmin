@@ -54,6 +54,6 @@ class AppProfileController extends Controller
 
         $appProfile->update($request->except(['app_icon', 'app_logo']));
 
-        return redirect()->route('app_profiles.show')->with('success', 'Profile updated successfully.');
+        return redirect()->route('app_profiles.show')->with('success', 'Profile sukses di update.');
     }
 }

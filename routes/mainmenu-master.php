@@ -3,6 +3,8 @@
 use App\Http\Controllers\AppFiturController;
 use App\Http\Controllers\AppProfileController;
 use App\Http\Controllers\MasterController;
+use App\Http\Controllers\OpsiLoginController;
+use App\Http\Controllers\temp\TemplateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,7 +24,7 @@ use Illuminate\Support\Facades\Route;
  */
 
 
-/* Route::fallback([TemplateController::class, 'error_pages']); */
+// Route::fallback([TemplateController::class, 'error_pages']);
 
 /* Route::middleware(['auth'])->group(function () {
     Route::resource('app_fiturs', AppFiturController::class);
@@ -38,6 +40,8 @@ use Illuminate\Support\Facades\Route;
 //TOOLS
 Route::middleware('admin')->prefix('master/tools')->group(function () {
 
+    Route::get('/master_profil', [MasterController::class, 'master_profil'])->name('master_profil');
+
     Route::resource('app_fiturs', AppFiturController::class);
     Route::post('app_fiturs/toggle-aktif', [AppFiturController::class, 'toggleAktif'])->name('app_fiturs.toggleAktif');
 
@@ -46,7 +50,9 @@ Route::middleware('admin')->prefix('master/tools')->group(function () {
     Route::put('app_profiles', [AppProfileController::class, 'update'])->name('app_profiles.update');
     //Route::get('/app_fiturs', [AppFiturController::class, 'index'])->name('app_fiturs');
 
-    Route::get('/master_profil', [MasterController::class, 'master_profil'])->name('master_profil');
+
+    Route::resource('opsi_logins', OpsiLoginController::class);
+    Route::post('opsi_logins/toggle-aktif', [OpsiLoginController::class, 'toggleAktif'])->name('opsi_logins.toggleAktif');
 
 
     Route::get('/tools_opsi_aplikasi', [MasterController::class, 'tools_opsi_aplikasi'])->name('tools_opsi_aplikasi');

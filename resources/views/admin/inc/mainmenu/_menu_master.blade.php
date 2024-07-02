@@ -4,6 +4,7 @@
         <span class="nav-link-text" data-i18n="nav.master_profil">Profil Master</span>
     </a>
 </li>
+<li class="nav-title">Tools App</li>
 <li class="{{ Request::is('master/tools/app_fiturs*') ? 'active' : '' }}">
     <a href="/master/tools/app_fiturs" title="App Fiturs" data-filter-tags="tools app fiturs">
         <i class="fal fa-cog"></i>
@@ -11,9 +12,15 @@
     </a>
 </li>
 <li class="{{ Request::is('master/tools/app_profiles*') ? 'active' : '' }}">
-    <a href="/master/tools/app_profiles" title="App Fiturs" data-filter-tags="tools app profiles">
+    <a href="/master/tools/app_profiles" title="App Profiles" data-filter-tags="tools app profiles">
         <i class="fal fa-laptop-code"></i>
         <span class="nav-link-text" data-i18n="nav.tools_app_profiles">App Profiles</span>
+    </a>
+</li>
+<li class="{{ Request::is('master/tools/opsi_logins*') ? 'active' : '' }}">
+    <a href="/master/tools/opsi_logins" title="Opsi Login" data-filter-tags="tools opsi logins">
+        <i class="fal fa-sign-in-alt"></i>
+        <span class="nav-link-text" data-i18n="nav.tools_app_profiles">Opsi Login</span>
     </a>
 </li>
 <li class="nav-title">Master</li>
@@ -23,11 +30,6 @@
         <span class="nav-link-text" data-i18n="nav.tools">Tools</span>
     </a>
     <ul>
-        <li class="{{ Request::is('master/tools/tools_opsi_aplikasi*') ? 'active' : '' }}">
-            <a href="{{ route('tools_opsi_aplikasi') }}" title="Opsi Aplikasi" data-filter-tags="tools opsi aplikasi">
-                <span class="nav-link-text" data-i18n="nav.tools_opsi_aplikasi">Opsi Aplikasi</span>
-            </a>
-        </li>
         <li class="{{ Request::is('master/tools/tools_impor_data_master*') ? 'active' : '' }}">
             <a href="{{ route('tools_impor_data_master') }}" title="Impor Data Master"
                 data-filter-tags="tools impor data master">

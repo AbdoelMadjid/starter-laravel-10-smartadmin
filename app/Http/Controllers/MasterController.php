@@ -11,10 +11,6 @@ class MasterController extends Controller
         return view('admin.master.master_profil');
     }
     //tools
-    public function tools_opsi_aplikasi()
-    {
-        return view('admin.master.tools_opsi_aplikasi');
-    }
     public function tools_impor_data_master()
     {
         return view('admin.master.tools_impor_data_master');
