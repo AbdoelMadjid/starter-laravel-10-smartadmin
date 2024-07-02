@@ -15,8 +15,8 @@
 <link id="mytheme" rel="stylesheet" media="screen, print" href="#">
 <link id="myskin" rel="stylesheet" media="screen, print" href="/admin/css/skins/skin-master.css">
 <!-- Place favicon.ico in the root directory -->
-<link rel="apple-touch-icon" sizes="180x180" href="/admin/img/favicon/topi-toga-abu-32.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/admin/img/favicon/topi-toga-abu-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/admin/img/{{ $profileApp->app_icon ?? '' }}">
+<link rel="icon" type="image/png" sizes="32x32" href="/admin/img/{{ $profileApp->app_icon ?? '' }}">
 <link rel="mask-icon" href="/admin/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
 
 <link rel="stylesheet" media="screen, print" href="/admin/css/fa-duotone.css">
