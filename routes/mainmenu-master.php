@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 
 /* Route::fallback([TemplateController::class, 'error_pages']); */
 
-Route::middleware(['auth'])->group(function () {
+/* Route::middleware(['auth'])->group(function () {
     Route::resource('app_fiturs', AppFiturController::class);
     Route::post('app_fiturs/toggle-aktif', [AppFiturController::class, 'toggleAktif'])->name('app_fiturs.toggleAktif');
 
@@ -34,9 +34,21 @@ Route::middleware(['auth'])->group(function () {
     //Route::get('/app_fiturs', [AppFiturController::class, 'index'])->name('app_fiturs');
 
     Route::get('/master_profil', [MasterController::class, 'master_profil'])->name('master_profil');
-});
+}); */
 //TOOLS
 Route::middleware('admin')->prefix('master/tools')->group(function () {
+
+    Route::resource('app_fiturs', AppFiturController::class);
+    Route::post('app_fiturs/toggle-aktif', [AppFiturController::class, 'toggleAktif'])->name('app_fiturs.toggleAktif');
+
+    Route::get('app_profiles', [AppProfileController::class, 'show'])->name('app_profiles.show');
+    Route::get('app_profiles/edit', [AppProfileController::class, 'edit'])->name('app_profiles.edit');
+    Route::put('app_profiles', [AppProfileController::class, 'update'])->name('app_profiles.update');
+    //Route::get('/app_fiturs', [AppFiturController::class, 'index'])->name('app_fiturs');
+
+    Route::get('/master_profil', [MasterController::class, 'master_profil'])->name('master_profil');
+
+
     Route::get('/tools_opsi_aplikasi', [MasterController::class, 'tools_opsi_aplikasi'])->name('tools_opsi_aplikasi');
     Route::get('/tools_impor_data_master', [MasterController::class, 'tools_impor_data_master'])->name('tools_impor_data_master');
     Route::get('/tools_ekspor_data_master', [MasterController::class, 'tools_ekspor_data_master'])->name('tools_ekspor_data_master');

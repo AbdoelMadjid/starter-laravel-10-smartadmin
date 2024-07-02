@@ -1,17 +1,17 @@
-<li class="{{ Request::is('master_profil*') ? 'active' : '' }}">
-    <a href="/master_profil" title="Profil Master" data-filter-tags="master profil">
+<li class="{{ Request::is('master/tools/master_profil*') ? 'active' : '' }}">
+    <a href="/master/tools/master_profil" title="Profil Master" data-filter-tags="master profil">
         <i class="fal fa-user-circle"></i>
         <span class="nav-link-text" data-i18n="nav.master_profil">Profil Master</span>
     </a>
 </li>
-<li class="{{ Request::is('app_fiturs*') ? 'active' : '' }}">
-    <a href="/app_fiturs" title="App Fiturs" data-filter-tags="tools app fiturs">
+<li class="{{ Request::is('master/tools/app_fiturs*') ? 'active' : '' }}">
+    <a href="/master/tools/app_fiturs" title="App Fiturs" data-filter-tags="tools app fiturs">
         <i class="fal fa-cog"></i>
         <span class="nav-link-text" data-i18n="nav.tools_app_fiturs">App Fiturs</span>
     </a>
 </li>
-<li class="{{ Request::is('app_profiles*') ? 'active' : '' }}">
-    <a href="/app_profiles" title="App Fiturs" data-filter-tags="tools app profiles">
+<li class="{{ Request::is('master/tools/app_profiles*') ? 'active' : '' }}">
+    <a href="/master/tools/app_profiles" title="App Fiturs" data-filter-tags="tools app profiles">
         <i class="fal fa-laptop-code"></i>
         <span class="nav-link-text" data-i18n="nav.tools_app_profiles">App Profiles</span>
     </a>
