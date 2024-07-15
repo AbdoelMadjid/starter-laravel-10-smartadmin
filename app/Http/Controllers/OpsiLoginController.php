@@ -11,7 +11,7 @@ class OpsiLoginController extends Controller
     public function index()
     {
         $opsiLogins = OpsiLogin::all();
-        return view('admin.opsi_logins.index', compact('opsiLogins'));
+        return view('opsi_logins.index', compact('opsiLogins'));
     }
 
     public function store(Request $request)

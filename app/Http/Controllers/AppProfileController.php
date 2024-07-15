@@ -11,13 +11,13 @@ class AppProfileController extends Controller
     public function show()
     {
         $appProfile = AppProfile::first();
-        return view('admin.app_profiles.show', compact('appProfile'));
+        return view('app_profiles.show', compact('appProfile'));
     }
 
     public function edit()
     {
         $appProfile = AppProfile::first();
-        return view('admin.app_profiles.edit', compact('appProfile'));
+        return view('app_profiles.edit', compact('appProfile'));
     }
 
     public function update(Request $request)

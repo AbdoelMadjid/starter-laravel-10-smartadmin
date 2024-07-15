@@ -11,7 +11,7 @@ class ManajemenPenggunaController extends Controller
     public function index()
     {
         $users = ManajemenPengguna::all();
-        return view('admin.manajemen_pengguna.index', compact('users'));
+        return view('manajemen_pengguna.index', compact('users'));
     }
 
     public function store(Request $request)

@@ -10,7 +10,7 @@ class AppFiturController extends Controller
     public function index()
     {
         $appFiturs = AppFitur::all();
-        return view('admin.app_fiturs.index', compact('appFiturs'));
+        return view('app_fiturs.index', compact('appFiturs'));
     }
 
     public function store(Request $request)
