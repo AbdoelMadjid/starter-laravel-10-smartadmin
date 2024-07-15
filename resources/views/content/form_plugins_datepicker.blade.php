@@ -1,11 +1,11 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'Date Picker')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/formplugins/bootstrap-datepicker/bootstrap-datepicker.css">
 @endsection
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Form Plugins'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Form Plugins'])
         <div class="subheader">
             <h1 class="subheader-title">
                 <i class='subheader-icon fal fa-credit-card-front'></i> Date Picker<sup
@@ -243,7 +243,7 @@
             });
 
 
-            // input group layout 
+            // input group layout
             $('#datepicker-2').datepicker({
                 todayHighlight: true,
                 orientation: "bottom left",
@@ -257,7 +257,7 @@
                 templates: controls
             });
 
-            // enable clear button 
+            // enable clear button
             $('#datepicker-3').datepicker({
                 todayBtn: "linked",
                 clearBtn: true,
@@ -273,7 +273,7 @@
                 templates: controls
             });
 
-            // orientation 
+            // orientation
             $('#datepicker-4-1').datepicker({
                 orientation: "top left",
                 todayHighlight: true,

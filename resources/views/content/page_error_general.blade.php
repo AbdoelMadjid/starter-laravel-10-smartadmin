@@ -1,4 +1,4 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'General Error')
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">

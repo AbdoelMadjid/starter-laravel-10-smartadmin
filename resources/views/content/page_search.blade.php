@@ -1,4 +1,4 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'Search')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/fa-solid.css">

@@ -1,11 +1,11 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'Wizard')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/formplugins/smartwizard/smartwizard.css">
 @endsection
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Form Plugins'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Form Plugins'])
         <div class="subheader">
             <h1 class="subheader-title">
                 <i class='subheader-icon fal fa-credit-card-front'></i> Wizard<sup
@@ -96,7 +96,7 @@
 
             // Smart Wizard
             $('#smartwizard').smartWizard({
-                selected: 0, // Initial selected step, 0 = first step 
+                selected: 0, // Initial selected step, 0 = first step
                 keyNavigation: true, // Enable/Disable keyboard navigation(left and right keys are used if enabled)
                 autoAdjustHeight: false, // Automatically adjust content height
                 cycleSteps: false, // Allows to cycle the navigation of steps
@@ -113,17 +113,17 @@
                     showNextButton: true, // show/hide a Next button
                     showPreviousButton: true, // show/hide a Previous button
                     /*toolbarExtraButtons: [
-            				$('<button></button>').text('Finish')
-            							  .addClass('btn btn-info')
-            							  .on('click', function(){ 
-            							alert('Finsih button click');                            
-            							  }),
-            				$('<button></button>').text('Cancel')
-            							  .addClass('btn btn-danger')
-            							  .on('click', function(){ 
-            							alert('Cancel button click');                            
-            							  })
-            						  ]*/
+                				$('<button></button>').text('Finish')
+                							  .addClass('btn btn-info')
+                							  .on('click', function(){
+                							alert('Finsih button click');
+                							  }),
+                				$('<button></button>').text('Cancel')
+                							  .addClass('btn btn-danger')
+                							  .on('click', function(){
+                							alert('Cancel button click');
+                							  })
+                						  ]*/
                 },
                 anchorSettings: {
                     anchorClickable: true, // Enable/Disable anchor navigation

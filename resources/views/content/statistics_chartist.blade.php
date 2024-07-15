@@ -1,11 +1,11 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'Chartist.js')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/statistics/chartist/chartist.css">
 @endsection
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Statistics'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Statistics'])
         <div class="subheader">
             <h1 class="subheader-title">
                 <i class='subheader-icon fal fa-chart-pie'></i> Chartist.js <sup

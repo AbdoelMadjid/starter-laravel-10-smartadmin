@@ -1,10 +1,10 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'Introduction')
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Application Intel'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Application Intel'])
         <div class="subheader">
-            @component('admin.inc._page_heading', [
+            @component('inc._page_heading', [
                 'icon' => 'info-circle',
                 'heading1' => 'Introduction',
                 'pagedescription' => 'A brief introduction to this WebApp',

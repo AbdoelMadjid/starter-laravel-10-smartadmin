@@ -1,4 +1,4 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'SmartPanels')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/fa-solid.css">
@@ -6,7 +6,7 @@
 @endsection
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Core Plugins'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Core Plugins'])
         <div class="subheader">
             <h1 class="subheader-title">
                 <i class='subheader-icon fal fa-shield-alt'></i> SmartPanels <sup
@@ -501,7 +501,7 @@
                 <div class="frame-wrap">
                     <pre class="prettyprint">
 &lt;div id="panel-id" class="panel"&gt;
-  &lt;div class="panel-hdr"&gt; 
+  &lt;div class="panel-hdr"&gt;
     &lt;h2&gt;
       Panel Title
     &lt;/h2&gt;
@@ -525,7 +525,7 @@ $('#js-page-content-demopanels').smartPanel({
     deleteSettingsKey: '#deletesettingskey-options',
     settingsKeyLabel: 'Reset settings?',
     deletePositionKey: '#deletepositionkey-options',
-    positionKeyLabel: 'Reset position?',    
+    positionKeyLabel: 'Reset position?',
     sortable: true,
     buttonOrder: '%collapse% %fullscreen% %close%',
     buttonOrderDropdown: '%refresh% %locked% %color% %custom% %reset%',
@@ -568,14 +568,14 @@ $('#js-page-content-demopanels').smartPanel({
     panelColors: ['bg-primary-700 bg-success-gradient',
             'bg-primary-500 bg-info-gradient',
             'bg-primary-600 bg-primary-gradient',
-            'bg-info-600 bg-primray-gradient',                      
+            'bg-info-600 bg-primray-gradient',
             'bg-info-600 bg-info-gradient',
             'bg-info-700 bg-success-gradient',
             'bg-success-900 bg-info-gradient',
-            'bg-success-700 bg-primary-gradient', 
-            'bg-success-600 bg-success-gradient',                                 
+            'bg-success-700 bg-primary-gradient',
+            'bg-success-600 bg-success-gradient',
             'bg-danger-900 bg-info-gradient',
-            'bg-fusion-400 bg-fusion-gradient', 
+            'bg-fusion-400 bg-fusion-gradient',
             'bg-faded'],
     resetButton: true,
     resetButtonLabel: "Reset Panel",
@@ -594,7 +594,7 @@ $('#js-page-content-demopanels').smartPanel({
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script>
         /* Activate smart panels */
-        /* These are the default settings, you can customize it per page as you need 
+        /* These are the default settings, you can customize it per page as you need
            Notice how we do not insert the init function inside DOM ready. Making it faster executed.
         */
         $('#js-page-content-demopanels').smartPanel({

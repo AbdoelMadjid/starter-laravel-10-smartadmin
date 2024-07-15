@@ -1,4 +1,4 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'Inbox General')
 @section('body_class', 'nav-function-minify layout-composed')
 @section('pages-css')

@@ -1,11 +1,11 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'i18Next')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/theme-demo.css">
 @endsection
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Core Plugins'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Core Plugins'])
         <div class="subheader">
             <h1 class="subheader-title">
                 <i class='subheader-icon fal fa-shield-alt'></i> i18Next <sup
@@ -125,7 +125,7 @@ $.i18n.init({
 	lng: applang
 }, function (t){
 	$('[data-i18n]').i18n();
-});	
+});
 </pre>
                             </div>
                             <h5 class="frame-heading">Dependencies (if you wish to load it manually)</h5>

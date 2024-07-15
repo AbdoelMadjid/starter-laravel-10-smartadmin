@@ -17,18 +17,6 @@
         <span class="nav-link-text" data-i18n="nav.tools_app_profiles">App Profiles</span>
     </a>
 </li>
-<li class="{{ Request::is('master/tools/manajemen_pengguna*') ? 'active' : '' }}">
-    <a href="/master/tools/manajemen_pengguna" title="Manajemen Pengguna" data-filter-tags="tools manajemen pengguna">
-        <i class="fal fa-users"></i>
-        <span class="nav-link-text" data-i18n="nav.tools_manajemen_pengguna">Manajemen Pengguna</span>
-    </a>
-</li>
-<li class="{{ Request::is('master/tools/opsi_logins*') ? 'active' : '' }}">
-    <a href="/master/tools/opsi_logins" title="Opsi Login" data-filter-tags="tools opsi logins">
-        <i class="fal fa-sign-in-alt"></i>
-        <span class="nav-link-text" data-i18n="nav.tools_opsi_logins">Opsi Login</span>
-    </a>
-</li>
 <li class="nav-title">Master</li>
 <li class="{{ Request::is('master/tools/tools*') ? 'active open' : '' }}">
     <a href="#" title="Tools" data-filter-tags="tools">

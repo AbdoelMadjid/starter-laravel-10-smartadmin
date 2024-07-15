@@ -1,11 +1,11 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'FullCalendar')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/miscellaneous/fullcalendar/fullcalendar.bundle.css">
 @endsection
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Miscellaneous'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Miscellaneous'])
         <div class="subheader">
             <h1 class="subheader-title">
                 <i class='subheader-icon fal fa-globe'></i> FullCalendar<sup class='badge badge-primary fw-500'>ADDON</sup>
@@ -71,10 +71,10 @@
     </main>
 @endsection
 @section('pages-script')
-    {{--         <!-- moment.js (dependency for the demo only); you do not have to use it unless you need it 
+    {{--         <!-- moment.js (dependency for the demo only); you do not have to use it unless you need it
 	DOC: Parse, validate, manipulate, and display dates and times in JavaScript. (https://momentjs.com/) --> --}}
     <script src="/admin/js/dependency/moment/moment.js"></script>
-    {{--         <!-- fullcalendar bundle: 
+    {{--         <!-- fullcalendar bundle:
 	 DOC: you may remove the extensions if you do not plan on using them. Learn more about these extensions at https://fullcalendar.io
 				+ core/main.js (core)
 				+ daygrid/main.js (extension)

@@ -1,11 +1,11 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'App.Core')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/theme-demo.css">
 @endsection
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Core Plugins'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Core Plugins'])
         <div class="subheader">
             <h1 class="subheader-title">
                 <i class='subheader-icon fal fa-shield-alt'></i> App.core.js <sup class='badge badge-danger fw-500'>CORE</sup>
@@ -437,15 +437,15 @@ var myapp_config = {
 	root_logo: $('.page-sidebar > .page-logo')
 	throttleDelay: 450,
 	filterDelay: 150,
-	thisDevice: null, 
-	isMobile: (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase())), 
+	thisDevice: null,
+	isMobile: (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase())),
 	mobileMenuTrigger: null,
 	mobileResolutionTrigger: 992,
 	isWebkit: ((!!window.chrome && !!window.chrome.webstore) === true || Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0 === true),
 	isChrome: (/chrom(e|ium)/.test(navigator.userAgent.toLowerCase())),
 	isIE: ( (window.navigator.userAgent.indexOf('Trident/') ) > 0 === true ),
-	debugState: true, 
-	rippleEffect: true, 
+	debugState: true,
+	rippleEffect: true,
 	mythemeAnchor: '#mytheme',
 	navAnchor: '#js-primary-nav',
 	navHooks: '#js-primary-nav > ul.navigation'
@@ -455,7 +455,7 @@ var myapp_config = {
 	navInitalized: 'js-nav-built',
 	navFilterInput: $('#nav_filter_input'),
 	navHorizontalWrapperId: 'js-nav-menu-wrapper',
-	navSpeed: 500, 
+	navSpeed: 500,
 	navClosedSign: 'fal fa-angle-down',
 	navOpenedSign: 'fal fa-angle-up',
 	appDateHook: $('.js-get-date'),
@@ -500,7 +500,7 @@ var initApp = (function(app) {
 	app.buildNavigation = function() { ... }
 	app.mobileCheckActivation = function(){ ... }
 	app.toggleVisibility = function (id) { ... }
-	app.domReadyMisc = function() { 
+	app.domReadyMisc = function() {
 	   /* get app date */
 	   /* activate last tab used */
 	   /* activate/destroy slimscroll */
@@ -520,9 +520,9 @@ var initApp = (function(app) {
 $(window).resize(
 	$.throttle( myapp_config.throttleDelay, function (e) {
 		/* (1a) ADD CLASS WHEN BELOW CERTAIN WIDTH (MOBILE MENU) */
-		initApp.mobileCheckActivation(); 
+		initApp.mobileCheckActivation();
 	})
-); 
+);
 
 /* Bind the throttled handler to the scroll event */
 $(window).scroll(

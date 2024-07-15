@@ -1,13 +1,13 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'Select')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/datagrid/datatables/datatables.bundle.css">
 @endsection
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Datatables'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Datatables'])
         <div class="subheader">
-            @component('admin.inc._page_heading', [
+            @component('inc._page_heading', [
                 'icon' => 'table',
                 'heading1' => 'DataTables:',
                 'heading2' => 'Select',
@@ -585,7 +585,7 @@
             $('#dt-basic-example').dataTable({
                 responsive: true,
                 dom:
-                    /*	--- Layout Structure 
+                    /*	--- Layout Structure
                     	--- Options
                     	l	-	length changing input control
                     	f	-	filtering input

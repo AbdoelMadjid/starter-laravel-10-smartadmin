@@ -1,13 +1,13 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'Responsive')
 @section('pages-css')
-        <link rel="stylesheet" media="screen, print" href="/admin/css/datagrid/datatables/datatables.bundle.css">
+    <link rel="stylesheet" media="screen, print" href="/admin/css/datagrid/datatables/datatables.bundle.css">
 @endsection
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Datatables'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Datatables'])
         <div class="subheader">
-            @component('admin.inc._page_heading', [
+            @component('inc._page_heading', [
                 'icon' => 'table',
                 'heading1' => 'DataTables:',
                 'heading2' => 'Responsive',
@@ -25,9 +25,12 @@
                             Example <span class="fw-300"><i>Table</i></span>
                         </h2>
                         <div class="panel-toolbar">
-                            <button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
-                            <button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button>
-                            <button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-offset="0,10" data-original-title="Close"></button>
+                            <button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip"
+                                data-offset="0,10" data-original-title="Collapse"></button>
+                            <button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip"
+                                data-offset="0,10" data-original-title="Fullscreen"></button>
+                            <button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-offset="0,10"
+                                data-original-title="Close"></button>
                         </div>
                     </div>
                     <div class="panel-container show">
@@ -2192,7 +2195,7 @@
     </main>
 @endsection
 @section('pages-script')
-{{--         <!-- datatble responsive bundle contains:
+    {{--         <!-- datatble responsive bundle contains:
 	+ jquery.dataTables.js
 	+ dataTables.bootstrap4.js
 	+ dataTables.autofill.js
@@ -2212,43 +2215,39 @@
 	+ dataTables.select.js
 	+ datatables.styles.app.js
 	+ datatables.styles.buttons.app.js --> --}}
-        <script src="/admin/js/datagrid/datatables/datatables.bundle.js"></script>
-        <script>
-            $(document).ready(function()
-            {
-                // initialize datatable
-                $('#dt-basic-example').dataTable(
-                {
-                    responsive: true,
-                    columnDefs: [
-                    {
+    <script src="/admin/js/datagrid/datatables/datatables.bundle.js"></script>
+    <script>
+        $(document).ready(function() {
+            // initialize datatable
+            $('#dt-basic-example').dataTable({
+                responsive: true,
+                columnDefs: [{
                         targets: -1,
                         title: 'Admin Controls',
                         orderable: false,
-                        render: function(data, type, full, meta)
-                        {
+                        render: function(data, type, full, meta) {
 
                             /*
                             -- ES6
                             -- convert using https://babeljs.io online transpiler
                             return `
-                            <div class='d-flex mt-2'>
-                            	<a href='javascript:void(0);' class='btn btn-sm btn-outline-danger mr-2' title='Delete Record'>
-                            		<i class="fal fa-times"></i> Delete Record
-                            	</a>
-                            	<a href='javascript:void(0);' class='btn btn-sm btn-outline-primary mr-2' title='Edit'>
-                            		<i class="fal fa-edit"></i> Edit
-                            	</a>
-                            	<div class='dropdown d-inline-block'>
-                            		<a href='#'' class='btn btn-sm btn-outline-primary mr-2' data-toggle='dropdown' aria-expanded='true' title='More options'>
-                            			<i class="fal fa-plus"></i>
-                            		</a>
-                            		<div class='dropdown-menu'>
-                            			<a class='dropdown-item' href='javascript:void(0);'>Change Status</a>
-                            			<a class='dropdown-item' href='javascript:void(0);'>Generate Report</a>
-                            		</div>
-                            	</div>
-                            </div>`;
+                        <div class='d-flex mt-2'>
+                        	<a href='javascript:void(0);' class='btn btn-sm btn-outline-danger mr-2' title='Delete Record'>
+                        		<i class="fal fa-times"></i> Delete Record
+                        	</a>
+                        	<a href='javascript:void(0);' class='btn btn-sm btn-outline-primary mr-2' title='Edit'>
+                        		<i class="fal fa-edit"></i> Edit
+                        	</a>
+                        	<div class='dropdown d-inline-block'>
+                        		<a href='#'' class='btn btn-sm btn-outline-primary mr-2' data-toggle='dropdown' aria-expanded='true' title='More options'>
+                        			<i class="fal fa-plus"></i>
+                        		</a>
+                        		<div class='dropdown-menu'>
+                        			<a class='dropdown-item' href='javascript:void(0);'>Change Status</a>
+                        			<a class='dropdown-item' href='javascript:void(0);'>Generate Report</a>
+                        		</div>
+                        	</div>
+                        </div>`;
 
                             ES5 example below:
 
@@ -2260,59 +2259,50 @@
                         targets: 17,
                         /*	The `data` parameter refers to the data for the cell (defined by the
                         	`data` option, which defaults to the column being worked with, in this case `data: 16`.*/
-                        render: function(data, type, full, meta)
-                        {
+                        render: function(data, type, full, meta) {
                             var badge = {
-                                1:
-                                {
+                                1: {
                                     'title': 'Pending',
                                     'class': 'badge-warning'
                                 },
-                                2:
-                                {
+                                2: {
                                     'title': 'Delivered',
                                     'class': 'badge-success'
                                 },
-                                3:
-                                {
+                                3: {
                                     'title': 'Canceled',
                                     'class': 'badge-secondary'
                                 },
-                                4:
-                                {
+                                4: {
                                     'title': 'Attempt #1',
                                     'class': 'bg-danger-100 text-white'
                                 },
-                                5:
-                                {
+                                5: {
                                     'title': 'Attempt #2',
                                     'class': 'bg-danger-300 text-white'
                                 },
-                                6:
-                                {
+                                6: {
                                     'title': 'Failed',
                                     'class': 'badge-danger'
                                 },
-                                7:
-                                {
+                                7: {
                                     'title': 'Attention!',
                                     'class': 'badge-primary'
                                 },
-                                8:
-                                {
+                                8: {
                                     'title': 'In Progress',
                                     'class': 'badge-success'
                                 },
                             };
-                            if (typeof badge[data] === 'undefined')
-                            {
+                            if (typeof badge[data] === 'undefined') {
                                 return data;
                             }
-                            return '<span class="badge ' + badge[data].class + ' badge-pill">' + badge[data].title + '</span>';
+                            return '<span class="badge ' + badge[data].class + ' badge-pill">' +
+                                badge[data].title + '</span>';
                         },
-                    }],
-                });
+                    }
+                ],
             });
-
-        </script>
+        });
+    </script>
 @endsection

@@ -1,11 +1,11 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'Color Picker')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/formplugins/bootstrap-colorpicker/bootstrap-colorpicker.css">
 @endsection
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Form Plugins'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Form Plugins'])
         <div class="subheader">
             <h1 class="subheader-title">
                 <i class='subheader-icon fal fa-credit-card-front'></i> Color Picker<sup

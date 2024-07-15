@@ -1,10 +1,10 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'Position')
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Utilities'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Utilities'])
         <div class="subheader">
-            @component('admin.inc._page_heading', [
+            @component('inc._page_heading', [
                 'icon' => 'window',
                 'heading1' => 'Position',
                 'pagedescription' => 'Use these shorthand utilities for quickly configuring the position of an element.',

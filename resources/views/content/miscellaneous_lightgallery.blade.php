@@ -1,11 +1,11 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'Light Gallery')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/miscellaneous/lightgallery/lightgallery.bundle.css">
 @endsection
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Miscellaneous'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Miscellaneous'])
         <div class="subheader">
             <h1 class="subheader-title">
                 <i class='subheader-icon fal fa-globe'></i> Light Gallery<sup class='badge badge-primary fw-500'>PREMIUM
@@ -321,8 +321,8 @@
     </main>
 @endsection
 @section('pages-script')
-    {{--         <!-- lightgallery bundle: 
-	 DOC: we added justifiedGallery for responsive thumbnail view and mousewheel.js for controlling next/prev using mousewheel  
+    {{--         <!-- lightgallery bundle:
+	 DOC: we added justifiedGallery for responsive thumbnail view and mousewheel.js for controlling next/prev using mousewheel
 		+ jquery.justifiedGallery.js (addon)
 		+ jquery.mousewheel.js (addon)
 		+ lightgallery.js (core)

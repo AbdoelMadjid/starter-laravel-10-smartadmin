@@ -1,13 +1,13 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'Skin Options')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/theme-demo.css">
 @endsection
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Theme Settings'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Theme Settings'])
         <div class="subheader">
-            @component('admin.inc._page_heading', [
+            @component('inc._page_heading', [
                 'heading1' => 'Theme Settings:',
                 'heading2' => 'Skin Options',
                 'pagedescription' => 'A true automated system for generating unlimited skins. Change your skins in a flash...',

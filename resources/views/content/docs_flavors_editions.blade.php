@@ -1,8 +1,8 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'Flavors &amp; Editions')
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Documentation'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Documentation'])
         <div class="subheader"></div>
         <h1 class="fw-500 mb-5 mt-5 text-center">
             SmartAdmin WebApp comes with multiple Flavors & Editions

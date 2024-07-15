@@ -1,13 +1,13 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'FixedColumns')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/datagrid/datatables/datatables.bundle.css">
 @endsection
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Datatables'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Datatables'])
         <div class="subheader">
-            @component('admin.inc._page_heading', [
+            @component('inc._page_heading', [
                 'icon' => 'table',
                 'heading1' => 'DataTables:',
                 'heading2' => 'FixedColumns',
@@ -2221,9 +2221,9 @@
                         render: function(data, type, full, meta) {
 
                             /*
-                                -- ES6
-                                -- convert using https://babeljs.io online transpiler
-                                return `
+                                    -- ES6
+                                    -- convert using https://babeljs.io online transpiler
+                                    return `
                         <div class='d-flex mt-2'>
                         	<a href='javascript:void(0);' class='btn btn-sm btn-outline-danger mr-2' title='Delete Record'>
                         		<i class="fal fa-times"></i> Delete Record
@@ -2242,9 +2242,9 @@
                         	</div>
                         </div>`;
 
-                                ES5 example below:
+                                    ES5 example below:
 
-                                */
+                                    */
                             return "\n\t\t\t\t\t\t<div class='d-flex demo'>\n\t\t\t\t\t\t\t<a href='javascript:void(0);' class='btn btn-sm btn-outline-danger btn-icon btn-inline-block mr-1' title='Delete Record'><i class=\"fal fa-times\"></i></a>\n\t\t\t\t\t\t\t<a href='javascript:void(0);' class='btn btn-sm btn-outline-primary btn-icon btn-inline-block mr-1' title='Edit'><i class=\"fal fa-edit\"></i></a>\n\t\t\t\t\t\t\t<div class='dropdown d-inline-block'>\n\t\t\t\t\t\t\t\t<a href='#' class='btn btn-sm btn-outline-primary btn-icon' data-toggle='dropdown' aria-expanded='true' title='More options'><i class=\"fal fa-plus\"></i></a>\n\t\t\t\t\t\t\t\t<div class='dropdown-menu'>\n\t\t\t\t\t\t\t\t\t<a class='dropdown-item' href='javascript:void(0);'>Change Status</a>\n\t\t\t\t\t\t\t\t\t<a class='dropdown-item' href='javascript:void(0);'>Generate Report</a>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>";
                         },
                     },

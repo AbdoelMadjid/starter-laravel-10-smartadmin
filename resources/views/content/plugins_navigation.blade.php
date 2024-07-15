@@ -1,11 +1,11 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'Navigation')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/theme-demo.css">
 @endsection
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Core Plugins'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Core Plugins'])
         <div class="subheader">
             <h1 class="subheader-title">
                 <i class='subheader-icon fal fa-shield-alt'></i> Navigation <sup class='badge badge-danger fw-500'>CORE</sup>
@@ -473,10 +473,10 @@
                             <div class="frame-wrap">
                                 <pre class="prettyprint">
 $("#mynav").navigation({
-   accordion: 'true', 
-   animate: 'ease-in', 
-   speed: 400, 
-   closedSign: 'fal fa-minus', 
+   accordion: 'true',
+   animate: 'ease-in',
+   speed: 400,
+   closedSign: 'fal fa-minus',
    openedSign: 'fal fa-plus'
 });</pre>
                             </div>
@@ -485,7 +485,7 @@ $("#mynav").navigation({
                             </h5>
                             <div class="frame-wrap">
                                 <pre class="prettyprint">
-//this will set the navigation based on app.config.js default config	
+//this will set the navigation based on app.config.js default config
 initApp.buildNavigation($("#mynav"));</pre>
                             </div>
                             <h5 class="frame-heading p-0 bg-white mb-2 mt-0">

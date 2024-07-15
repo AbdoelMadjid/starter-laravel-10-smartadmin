@@ -1,10 +1,10 @@
-@extends('admin.inc.main_auth')
+@extends('inc.main_auth')
 @section('title', 'Login')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/fa-brands.css">
 @endsection
 @section('pages-content')
-    @component('admin.inc._auth_header')
+    @component('inc._auth_header')
         <a href="/page_auth_register" class="btn-link text-white ml-auto">
             Create Account
         </a>

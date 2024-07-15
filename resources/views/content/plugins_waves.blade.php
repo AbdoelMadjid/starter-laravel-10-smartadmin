@@ -1,11 +1,11 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'Waves')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/theme-demo.css">
 @endsection
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Core Plugins'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Core Plugins'])
         <div class="subheader">
             <h1 class="subheader-title">
                 <i class='subheader-icon fal fa-shield-alt'></i> Waves <sup class='badge badge-success fw-500'>EXTENSION</sup>
@@ -134,7 +134,7 @@ rippleEffect: true, // material design effect that appears on all buttons</pre>
 if (window.Waves && myapp_config.rippleEffect) {
     Waves.attach('.nav-menu:not(.js-waves-off) a, .btn:not(.js-waves-off):not(.btn-switch), .js-waves-on', ['waves-themed']);
     Waves.init();
-    ... 
+    ...
 } </pre>
                             </div>
                         </div>

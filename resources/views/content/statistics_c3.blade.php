@@ -1,11 +1,11 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'C3 Charts')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/statistics/c3/c3.css">
 @endsection
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Statistics'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Statistics'])
         <div class="subheader">
             <h1 class="subheader-title">
                 <i class='subheader-icon fal fa-chart-pie'></i> C3 Charts<sup class='badge badge-primary fw-500'>ADDON</sup>

@@ -1,4 +1,4 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'Select2')
 @section('pages-css')
     <!-- DEMO related CSS below -->
@@ -8,7 +8,7 @@
 @endsection
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Form Plugins'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Form Plugins'])
         <div class="subheader">
             <h1 class="subheader-title">
                 <i class='subheader-icon fal fa-credit-card-front'></i> Select2<sup

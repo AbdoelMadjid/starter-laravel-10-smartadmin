@@ -1,4 +1,4 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'Contacts')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/fa-solid.css">
@@ -6,7 +6,7 @@
 @endsection
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Page Views'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Page Views'])
         <div class="subheader">
             <h1 class="subheader-title">
                 <i class='subheader-icon fal fa-plus-circle'></i> Contacts

@@ -1,8 +1,8 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'List')
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', [
+        @include('inc._page_breadcrumb', [
             'category_1' => 'Page Views',
             'category_2' => 'Forum Layouts',
         ])

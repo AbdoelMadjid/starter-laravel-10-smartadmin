@@ -50,12 +50,6 @@ Route::middleware('admin')->prefix('master/tools')->group(function () {
     Route::put('app_profiles', [AppProfileController::class, 'update'])->name('app_profiles.update');
     //Route::get('/app_fiturs', [AppFiturController::class, 'index'])->name('app_fiturs');
 
-
-    Route::resource('opsi_logins', OpsiLoginController::class);
-    Route::post('opsi_logins/toggle-aktif', [OpsiLoginController::class, 'toggleAktif'])->name('opsi_logins.toggleAktif');
-
-    Route::resource('manajemen_pengguna', ManajemenPenggunaController::class);
-
     Route::get('/tools_opsi_aplikasi', [MasterController::class, 'tools_opsi_aplikasi'])->name('tools_opsi_aplikasi');
     Route::get('/tools_impor_data_master', [MasterController::class, 'tools_impor_data_master'])->name('tools_impor_data_master');
     Route::get('/tools_ekspor_data_master', [MasterController::class, 'tools_ekspor_data_master'])->name('tools_ekspor_data_master');

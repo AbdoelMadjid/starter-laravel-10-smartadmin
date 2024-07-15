@@ -1,4 +1,4 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'Export')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/datagrid/datatables/datatables.bundle.css">
@@ -6,9 +6,9 @@
 @endsection
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Datatables'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Datatables'])
         <div class="subheader">
-            @component('admin.inc._page_heading', [
+            @component('inc._page_heading', [
                 'icon' => 'table',
                 'heading1' => 'DataTables:',
                 'heading2' => 'Export',
@@ -547,32 +547,32 @@
 @endsection
 @section('pages-script')
     <!-- datatble responsive bundle contains:
-                         + jquery.dataTables.js
-                         + dataTables.bootstrap4.js
-                         + dataTables.autofill.js
-                         + dataTables.buttons.js
-                         + buttons.bootstrap4.js
-                         + buttons.html5.js
-                         + buttons.print.js
-                         + buttons.colVis.js
-                         + dataTables.colreorder.js
-                         + dataTables.fixedcolumns.js
-                         + dataTables.fixedheader.js
-                         + dataTables.keytable.js
-                         + dataTables.responsive.js
-                         + dataTables.rowgroup.js
-                         + dataTables.rowreorder.js
-                         + dataTables.scroller.js
-                         + dataTables.select.js
-                         + datatables.styles.app.js
-                         + datatables.styles.buttons.app.js -->
+                             + jquery.dataTables.js
+                             + dataTables.bootstrap4.js
+                             + dataTables.autofill.js
+                             + dataTables.buttons.js
+                             + buttons.bootstrap4.js
+                             + buttons.html5.js
+                             + buttons.print.js
+                             + buttons.colVis.js
+                             + dataTables.colreorder.js
+                             + dataTables.fixedcolumns.js
+                             + dataTables.fixedheader.js
+                             + dataTables.keytable.js
+                             + dataTables.responsive.js
+                             + dataTables.rowgroup.js
+                             + dataTables.rowreorder.js
+                             + dataTables.scroller.js
+                             + dataTables.select.js
+                             + datatables.styles.app.js
+                             + datatables.styles.buttons.app.js -->
     <script src="/admin/js/datagrid/datatables/datatables.bundle.js"></script>
     <!-- datatbles buttons bundle contains:
-                         + "jszip.js",
-                         + "pdfmake.js",
-                         + "vfs_fonts.js"
-                         NOTE: 	The file size is pretty big, but you can always use the
-                           build.json file to deselect any components you do not need under "export" -->
+                             + "jszip.js",
+                             + "pdfmake.js",
+                             + "vfs_fonts.js"
+                             NOTE: 	The file size is pretty big, but you can always use the
+                               build.json file to deselect any components you do not need under "export" -->
     <script src="/admin/js/datagrid/datatables/datatables.export.js"></script>
     <script>
         $(document).ready(function() {

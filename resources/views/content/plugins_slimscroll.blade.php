@@ -1,11 +1,11 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'slimscroll')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/theme-demo.css">
 @endsection
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', ['category_1' => 'Core Plugins'])
+        @include('inc._page_breadcrumb', ['category_1' => 'Core Plugins'])
         <div class="subheader">
             <h1 class="subheader-title">
                 <i class='subheader-icon fal fa-shield-alt'></i> SlimScroll <sup
@@ -408,14 +408,14 @@ $('#slimscroll').slimScroll({
                             <h5 class="frame-heading">Initliza with data attributes </h5>
                             <div class="frame-wrap">
                                 <pre class="prettyprint">
-&lt;div id="slimscroll" class="custom-scroll" style="height:300px" 
-        data-scrollHeight="300" 
-        data-scrollSize="4px" 
-        data-scrollPosition="right" 
-        data-scrollColor="rgba(0,0,0,0.6)" 
-        data-alwaysVisible="false" 
-        data-distance="4px" 
-        data-railVisible="false" 
+&lt;div id="slimscroll" class="custom-scroll" style="height:300px"
+        data-scrollHeight="300"
+        data-scrollSize="4px"
+        data-scrollPosition="right"
+        data-scrollColor="rgba(0,0,0,0.6)"
+        data-alwaysVisible="false"
+        data-distance="4px"
+        data-railVisible="false"
         data-railColor="#fafafa" &gt;
   &lt;div class="p-3"&gt;
     ...

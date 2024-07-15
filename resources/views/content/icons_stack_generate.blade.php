@@ -1,4 +1,4 @@
-@extends('admin.inc.main')
+@extends('inc.main')
 @section('title', 'Generate Stack')
 @section('pages-css')
     <link rel="stylesheet" media="screen, print" href="/admin/css/fa-regular.css">
@@ -8,12 +8,12 @@
 @endsection
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
-        @include('admin.inc._page_breadcrumb', [
+        @include('inc._page_breadcrumb', [
             'category_1' => 'Font Icons',
             'category_2' => 'Stack Icons',
         ])
         <div class="subheader">
-            @component('admin.inc._page_heading', [
+            @component('inc._page_heading', [
                 'heading1' => 'Stack Icons:',
                 'heading2' => 'Generate Stack',
                 'sup' => 'ADDON',

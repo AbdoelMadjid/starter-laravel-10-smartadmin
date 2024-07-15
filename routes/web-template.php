@@ -22,9 +22,10 @@ use Illuminate\Support\Facades\Route;
 
 /* Route::fallback([TemplateController::class, 'error_pages']); */
 
-// DEVELOPER
-Route::get('/dev_component', [TemplateController::class, 'dev_component'])->name('developer_component');
-
+Route::middleware('admin')->prefix('master/developer')->group(function () {
+    // DEVELOPER
+    Route::get('/dev_component', [TemplateController::class, 'dev_component'])->name('developer_component');
+});
 
 // INTEL
 Route::get('/intel_analytics_dashboard', [TemplateController::class, 'intel_analytics_dashboard'])->name('intel_analytics_dashboard');
