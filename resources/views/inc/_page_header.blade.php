@@ -64,10 +64,10 @@
             <a href="#" data-toggle="dropdown" title="drlantern@gotbootstrap.com"
                 class="header-icon d-flex align-items-center justify-content-center ml-2">
                 @if (auth()->user()->image)
-                    <img src="/admin/img/{{ auth()->user()->image }}" class="profile-image rounded-circle"
+                    <img src="/admin/img/users/{{ auth()->user()->image }}" class="profile-image rounded-circle"
                         alt="{{ auth()->user()->name }}">
                 @else
-                    <img src="/admin/img/user.jpg" class="profile-image rounded-circle"
+                    <img src="/admin/img/users/user.jpg" class="profile-image rounded-circle"
                         alt="{{ auth()->user()->name }}">
                 @endif
                 <!--
@@ -81,10 +81,10 @@
                     <div class="d-flex flex-row align-items-center mt-1 mb-1 color-white">
                         <span class="mr-2">
                             @if (auth()->user()->image)
-                                <img src="/admin/img/{{ auth()->user()->image }}" class="rounded-circle profile-image"
-                                    alt="{{ auth()->user()->name }}">
+                                <img src="/admin/img/users/{{ auth()->user()->image }}"
+                                    class="rounded-circle profile-image" alt="{{ auth()->user()->name }}">
                             @else
-                                <img src="/admin/img/user.jpg" class="rounded-circle profile-image"
+                                <img src="/admin/img/users/user.jpg" class="rounded-circle profile-image"
                                     alt="{{ auth()->user()->name }}">
                             @endif
                         </span>

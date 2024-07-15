@@ -3,7 +3,7 @@
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GuestController;
-use App\Http\Controllers\temp\TemplateController;
+use App\Http\Controllers\TemplateController;
 use Illuminate\Support\Facades\Route;
 
 /*

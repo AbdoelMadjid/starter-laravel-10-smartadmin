@@ -18,7 +18,7 @@ class AppProfileSeeder extends Seeder
                 'app_nama' => 'Repalogic',
                 'app_deskripsi' => 'Dashboard yang bisa di gunakan untuk manajemen aplikasi',
                 'app_tahun' => 2019,
-                'app_pengembang' => 'Repalogic',
+                'app_pengembang' => 'Team SKAONE',
                 'app_icon' => 'topi-toga-abu-32.png',
                 'app_logo' => 'logosmk-big.png',
                 'created_at' => now(),

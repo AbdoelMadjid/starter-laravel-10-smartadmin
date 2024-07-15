@@ -23,10 +23,11 @@
         </div>
         <div class="info-card">
             @if (auth()->user()->image)
-                <img src="/admin/img/{{ auth()->user()->image }}" class="profile-image rounded-circle"
+                <img src="/admin/img/users/{{ auth()->user()->image }}" class="profile-image rounded-circle"
                     alt="{{ auth()->user()->name }}">
             @else
-                <img src="/admin/img/user.jpg" class="profile-image rounded-circle" alt="{{ auth()->user()->name }}">
+                <img src="/admin/img/users/user.jpg" class="profile-image rounded-circle"
+                    alt="{{ auth()->user()->name }}">
             @endif
             <div class="info-card-text">
                 <a href="#" class="d-flex align-items-center text-white">

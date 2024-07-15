@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\temp\TemplateController;
+use App\Http\Controllers\TemplateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,16 +22,20 @@ use Illuminate\Support\Facades\Route;
 
 /* Route::fallback([TemplateController::class, 'error_pages']); */
 
-Route::middleware('admin')->prefix('master/developer')->group(function () {
+Route::middleware('admin')->prefix('dev')->group(function () {
     // DEVELOPER
-    Route::get('/dev_component', [TemplateController::class, 'dev_component'])->name('developer_component');
+    Route::get('/dev_component', [TemplateController::class, 'dev_component'])->name('dev_component');
+    Route::get('/dev_landing_page', [TemplateController::class, 'dev_landing_page'])->name('dev_landing_page');
 });
 
 // INTEL
-Route::get('/intel_analytics_dashboard', [TemplateController::class, 'intel_analytics_dashboard'])->name('intel_analytics_dashboard');
-Route::get('/intel_marketing_dashboard', [TemplateController::class, 'intel_marketing_dashboard'])->name('intel_marketing_dashboard');
-Route::get('/intel_introduction', [TemplateController::class, 'intel_introduction'])->name('intel_introduction');
-Route::get('/intel_privacy', [TemplateController::class, 'intel_privacy'])->name('intel_privacy');
+Route::middleware('admin')->prefix('intel')->group(function () {
+    Route::get('/intel_analytics_dashboard', [TemplateController::class, 'intel_analytics_dashboard'])->name('intel_analytics_dashboard');
+    Route::get('/intel_marketing_dashboard', [TemplateController::class, 'intel_marketing_dashboard'])->name('intel_marketing_dashboard');
+    Route::get('/intel_introduction', [TemplateController::class, 'intel_introduction'])->name('intel_introduction');
+    Route::get('/intel_privacy', [TemplateController::class, 'intel_privacy'])->name('intel_privacy');
+});
+
 
 // SETTING
 

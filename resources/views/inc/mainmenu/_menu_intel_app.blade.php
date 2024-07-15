@@ -1,30 +1,30 @@
 <li class="nav-title">Intel Application</li>
-<li class="{{ Request::is('intel*') ? 'active open' : '' }}">
+<li class="{{ Request::is('intel/intel*') ? 'active open' : '' }}">
     <a href="#" title="Application Intel" data-filter-tags="application intel">
         <i class="fal fa-info-circle"></i>
         <span class="nav-link-text" data-i18n="nav.application_intel">Application Intel</span>
     </a>
     <ul>
-        <li class="{{ Request::is('intel_analytics_dashboard*') ? 'active' : '' }}">
+        <li class="{{ Request::is('intel/intel_analytics_dashboard*') ? 'active' : '' }}">
             <a href="/intel_analytics_dashboard" title="Analytics Dashboard"
                 data-filter-tags="application intel analytics dashboard">
                 <span class="nav-link-text" data-i18n="nav.application_intel_analytics_dashboard">Analytics
                     Dashboard</span>
             </a>
         </li>
-        <li class="{{ Request::is('intel_marketing_dashboard*') ? 'active' : '' }}">
+        <li class="{{ Request::is('intel/intel_marketing_dashboard*') ? 'active' : '' }}">
             <a href="/intel_marketing_dashboard" title="Marketing Dashboard"
                 data-filter-tags="application intel marketing dashboard">
                 <span class="nav-link-text" data-i18n="nav.application_intel_marketing_dashboard">Marketing
                     Dashboard</span>
             </a>
         </li>
-        <li class="{{ Request::is('intel_introduction*') ? 'active' : '' }}">
+        <li class="{{ Request::is('intel/intel_introduction*') ? 'active' : '' }}">
             <a href="/intel_introduction" title="Introduction" data-filter-tags="application intel introduction">
                 <span class="nav-link-text" data-i18n="nav.application_intel_introduction">Introduction</span>
             </a>
         </li>
-        <li class="{{ Request::is('intel_privacy*') ? 'active' : '' }}">
+        <li class="{{ Request::is('intel/intel_privacy*') ? 'active' : '' }}">
             <a href="/intel_privacy" title="Privacy" data-filter-tags="application intel privacy">
                 <span class="nav-link-text" data-i18n="nav.application_intel_privacy">Privacy</span>
             </a>

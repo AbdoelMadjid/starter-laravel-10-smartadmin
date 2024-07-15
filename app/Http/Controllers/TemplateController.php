@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\temp;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -19,6 +19,10 @@ class TemplateController extends Controller
     public function dev_component()
     {
         return view('content.developer_component');
+    }
+    public function dev_landing_page()
+    {
+        return view('content.developer_landing_page');
     }
     public function intel_analytics_dashboard()
     {
