@@ -18,8 +18,6 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 });
  */
-
-
 /* Route::fallback([TemplateController::class, 'error_pages']); */
 
 Route::middleware('admin')->prefix('dev')->group(function () {
@@ -27,7 +25,6 @@ Route::middleware('admin')->prefix('dev')->group(function () {
     Route::get('/dev_component', [TemplateController::class, 'dev_component'])->name('dev_component');
     Route::get('/dev_landing_page', [TemplateController::class, 'dev_landing_page'])->name('dev_landing_page');
 });
-
 // INTEL
 Route::middleware('admin')->prefix('intel')->group(function () {
     Route::get('/intel_analytics_dashboard', [TemplateController::class, 'intel_analytics_dashboard'])->name('intel_analytics_dashboard');
@@ -35,25 +32,24 @@ Route::middleware('admin')->prefix('intel')->group(function () {
     Route::get('/intel_introduction', [TemplateController::class, 'intel_introduction'])->name('intel_introduction');
     Route::get('/intel_privacy', [TemplateController::class, 'intel_privacy'])->name('intel_privacy');
 });
-
-
 // SETTING
-
-Route::get('/settings_how_it_works', [TemplateController::class, 'settings_how_it_works'])->name('settings_how_it_works');
-Route::get('/settings_layout_options', [TemplateController::class, 'settings_layout_options'])->name('settings_layout_options');
-Route::get('/settings_theme_modes', [TemplateController::class, 'settings_theme_modes'])->name('settings_theme_modes');
-Route::get('/settings_skin_options', [TemplateController::class, 'settings_skin_options'])->name('settings_skin_options');
-Route::get('/settings_saving_db', [TemplateController::class, 'settings_saving_db'])->name('settings_saving_db');
-
+Route::middleware('admin')->prefix('setting')->group(function () {
+    Route::get('/settings_how_it_works', [TemplateController::class, 'settings_how_it_works'])->name('settings_how_it_works');
+    Route::get('/settings_layout_options', [TemplateController::class, 'settings_layout_options'])->name('settings_layout_options');
+    Route::get('/settings_theme_modes', [TemplateController::class, 'settings_theme_modes'])->name('settings_theme_modes');
+    Route::get('/settings_skin_options', [TemplateController::class, 'settings_skin_options'])->name('settings_skin_options');
+    Route::get('/settings_saving_db', [TemplateController::class, 'settings_saving_db'])->name('settings_saving_db');
+});
 // DOC
-Route::get('/docs_general', [TemplateController::class, 'docs_general'])->name('docs_general');
-Route::get('/docs_project_structure', [TemplateController::class, 'docs_project_structure'])->name('docs_project_structure');
-Route::get('/docs_flavors_editions', [TemplateController::class, 'docs_flavors_editions'])->name('docs_flavors_editions');
-Route::get('/docs_community_support', [TemplateController::class, 'docs_community_support'])->name('docs_community_support');
-Route::get('/docs_premium_support', [TemplateController::class, 'docs_premium_support'])->name('docs_premium_support');
-Route::get('/docs_licensing', [TemplateController::class, 'docs_licensing'])->name('docs_licensing');
-Route::get('/docs_buildnotes', [TemplateController::class, 'docs_buildnotes'])->name('docs_buildnotes');
-
+Route::middleware('admin')->prefix('docs')->group(function () {
+    Route::get('/docs_general', [TemplateController::class, 'docs_general'])->name('docs_general');
+    Route::get('/docs_project_structure', [TemplateController::class, 'docs_project_structure'])->name('docs_project_structure');
+    Route::get('/docs_flavors_editions', [TemplateController::class, 'docs_flavors_editions'])->name('docs_flavors_editions');
+    Route::get('/docs_community_support', [TemplateController::class, 'docs_community_support'])->name('docs_community_support');
+    Route::get('/docs_premium_support', [TemplateController::class, 'docs_premium_support'])->name('docs_premium_support');
+    Route::get('/docs_licensing', [TemplateController::class, 'docs_licensing'])->name('docs_licensing');
+    Route::get('/docs_buildnotes', [TemplateController::class, 'docs_buildnotes'])->name('docs_buildnotes');
+});
 // UI
 Route::get('/ui_alerts', [TemplateController::class, 'ui_alerts'])->name('ui_alerts');
 Route::get('/ui_accordion', [TemplateController::class, 'ui_accordion'])->name('ui_accordion');
