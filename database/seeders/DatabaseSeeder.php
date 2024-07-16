@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\OpsiLogin;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,6 +24,7 @@ class DatabaseSeeder extends Seeder
             AppFiturSeeder::class,
             AppProfileSeeder::class,
             UserSeeder::class,
+            OpsiLoginSeeder::class,
         ]);
     }
 }

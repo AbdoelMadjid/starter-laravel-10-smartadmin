@@ -85,11 +85,12 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                     Account</strong></a>
         </div>
     </div>
-    <div class="login-footer p-2">
+    <div class="position-absolute pos-bottom pos-left pos-right p-3 text-center text-white">
         <div class="row">
-            <div class="col col-sm-12 text-center">
-                <i><strong>System Message:</strong> You were logged out from 198.164.246.1 on Saturday, March, 2017 at
-                    10.56AM</i>
+            <div class="col col-sm-12 text-center text-primary">
+                {{ $profileApp->app_tahun ?? '' }} © {{ $profileApp->app_pengembang ?? '' }} by&nbsp;<a
+                    href="https://laravel.com/docs/10.x" title='laravel.com' class="opacity-90" target="_blank">Laravel
+                    v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</a>
             </div>
         </div>
     </div>

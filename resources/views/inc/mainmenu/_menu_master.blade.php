@@ -1,7 +1,7 @@
 <li class="{{ Request::is('master/tools/master_profil*') ? 'active' : '' }}">
     <a href="/master/tools/master_profil" title="Profil Master" data-filter-tags="master profil">
         <i class="fal fa-user-circle"></i>
-        <span class="nav-link-text" data-i18n="nav.master_profil">Profil Master</span>
+        <span class="nav-link-text" data-i18n="nav.master_profil">Profil Admin</span>
     </a>
 </li>
 <li class="nav-title">Tools App</li>

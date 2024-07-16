@@ -115,7 +115,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
     <div class="position-absolute pos-bottom pos-left pos-right p-3 text-center text-white">
         <div class="row">
             <div class="col col-sm-12 text-center text-primary">
-                {{ $profileApp->app_tahun ?? '' }} © {{ $profileApp->app_nama ?? '' }} by&nbsp;<a
+                {{ $profileApp->app_tahun ?? '' }} © {{ $profileApp->app_pengembang ?? '' }} by&nbsp;<a
                     href="https://laravel.com/docs/10.x" title='laravel.com' class="opacity-90" target="_blank">Laravel
                     v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</a>
             </div>

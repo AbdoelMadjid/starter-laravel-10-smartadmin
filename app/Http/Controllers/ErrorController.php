@@ -8,6 +8,6 @@ class ErrorController extends Controller
 {
     public function index()
     {
-        return view('404');
+        return view('error.404');
     }
 }
