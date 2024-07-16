@@ -247,19 +247,19 @@
                         <span class="nav-link-text" data-i18n="nav.font_icons_fontawesome_regular">Regular</span>
                     </a>
                 </li>
-                <li class="{{ Request::is('icons/fontawesome_solid') ? 'active' : '' }}">
+                <li class="{{ Request::is('icons/fontawesome_solid*') ? 'active' : '' }}">
                     <a href="{{ route('fontawesome_solid') }}" title="Solid"
                         data-filter-tags="font icons fontawesome solid">
                         <span class="nav-link-text" data-i18n="nav.font_icons_fontawesome_solid">Solid</span>
                     </a>
                 </li>
-                <li class="{{ Request::is('icons/fontawesome_duotone') ? 'active' : '' }}">
+                <li class="{{ Request::is('icons/fontawesome_duotone*') ? 'active' : '' }}">
                     <a href="{{ route('fontawesome_duotone') }}" title="Duotone"
                         data-filter-tags="font icons fontawesome duotone">
                         <span class="nav-link-text" data-i18n="nav.font_icons_fontawesome_duotone">Duotone</span>
                     </a>
                 </li>
-                <li class="{{ Request::is('icons/fontawesome_brand') ? 'active' : '' }}">
+                <li class="{{ Request::is('icons/fontawesome_brand*') ? 'active' : '' }}">
                     <a href="{{ route('fontawesome_brand') }}" title="Brand"
                         data-filter-tags="font icons fontawesome brand">
                         <span class="nav-link-text" data-i18n="nav.font_icons_fontawesome_brand">Brand</span>
@@ -272,13 +272,13 @@
                 <span class="nav-link-text" data-i18n="nav.font_icons_nextgen_icons">NextGen Icons</span>
             </a>
             <ul>
-                <li class="{{ Request::is('icons/nextgen_general') ? 'active' : '' }}">
+                <li class="{{ Request::is('icons/nextgen_general*') ? 'active' : '' }}">
                     <a href="{{ route('nextgen_general') }}" title="General"
                         data-filter-tags="font icons nextgen icons general">
                         <span class="nav-link-text" data-i18n="nav.font_icons_nextgen_icons_general">General</span>
                     </a>
                 </li>
-                <li class="{{ Request::is('icons/nextgen_base') ? 'active' : '' }}">
+                <li class="{{ Request::is('icons/nextgen_base*') ? 'active' : '' }}">
                     <a href="{{ route('nextgen_base') }}" title="Base"
                         data-filter-tags="font icons nextgen icons base">
                         <span class="nav-link-text" data-i18n="nav.font_icons_nextgen_icons_base">Base</span>
@@ -291,13 +291,13 @@
                 <span class="nav-link-text" data-i18n="nav.font_icons_stack_icons">Stack Icons</span>
             </a>
             <ul>
-                <li class="{{ Request::is('icons/stack_showcase') ? 'active' : '' }}">
+                <li class="{{ Request::is('icons/stack_showcase*') ? 'active' : '' }}">
                     <a href="{{ route('stack_showcase') }}" title="Showcase"
                         data-filter-tags="font icons stack icons showcase">
                         <span class="nav-link-text" data-i18n="nav.font_icons_stack_icons_showcase">Showcase</span>
                     </a>
                 </li>
-                <li class="{{ Request::is('icons/stack_generate') ? 'active' : '' }}">
+                <li class="{{ Request::is('icons/stack_generate*') ? 'active' : '' }}">
                     <a href="{{ route('stack_generate?layers=3') }}" title="Generate Stack"
                         data-filter-tags="font icons stack icons generate stack">
                         <span class="nav-link-text" data-i18n="nav.font_icons_stack_icons_generate_stack">Generate
@@ -314,12 +314,12 @@
         <span class="nav-link-text" data-i18n="nav.tables">Tables</span>
     </a>
     <ul>
-        <li class="{{ Request::is('tables/basic') ? 'active' : '' }}">
+        <li class="{{ Request::is('tables/basic*') ? 'active' : '' }}">
             <a href="{{ route('basic') }}" title="Basic Tables" data-filter-tags="tables basic tables">
                 <span class="nav-link-text" data-i18n="nav.tables_basic_tables">Basic Tables</span>
             </a>
         </li>
-        <li class="{{ Request::is('tables/generate_style') ? 'active' : '' }}">
+        <li class="{{ Request::is('tables/generate_style*') ? 'active' : '' }}">
             <a href="{{ route('generate_style') }}" title="Generate Table Style"
                 data-filter-tags="tables generate table style">
                 <span class="nav-link-text" data-i18n="nav.tables_generate_table_style">Generate Table
@@ -334,24 +334,24 @@
         <span class="nav-link-text" data-i18n="nav.form_stuff">Form Stuff</span>
     </a>
     <ul>
-        <li class="{{ Request::is('form_stuff/basic_inputs') ? 'active' : '' }}">
+        <li class="{{ Request::is('form_stuff/basic_inputs*') ? 'active' : '' }}">
             <a href="{{ route('basic_inputs') }}" title="Basic Inputs" data-filter-tags="form stuff basic inputs">
                 <span class="nav-link-text" data-i18n="nav.form_stuff_basic_inputs">Basic Inputs</span>
             </a>
         </li>
-        <li class="{{ Request::is('form_stuff/checkbox_radio') ? 'active' : '' }}">
+        <li class="{{ Request::is('form_stuff/checkbox_radio*') ? 'active' : '' }}">
             <a href="{{ route('checkbox_radio') }}" title="Checkbox & Radio"
                 data-filter-tags="form stuff checkbox & radio">
                 <span class="nav-link-text" data-i18n="nav.form_stuff_checkbox_&_radio">Checkbox &
                     Radio</span>
             </a>
         </li>
-        <li class="{{ Request::is('form_stuff/input_groups') ? 'active' : '' }}">
+        <li class="{{ Request::is('form_stuff/input_groups*') ? 'active' : '' }}">
             <a href="{{ route('input_groups') }}" title="Input Groups" data-filter-tags="form stuff input groups">
                 <span class="nav-link-text" data-i18n="nav.form_stuff_input_groups">Input Groups</span>
             </a>
         </li>
-        <li class="{{ Request::is('form_stuff/validation') ? 'active' : '' }}">
+        <li class="{{ Request::is('form_stuff/validation*') ? 'active' : '' }}">
             <a href="{{ route('validation') }}" title="Validation" data-filter-tags="form stuff validation">
                 <span class="nav-link-text" data-i18n="nav.form_stuff_validation">Validation</span>
             </a>

@@ -11,8 +11,8 @@
         <span class="nav-link-text" data-i18n="nav.gurumapel_data_kbm">Data KBM</span>
     </a>
 </li>
-<li class="{{ Request::is('gurumapel/capaian_pembelajaran*') ? 'active' : '' }}">
-    <a href="{{ route('capaian_pembelajaran') }}" title="Capaian Pembelajaran"
+<li class="{{ Request::is('gurumapel/capaian_pembelajaran_gmp*') ? 'active' : '' }}">
+    <a href="{{ route('capaian_pembelajaran_gmp') }}" title="Capaian Pembelajaran"
         data-filter-tags="gurumapel capaian pembelajaran">
         <i class="fal fa-list-ul"></i>
         <span class="nav-link-text" data-i18n="nav.gurumapel_capaian_pembelajaran">Capaian Pembelajaran</span>

@@ -22,8 +22,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('admin')->prefix('dev')->group(function () {
     // DEVELOPER
-    Route::get('/dev_component', [TemplateController::class, 'dev_component'])->name('dev_component');
-    Route::get('/dev_landing_page', [TemplateController::class, 'dev_landing_page'])->name('dev_landing_page');
+    Route::get('/component', [TemplateController::class, 'dev_component'])->name('component');
+    Route::get('/landing_page', [TemplateController::class, 'dev_landing_page'])->name('landing_page');
 });
 // INTEL
 Route::middleware('admin')->prefix('intel')->group(function () {
