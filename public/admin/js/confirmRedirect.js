@@ -4,6 +4,8 @@
                 elem.addEventListener("click", function(event) {
                     event.preventDefault(); // Mencegah perilaku default
 
+                    initApp.playSound('/admin/media/sound', 'voice_on')
+
                     var title = elem.getAttribute("data-title");
                     var message = elem.getAttribute("data-message");
                     var secondsLeft = 10; // Waktu dalam detik
