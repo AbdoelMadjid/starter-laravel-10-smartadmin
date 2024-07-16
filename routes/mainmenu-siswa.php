@@ -23,12 +23,12 @@ use Illuminate\Support\Facades\Route;
 /* Route::fallback([TemplateController::class, 'error_pages']); */
 
 Route::middleware('siswa')->prefix('pesertadidik')->group(function () {
-    Route::get('/siswa_profil', [SiswaController::class, 'siswa_profil'])->name('siswa_profil');
-    Route::get('/siswa_lcks_penilaian', [SiswaController::class, 'siswa_lcks_penilaian'])->name('siswa_lcks_penilaian');
-    Route::get('/siswa_lcks_absensi', [SiswaController::class, 'siswa_lcks_absensi'])->name('siswa_lcks_absensi');
-    Route::get('/siswa_lcks_kegiatan_eskul', [SiswaController::class, 'siswa_lcks_kegiatan_eskul'])->name('siswa_lcks_kegiatan_eskul');
-    Route::get('/siswa_lcks_prestasi_siswa', [SiswaController::class, 'siswa_lcks_prestasi_siswa'])->name('siswa_lcks_prestasi_siswa');
-    Route::get('/siswa_lcks_praktek_kerja', [SiswaController::class, 'siswa_lcks_praktek_kerja'])->name('siswa_lcks_praktek_kerja');
-    Route::get('/siswa_lcks_catatan', [SiswaController::class, 'siswa_lcks_catatan'])->name('siswa_lcks_catatan');
-    Route::get('/siswa_remedial', [SiswaController::class, 'siswa_remedial'])->name('siswa_remedial');
+    Route::get('/profil_siswa', [SiswaController::class, 'siswa_profil'])->name('profil_siswa');
+    Route::get('/lcks_penilaian', [SiswaController::class, 'siswa_lcks_penilaian'])->name('lcks_penilaian');
+    Route::get('/lcks_absensi', [SiswaController::class, 'siswa_lcks_absensi'])->name('lcks_absensi');
+    Route::get('/lcks_kegiatan_eskul', [SiswaController::class, 'siswa_lcks_kegiatan_eskul'])->name('lcks_kegiatan_eskul');
+    Route::get('/lcks_prestasi_siswa', [SiswaController::class, 'siswa_lcks_prestasi_siswa'])->name('lcks_prestasi_siswa');
+    Route::get('/lcks_praktek_kerja', [SiswaController::class, 'siswa_lcks_praktek_kerja'])->name('lcks_praktek_kerja');
+    Route::get('/lcks_catatan', [SiswaController::class, 'siswa_lcks_catatan'])->name('lcks_catatan');
+    Route::get('/remedial_siswa', [SiswaController::class, 'siswa_remedial'])->name('remedial_siswa');
 });

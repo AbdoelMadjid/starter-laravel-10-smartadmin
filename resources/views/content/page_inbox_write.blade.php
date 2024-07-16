@@ -34,7 +34,7 @@
                             </div>
                         </div>
                         <div class="flex-1 pr-3">
-                            <a href="page_inbox_general.html"
+                            <a href="{{ route('general_inbox') }}"
                                 class="dropdown-item px-3 px-sm-4 pr-lg-3 pl-lg-5 py-2 fs-md font-weight-bold d-flex justify-content-between rounded-pill border-top-left-radius-0 border-bottom-left-radius-0 ">
                                 <div>
                                     <i class="fas fa-folder-open width-1"></i>Inbox

@@ -8,7 +8,7 @@
         <span class="text-white opacity-50 ml-auto mr-2 hidden-sm-down">
             Already a member?
         </span>
-        <a href="/page_auth_login" class="btn-link text-white ml-auto ml-sm-0">
+        <a href="{{ route('auth_login') }}" class="btn-link text-white ml-auto ml-sm-0">
             Secure Login
         </a>
     @endcomponent
@@ -32,7 +32,7 @@
                             <strong>Heads Up!</strong> Due to server maintenance from 9:30GTA to 12GTA, the
                             verification emails could be delayed by up to 10 minutes.
                         </div>
-                        <form id="js-login" novalidate="" action="/intel_analytics_dashboard">
+                        <form id="js-login" novalidate="" action="/">
                             <div class="form-group row">
                                 <label class="col-xl-12 form-label" for="fname">Your first and last
                                     name</label>
@@ -92,9 +92,10 @@
             </div>
         </div>
         <div class="position-absolute pos-bottom pos-left pos-right p-3 text-center text-white">
-            {{ $profileApp->app_tahun ?? '' }} © {{ $profileApp->app_pengembang ?? '' }} by&nbsp;<a href="https://laravel.com/docs/10.x" title='laravel.com' class="btn-link font-weight-bold"
-            target="_blank">Laravel
-            v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</a>
+            {{ $profileApp->app_tahun ?? '' }} © {{ $profileApp->app_pengembang ?? '' }} by&nbsp;<a
+                href="https://laravel.com/docs/10.x" title='laravel.com' class="btn-link font-weight-bold"
+                target="_blank">Laravel
+                v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</a>
         </div>
     </div>
 @endsection

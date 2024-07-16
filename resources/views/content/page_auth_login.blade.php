@@ -5,7 +5,7 @@
 @endsection
 @section('pages-content')
     @component('inc._auth_header')
-        <a href="/page_auth_register" class="btn-link text-white ml-auto">
+        <a href="{{ route('auth_register') }}" class="btn-link text-white ml-auto">
             Create Account
         </a>
     @endcomponent
@@ -81,16 +81,17 @@
                                 </div>
                             </div>
                             <div class="row no-gutters">
-                                <a href="/page_auth_forget"><strong>Recover Password</strong></a>
+                                <a href="{{ route('auth_forget') }}"><strong>Recover Password</strong></a>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
             <div class="position-absolute pos-bottom pos-left pos-right p-3 text-center text-white">
-                {{ $profileApp->app_tahun ?? '' }} - @php echo date('Y'); @endphp  © {{ $profileApp->app_pengembang ?? '' }} by&nbsp;<a href="https://laravel.com/docs/10.x" title='laravel.com' class="btn-link font-weight-bold"
-                target="_blank">Laravel
-                v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</a>
+                {{ $profileApp->app_tahun ?? '' }} - @php echo date('Y'); @endphp © {{ $profileApp->app_pengembang ?? '' }} by&nbsp;<a
+                    href="https://laravel.com/docs/10.x" title='laravel.com' class="btn-link font-weight-bold"
+                    target="_blank">Laravel
+                    v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</a>
             </div>
         </div>
     </div>

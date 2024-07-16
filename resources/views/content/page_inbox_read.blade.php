@@ -34,7 +34,7 @@
                             </div>
                         </div>
                         <div class="flex-1 pr-3">
-                            <a href="/page_inbox_general"
+                            <a href="{{ route('general_inbox') }}"
                                 class="dropdown-item px-3 px-sm-4 pr-lg-3 pl-lg-5 py-2 fs-md font-weight-bold d-flex justify-content-between rounded-pill border-top-left-radius-0 border-bottom-left-radius-0 ">
                                 <div>
                                     <i class="fas fa-folder-open width-1"></i>Inbox
@@ -94,16 +94,17 @@
                     <div
                         class="d-flex flex-wrap align-items-center pl-2 pr-3 py-2 px-sm-4 pr-lg-5 pl-lg-0 border-faded border-top-0 border-left-0 border-right-0">
                         <div class="flex-1 d-flex align-items-center">
-                            <a href="/page_inbox_general" class="btn btn-icon rounded-circle mr-2 mr-lg-3">
+                            <a href="{{ route('general_inbox') }}" class="btn btn-icon rounded-circle mr-2 mr-lg-3">
                                 <i class="fas fa-arrow-left fs-lg"></i>
                             </a>
                             <a href="javascript:void(0);" class="btn btn-icon rounded-circle mr-1">
                                 <i class="fas fa-redo fs-md"></i>
                             </a>
-                            <a href="/page_inbox_general" class="btn btn-icon rounded-circle mr-1">
+                            <a href="{{ route('general_inbox') }}" class="btn btn-icon rounded-circle mr-1">
                                 <i class="fas fa-exclamation-circle fs-md"></i>
                             </a>
-                            <a href="/page_inbox_general" id="js-delete-selected" class="btn btn-icon rounded-circle mr-1">
+                            <a href="{{ route('general_inbox') }}" id="js-delete-selected"
+                                class="btn btn-icon rounded-circle mr-1">
                                 <i class="fas fa-trash fs-md"></i>
                             </a>
                         </div>

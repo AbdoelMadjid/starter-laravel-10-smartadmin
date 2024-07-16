@@ -34,7 +34,7 @@
                             </div>
                         </div>
                         <div class="flex-1 pr-3">
-                            <a href="/page_inbox_general"
+                            <a href="{{ route('general_inbox') }}"
                                 class="dropdown-item px-3 px-sm-4 pr-lg-3 pl-lg-5 py-2 fs-md font-weight-bold d-flex justify-content-between rounded-pill border-top-left-radius-0 border-bottom-left-radius-0 active">
                                 <div>
                                     <i class="fas fa-folder-open width-1"></i>Inbox
@@ -160,10 +160,10 @@
                                         <div
                                             class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
                                             <div class="row w-100">
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Melissa
                                                     Ayre</a>
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Re:
                                                     New security codes (2)</a>
                                             </div>
@@ -186,10 +186,10 @@
                                         <div
                                             class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
                                             <div class="row w-100">
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Adison
                                                     Le</a>
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Welcome
                                                     to the new portal, here is what you need to do</a>
                                             </div>
@@ -212,10 +212,10 @@
                                         <div
                                             class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
                                             <div class="row w-100">
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Oliver
                                                     Kopyuv</a>
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Transformer
                                                     Combustion Defuser is ready</a>
                                             </div>
@@ -238,10 +238,10 @@
                                         <div
                                             class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
                                             <div class="row w-100">
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Dr.
                                                     John Cook PhD</a>
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">PWS
                                                     facts for patient #3245</a>
                                             </div>
@@ -264,10 +264,10 @@
                                         <div
                                             class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
                                             <div class="row w-100">
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Sarah
                                                     McBrook</a>
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Are
                                                     you coming to the after party?</a>
                                             </div>
@@ -290,10 +290,10 @@
                                         <div
                                             class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
                                             <div class="row w-100">
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Lisa
                                                     Hatchensen</a>
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">The
                                                     results for bloodwork</a>
                                             </div>
@@ -316,10 +316,10 @@
                                         <div
                                             class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
                                             <div class="row w-100">
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Anothony
                                                     Bezyeth</a>
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Questions
                                                     regarding accesskey</a>
                                             </div>
@@ -342,9 +342,9 @@
                                         <div
                                             class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
                                             <div class="row w-100">
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Wrapbootstrap</a>
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Your
                                                     registration is complete</a>
                                             </div>
@@ -367,10 +367,10 @@
                                         <div
                                             class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
                                             <div class="row w-100">
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Oliver
                                                     Kopyuv</a>
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Transformer
                                                     Combustion Defuser is ready</a>
                                             </div>
@@ -393,10 +393,10 @@
                                         <div
                                             class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
                                             <div class="row w-100">
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Dr.
                                                     John Cook PhD</a>
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">PWS
                                                     facts for patient #3245</a>
                                             </div>
@@ -419,10 +419,10 @@
                                         <div
                                             class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
                                             <div class="row w-100">
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Sarah
                                                     McBrook</a>
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Are
                                                     you coming to the after party?</a>
                                             </div>
@@ -445,10 +445,10 @@
                                         <div
                                             class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
                                             <div class="row w-100">
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Lisa
                                                     Hatchensen</a>
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">The
                                                     results for bloodwork</a>
                                             </div>
@@ -471,10 +471,10 @@
                                         <div
                                             class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
                                             <div class="row w-100">
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Anothony
                                                     Bezyeth</a>
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Questions
                                                     regarding accesskey</a>
                                             </div>
@@ -497,10 +497,10 @@
                                         <div
                                             class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
                                             <div class="row w-100">
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Bloodworks
                                                     Inc.</a>
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Your
                                                     results are here</a>
                                             </div>
@@ -523,10 +523,10 @@
                                         <div
                                             class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
                                             <div class="row w-100">
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Oliver
                                                     Kopyuv</a>
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Transformer
                                                     Combustion Defuser is ready</a>
                                             </div>
@@ -549,10 +549,10 @@
                                         <div
                                             class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
                                             <div class="row w-100">
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Dr.
                                                     John Cook PhD</a>
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">PWS
                                                     facts for patient #3245</a>
                                             </div>
@@ -575,10 +575,10 @@
                                         <div
                                             class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
                                             <div class="row w-100">
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Sarah
                                                     McBrook</a>
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Are
                                                     you coming to the after party?</a>
                                             </div>
@@ -601,10 +601,10 @@
                                         <div
                                             class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
                                             <div class="row w-100">
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Lisa
                                                     Hatchensen</a>
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">The
                                                     results for bloodwork</a>
                                             </div>
@@ -627,10 +627,10 @@
                                         <div
                                             class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
                                             <div class="row w-100">
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Anothony
                                                     Bezyeth</a>
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Questions
                                                     regarding accesskey</a>
                                             </div>
@@ -653,10 +653,10 @@
                                         <div
                                             class="d-flex flex-row flex-wrap flex-1 align-items-stretch align-self-stretch order-2 order-lg-3">
                                             <div class="row w-100">
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex width-sm align-items-center pt-1 pb-0 py-lg-1 col-12 col-lg-auto">Password
                                                     reset</a>
-                                                <a href="/page_inbox_read"
+                                                <a href="{{ route('read') }}"
                                                     class="name d-flex align-items-center pt-0 pb-1 py-lg-1 flex-1 col-12 col-lg-auto">Your
                                                     password was changed</a>
                                             </div>

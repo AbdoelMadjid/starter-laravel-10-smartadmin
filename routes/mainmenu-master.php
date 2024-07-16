@@ -2,9 +2,7 @@
 
 use App\Http\Controllers\AppFiturController;
 use App\Http\Controllers\AppProfileController;
-use App\Http\Controllers\ManajemenPenggunaController;
 use App\Http\Controllers\MasterController;
-use App\Http\Controllers\OpsiLoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
