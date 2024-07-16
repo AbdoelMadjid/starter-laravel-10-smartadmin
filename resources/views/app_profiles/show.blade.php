@@ -55,35 +55,39 @@
             </x-slot>
             <x-col size1=6 size2=6>
                 <x-slot name="content1">
-                    <table class="table table-bordered">
+                    <table class="table table-hover table-clean">
                         <tr>
                             <th>Nama</th>
+                            <td>:</td>
                             <td>{{ $appProfile->app_nama }}</td>
                         </tr>
                         <tr>
                             <th>Deskripsi</th>
+                            <td>:</td>
                             <td>{{ $appProfile->app_deskripsi }}</td>
                         </tr>
                         <tr>
                             <th>Tahun</th>
+                            <td>:</td>
                             <td>{{ $appProfile->app_tahun }}</td>
                         </tr>
                         <tr>
                             <th>Pengembang</th>
+                            <td>:</td>
                             <td>{{ $appProfile->app_pengembang }}</td>
                         </tr>
                     </table>
                 </x-slot>
-                <table class="table table-bordered">
+                <table class="table table-clean">
                     <tr>
-                        <th>Icon</th>
-                        <td><img src="{{ asset('admin/img/' . $appProfile->app_icon) }}" alt="Icon" width="50">
-                        </td>
+                        <th style="align-content: center">Icon</th>
+                        <td style="align-content: center">:</td>
+                        <td><img src="{{ asset('admin/img/' . $appProfile->app_icon) }}" alt="Icon" width="50"></td>
                     </tr>
                     <tr>
-                        <th>Logo</th>
-                        <td><img src="{{ asset('admin/img/' . $appProfile->app_logo) }}" alt="Logo" width="50">
-                        </td>
+                        <th style="align-content: center">Logo</th>
+                        <td style="align-content: center">:</td>
+                        <td><img src="{{ asset('admin/img/' . $appProfile->app_logo) }}" alt="Logo" width="50"></td>
                     </tr>
                 </table>
                 <x-slot name="Content2">
