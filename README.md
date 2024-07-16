@@ -24,7 +24,7 @@
 
 ## Installer Laravel v10.42.0 (PHP v8.2.3)
 ```console
-git clone https://github.com/AbdoelMadjid/template-lcks.git
+git clone https://github.com/AbdoelMadjid/starter-laravel-10-smartadmin.git
 ```
 ```console
 composer install
