@@ -30,6 +30,7 @@
     <li><a href="#application-development-plan">Application Development Plan</a></li>
     <li><a href="#installation">Installation</a></li>
     <li><a href="#roadmap-project">Roadmap Project</a></li>
+    <li><a href="#example">Example</a></li>
     <li><a href="#license">License</a></li>
   </ol>
 </details>
@@ -211,6 +212,17 @@ Several menu groups are created so that they can be displayed or not.
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Example
+<table>
+    <tr>
+        <td width='100'>
+            ![2024-07-17_102541](https://github.com/user-attachments/assets/496c4633-fff1-486b-bba3-e8bbe789ebdf)
+        </td>
+        <td>
+        </td>
+    </tr>
+</table>
 
 ## License
 
