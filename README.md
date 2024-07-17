@@ -101,7 +101,7 @@ Role : <br>
 - Guru Mapel : adelina@gmail.com/password <br>
 - Siswa : ikbara@gmail.com/password <br>
 
-### Akses User
+### User Access
 The access used is to sort roles, by filtering the submenu section with the following script:
 
 ```console
@@ -178,6 +178,26 @@ Several features are set to be displayed or not
 feature files are saved in View -> inc -> fitur
 
 -   Mainmenu Show   
+Several menu groups are created so that they can be displayed or not.
+
+<i>Helper Fitures.php</i>
+```console
+    public static function isMainMenuTemplateActive()
+    {
+        $fitur = AppFitur::where('nama_fitur', '_mainmenu_template')->first();
+        return $fitur && $fitur->aktif === 'Y';
+    }
+```
+<i>Implementation</i>
+```console
+   @if (App\Helpers\Fitures::isMainMenuTemplateActive())
+        @include('inc.mainmenu._menu_depelover')
+        @include('inc.mainmenu._menu_intel_app')
+        @include('inc.mainmenu._menu_tools_component_app')
+        @include('inc.mainmenu._menu_plugin_addon_app')
+        @include('inc.mainmenu._menu_layouts_app')
+    @endif
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
