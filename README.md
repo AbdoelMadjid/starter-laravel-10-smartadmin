@@ -27,6 +27,7 @@
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#flat-form">Flat Form</a></li>
+    <li><a href="#application-development-plan">Application Development Plan</a></li>
     <li><a href="#installation">Installation</a></li>
     <li><a href="#roadmap-project">Roadmap Project</a></li>
     <li><a href="#license">License</a></li>
@@ -50,6 +51,16 @@ The Student Competency Achievement application was created to simplify the proce
 - Template SmartAdmin 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Application Development Plan
+The following is the development plan, the points of which will continue to be updated.
+- Role (more than 2 users)
+- User access is limited by active and inactive
+- On and off options of some features
+- Menu options to be displayed or not
+- ...
+
+
 
 <!-- INSTALLATION -->
 ## Installation
