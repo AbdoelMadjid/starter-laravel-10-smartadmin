@@ -40,7 +40,7 @@
 ## About The Project
 
 This application is an application for student competency achievements which is used as a report card for independent curriculum students. 
-This application uses the [smartadmin](https://wrapbootstrap.com/user/MyOrange) template.
+This application uses the <a href="https://wrapbootstrap.com/user/MyOrange" target="_blank"> smartadmin </a> template.
 The Student Competency Achievement application was created to simplify the process of assessing teaching and learning activities at SMKN 1 Kadipaten.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -217,6 +217,7 @@ Several menu groups are created so that they can be displayed or not.
 <table>
     <tr>
         <td width='100'>
+            <img src="https://github.com/user-attachments/assets/496c4633-fff1-486b-bba3-e8bbe789ebdf" width="100"/>
             ![2024-07-17_102541](https://github.com/user-attachments/assets/496c4633-fff1-486b-bba3-e8bbe789ebdf)
         </td>
         <td>
