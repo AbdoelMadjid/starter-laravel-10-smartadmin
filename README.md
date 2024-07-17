@@ -25,12 +25,7 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
+    <li><a href="#about-the-project">About The Project</a></li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
@@ -53,8 +48,46 @@
 
 Aplikasi ini adalah aplikasi capaian kompetensi siswa (LCKS) yang di pergunakan sebagai rapor siswa kurikulum merdeka. 
 Aplikasi ini menggunakan template [smartadmin](https://wrapbootstrap.com/user/MyOrange).
+Aplikasi Capaian Kompetensi Siswa (LCKS) di buat untuk mempermudah proses penilaian KBM di SMKN 1 Kadipaten. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- INSTALLATION -->
+## Installation
+
+```console
+git clone https://github.com/AbdoelMadjid/starter-laravel-10-smartadmin.git
+```
+
+```console
+composer install
+```
+
+```console
+composer dump-autoload
+```
+
+```console
+cp .env.example .env
+```
+
+```console
+php artisan key:generate
+```
+
+```html
+DB_CONNECTION=mysql DB_HOST=127.0.0.1 DB_PORT=3306 DB_DATABASE=??
+DB_USERNAME=root DB_PASSWORD=
+```
+
+```console
+php artisan migrate
+```
+
+```console
+php artisan db:seed
+```
+
 
 
 ## Fitur yang di tambahkan
