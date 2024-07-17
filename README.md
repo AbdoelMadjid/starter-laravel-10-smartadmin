@@ -74,6 +74,10 @@ git clone https://github.com/AbdoelMadjid/starter-laravel-10-smartadmin.git
 ```
 
 ```console
+cd starter-laravel-10-smartadmin
+```
+
+```console
 composer install
 ```
 
