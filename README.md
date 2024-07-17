@@ -234,7 +234,7 @@ Several menu groups are created so that they can be displayed or not.
             Halaman Login <br>
             <img src="https://github.com/user-attachments/assets/d924923a-cb37-469b-ad24-05ccf83c9e68" />
         </td>        
-        <td>
+        <td valign="top">
             Halaman Awal <br>
             <img src="https://github.com/user-attachments/assets/0d218750-807e-4846-a32a-1ff28f9884a5" />
         </td>
