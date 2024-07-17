@@ -4,6 +4,7 @@ use App\Http\Controllers\AppFiturController;
 use App\Http\Controllers\AppProfileController;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\TahunAjaranController;
+use App\Http\Controllers\ProfilSekolahController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -61,6 +62,10 @@ Route::middleware('admin')->prefix('admin')->group(function () {
 });
 //AKADEMIK
 Route::middleware('admin')->prefix('akademik')->group(function () {
+
+    Route::get('profil-sekolah', [ProfilSekolahController::class, 'index'])->name('profil-sekolah.index');
+    Route::put('profil-sekolah/{npsn}', [ProfilSekolahController::class, 'update'])->name('profil-sekolah.update');
+
     Route::get('/indentitas_sekolah', [MasterController::class, 'akademik_indentitas_sekolah'])->name('indentitas_sekolah');
     Route::get('/tenaga_pendidik', [MasterController::class, 'akademik_tenaga_pendidik'])->name('tenaga_pendidik');
     Route::get('/paket_keahlian', [MasterController::class, 'akademik_paket_keahlian'])->name('paket_keahlian');

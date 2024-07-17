@@ -28,14 +28,15 @@
                             Merdeka</a> <br>Khusus
                         <a href="https://www.google.com/maps/place/SMKN+1+Kadipaten/@-6.7848705,108.1685372,17z/data=!3m1!4b1!4m6!3m5!1s0x2e6f290a172857b7:0x9b75b5e0e32203c8!8m2!3d-6.7848758!4d108.1711121!16s%2Fg%2F11jf9s3_9t?entry=ttu"
                             class="text-white opacity-70"> SMKN 1 Kadipaten </a> Majalengka.
-                        <br>
-                        @if ($tahunAjaranAktif)
-                            <p>Tahun Ajaran Aktif: {{ $tahunAjaranAktif->tahunajaran }}</p>
-                            <p>Semester: {{ $tahunAjaranAktif->semester }}</p>
-                        @else
-                            <p>Tidak ada tahun ajaran aktif saat ini.</p>
-                        @endif
                     </p>
+                    @if ($tahunAjaranAktif)
+                        <p class="text-white opacity-50">
+                            Tahun Ajaran : {{ $tahunAjaranAktif->tahunajaran }} <br>
+                            Semester : {{ $tahunAjaranAktif->semester }}
+                        </p>
+                    @else
+                        <p>Tidak ada tahun ajaran aktif saat ini.</p>
+                    @endif
                     <div class="d-sm-flex flex-column align-items-center justify-content-center d-md-block">
                         <div class="px-0 py-1 mt-5 text-white fs-nano opacity-50">
                             Find us on social media

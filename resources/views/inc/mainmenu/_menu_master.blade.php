@@ -51,10 +51,10 @@
         <span class="nav-link-text" data-i18n="nav.akademik">Akademik</span>
     </a>
     <ul>
-        <li class="{{ Request::is('akademik/indentitas_sekolah*') ? 'active' : '' }}">
-            <a href="{{ route('indentitas_sekolah') }}" title="Identitas Sekolah"
-                data-filter-tags="akademik identitas sekolah">
-                <span class="nav-link-text" data-i18n="nav.akademik_indentitas_sekolah">Identitas Sekolah</span>
+        <li class="{{ Request::is('akademik/profil-sekolah*') ? 'active' : '' }}">
+            <a href="{{ route('profil-sekolah.index') }}" title="Profil Sekolah"
+                data-filter-tags="akademik profil sekolah">
+                <span class="nav-link-text" data-i18n="nav.akademik_profil_sekolah">Profil Sekolah</span>
             </a>
         </li>
         <li class="{{ Request::is('akademik/tenaga_pendidik*') ? 'active' : '' }}">

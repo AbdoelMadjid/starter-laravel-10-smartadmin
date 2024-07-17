@@ -45,7 +45,7 @@
                     <div class="card-header pr-3 d-flex align-items-center flex-wrap">
                         <!-- we wrap header title inside a span tag with utility padding -->
                         <div class="card-title mb-0 fs-xl fw-700"> <i class="fal fa-calendar-alt color-primary-700"></i>
-                            Tahun Ajaran
+                            Tahun Ajaran {{ $tahunAjaranAktif->tahunajaran }} Semester {{ $tahunAjaranAktif->semester }}
                         </div>
                         <x-button color="primary" size="xs" pills :label="__('Tambah')" class="ml-auto" data-toggle="modal"
                             data-target="#createModal" />

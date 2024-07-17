@@ -36,8 +36,106 @@
                 </div>
             @endcomponent
         </div>
+        <div class="card mb-g p-2">
+            <div class="card-body">
+                @if ($tahunAjaranAktif)
+                    <h2 class="fw-700 m-0" name="pluginreference">
+                        Tahun Ajaran {{ $tahunAjaranAktif->tahunajaran }}
+                        <small>
+                            Semester <strong>{{ $tahunAjaranAktif->semester }}</strong>
+                        </small>
+                    </h2>
+                @else
+                    <p>Tidak ada tahun ajaran aktif saat ini.</p>
+                @endif
 
+                <div class="row">
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="p-3 bg-primary-300 rounded overflow-hidden position-relative text-white mb-g">
+                            <div class="">
+                                <h3 class="display-4 d-block l-h-n m-0 fw-500">
+                                    21.5k
+                                    <small class="m-0 l-h-n">users signed up</small>
+                                </h3>
+                            </div>
+                            <i class="fal fa-user position-absolute pos-right pos-bottom opacity-15 mb-n1 mr-n1"
+                                style="font-size:6rem"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="p-3 bg-warning-400 rounded overflow-hidden position-relative text-white mb-g">
+                            <div class="">
+                                <h3 class="display-4 d-block l-h-n m-0 fw-500">
+                                    $10,203
+                                    <small class="m-0 l-h-n">Visual Index Figure</small>
+                                </h3>
+                            </div>
+                            <i class="fal fa-gem position-absolute pos-right pos-bottom opacity-15  mb-n1 mr-n4"
+                                style="font-size: 6rem;"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="p-3 bg-success-200 rounded overflow-hidden position-relative text-white mb-g">
+                            <div class="">
+                                <h3 class="display-4 d-block l-h-n m-0 fw-500">
+                                    - 103.72
+                                    <small class="m-0 l-h-n">Offset Balance Ratio</small>
+                                </h3>
+                            </div>
+                            <i class="fal fa-lightbulb position-absolute pos-right pos-bottom opacity-15 mb-n5 mr-n6"
+                                style="font-size: 8rem;"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="p-3 bg-info-200 rounded overflow-hidden position-relative text-white mb-g">
+                            <div class="">
+                                <h3 class="display-4 d-block l-h-n m-0 fw-500">
+                                    +40%
+                                    <small class="m-0 l-h-n">Product level increase</small>
+                                </h3>
+                            </div>
+                            <i class="fal fa-globe position-absolute pos-right pos-bottom opacity-15 mb-n1 mr-n4"
+                                style="font-size: 6rem;"></i>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <p class="panel-tag fw-500">
+                    To see all list of Core plugins for a barebone version please visit the <a href="/plugin_faq"
+                        class="fw-500"> Plugin FAQ</a> page.
+                </p>
+                <div class="mb-g">
+                    <h4><i class="fal fa-exclamation text-danger"></i> Select a plugin from the list below for full
+                        documentation</h4>
+                    <p class="text-faded fs-nano">Disclaimer: Third party plugins are left unchanged, all third party
+                        plugins have limited support (to design elements only), and you must refer to the documentation via
+                        plugin's official website</p>
+                    <select class="js-plugins custom-select form-control" style="width:15rem;">
+                        <option value="">-- Select Plugin --</option>
+                    </select>
+                </div>
+                <div id="js-display" class="d-none">
+                    <h5 class="fw-700">
+                        <span class="js-plugin-name"></span>
+                    </h5>
+                    <p>
+                        <span class="js-plugin-description"></span>
+                    </p>
+                    <p>
+                        <strong>Documentation:</strong>
+                        <br>
+                        <a href="" class="js-plugin-url" target="_blank"></a>
+                    </p>
+                    <p>
+                        <strong>License:</strong>
+                        <br>
+                        <span class="js-plugin-license"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
         <div class="fs-lg fw-300 p-5 bg-white border-faded rounded mb-g shadow-5">
+
             <x-col :size1="4" :size2="8">
                 <x-slot name='content1'>
                     <div id="panel-5" class="panel">
@@ -45,12 +143,18 @@
                             <h2>Subscriptions Hourly</h2>
                         </div>
                         <div class="panel-container show">
-                            @if ($tahunAjaranAktif)
-                                <p>Tahun Ajaran Aktif: {{ $tahunAjaranAktif->tahunajaran }}</p>
-                                <p>Semester: {{ $tahunAjaranAktif->semester }}</p>
-                            @else
-                                <p>Tidak ada tahun ajaran aktif saat ini.</p>
-                            @endif
+                            <div class="panel-content p-0">
+                                <div class="d-flex flex-column">
+                                    <div class="d-flex flex-row px-3 pt-3 pb-2">
+                                        @if ($tahunAjaranAktif)
+                                            <p>Tahun Ajaran Aktif: {{ $tahunAjaranAktif->tahunajaran }}</p>
+                                            <p>Semester: {{ $tahunAjaranAktif->semester }}</p>
+                                        @else
+                                            <p>Tidak ada tahun ajaran aktif saat ini.</p>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </x-slot>
