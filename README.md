@@ -41,6 +41,7 @@ Dengan role yaitu Admin, Wali Kelas, Guru Mapel, Siswa <br>
 </td>
 </tr>
 </table>
+
 ## Installer Laravel v10.42.0 (PHP v8.2.3)
 
 ```console
