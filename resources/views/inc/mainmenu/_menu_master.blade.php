@@ -98,8 +98,9 @@
         <span class="nav-link-text" data-i18n="nav.kurikulum">Kurikulum</span>
     </a>
     <ul>
-        <li class="{{ Request::is('kurikulum/tahunajaran*') ? 'active' : '' }}">
-            <a href="{{ route('tahunajaran') }}" title="Tahun Ajaran" data-filter-tags="kurikulum tahunajaran">
+        <li class="{{ Request::is('kurikulum/tahun_ajaran*') ? 'active' : '' }}">
+            <a href="{{ route('tahun_ajaran.index') }}" title="Tahun Ajaran"
+                data-filter-tags="kurikulum tahunajaran">
                 <span class="nav-link-text" data-i18n="nav.kurikulum_tahunajaran">Tahun Ajaran</span>
             </a>
         </li>

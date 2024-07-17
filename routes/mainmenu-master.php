@@ -3,6 +3,7 @@
 use App\Http\Controllers\AppFiturController;
 use App\Http\Controllers\AppProfileController;
 use App\Http\Controllers\MasterController;
+use App\Http\Controllers\TahunAjaranController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -72,6 +73,9 @@ Route::middleware('admin')->prefix('akademik')->group(function () {
 
 //kurikulum
 Route::middleware('admin')->prefix('kurikulum')->group(function () {
+
+    Route::resource('tahun_ajaran', TahunAjaranController::class);
+
     Route::get('/versi', [MasterController::class, 'kurikulum_versi'])->name('versi');
     Route::get('/tahunajaran', [MasterController::class, 'kurikulum_tahunajaran'])->name('tahunajaran');
     Route::get('/pengumuman', [MasterController::class, 'kurikulum_pengumuman'])->name('pengumuman');

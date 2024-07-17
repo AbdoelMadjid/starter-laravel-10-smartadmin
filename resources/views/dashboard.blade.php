@@ -45,10 +45,12 @@
                             <h2>Subscriptions Hourly</h2>
                         </div>
                         <div class="panel-container show">
-                            <div class="panel-content">
-                                <h5>Subscription Views / hour</h5>
-                                <div id="flotBar1" style="width: 100%; height: 160px;"></div>
-                            </div>
+                            @if ($tahunAjaranAktif)
+                                <p>Tahun Ajaran Aktif: {{ $tahunAjaranAktif->tahunajaran }}</p>
+                                <p>Semester: {{ $tahunAjaranAktif->semester }}</p>
+                            @else
+                                <p>Tidak ada tahun ajaran aktif saat ini.</p>
+                            @endif
                         </div>
                     </div>
                 </x-slot>
