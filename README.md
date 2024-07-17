@@ -157,7 +157,7 @@ Active and Deactivated Login Options, for roles if the position is inactive you 
 Route::get('/dashboard', [TemplateController::class, 'index'])->middleware(['auth', 'check.role.status']);
 ```
 
-### Fitur Show
+### Show feature
 -   Content Setting and Other Features
 
 Several features are set to be displayed or not
