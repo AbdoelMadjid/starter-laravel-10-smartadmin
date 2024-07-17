@@ -142,6 +142,8 @@ Opsi Login dengan Aktif dan Non Aktifkan, untuk role jika posisi tidak aktif tid
 Route::get('/dashboard', [TemplateController::class, 'index'])->middleware(['auth', 'check.role.status']);
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
