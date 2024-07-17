@@ -254,6 +254,8 @@ Several menu groups are created so that they can be displayed or not.
     </tr>
 </table>
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## License
 
