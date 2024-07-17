@@ -218,7 +218,7 @@ Several menu groups are created so that they can be displayed or not.
     <tr>
         <td width='70%'>
             Halaman Awal <br>
-            <img src="https://github.com/user-attachments/assets/496c4633-fff1-486b-bba3-e8bbe789ebdf" width="70%" />
+            <img src="https://github.com/user-attachments/assets/496c4633-fff1-486b-bba3-e8bbe789ebdf" width="80%" />
         </td>
         <td>
             Halaman Login <br>
