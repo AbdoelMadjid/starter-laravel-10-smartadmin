@@ -37,9 +37,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Aplikasi ini adalah aplikasi capaian kompetensi siswa (LCKS) yang di pergunakan sebagai rapor siswa kurikulum merdeka. 
-Aplikasi ini menggunakan template [smartadmin](https://wrapbootstrap.com/user/MyOrange).
-Aplikasi Capaian Kompetensi Siswa (LCKS) di buat untuk mempermudah proses penilaian KBM di SMKN 1 Kadipaten. 
+This application is an application for student competency achievements which is used as a report card for independent curriculum students. 
+This application uses the [smartadmin](https://wrapbootstrap.com/user/MyOrange) template.
+The Student Competency Achievement application was created to simplify the process of assessing teaching and learning activities at SMKN 1 Kadipaten.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -102,7 +102,7 @@ Role : <br>
 - Siswa : ikbara@gmail.com/password <br>
 
 ### Akses User
-Akses yang di gunakan memilah role, dengan memfilter bagian submenu dengan script berikut :
+The access used is to sort roles, by filtering the submenu section with the following script:
 
 ```console
 @if (auth()->user()->role == 'Admin')
@@ -119,7 +119,7 @@ Akses yang di gunakan memilah role, dengan memfilter bagian submenu dengan scrip
 @endif
 ```
 
-Opsi Login dengan Aktif dan Non Aktifkan, untuk role jika posisi tidak aktif tidak bisa login
+Active and Deactivated Login Options, for roles if the position is inactive you cannot log in
 
 -   Middleware CheckRoleStatus
 
@@ -140,16 +140,16 @@ Opsi Login dengan Aktif dan Non Aktifkan, untuk role jika posisi tidak aktif tid
     }
 ```
 
--   Implementasi
+-   Implementation
 
 ```console
 Route::get('/dashboard', [TemplateController::class, 'index'])->middleware(['auth', 'check.role.status']);
 ```
 
 ### Fitur Show
--   Content Setting and Other Fiturs
+-   Content Setting and Other Features
 
-Beberapa Fitur yang di setting untuk di tampilkan atau tidak
+Several features are set to be displayed or not
 
 <i>Middleware Fitur</i>
 ```console
@@ -169,13 +169,13 @@ Beberapa Fitur yang di setting untuk di tampilkan atau tidak
     }
 ```
 
-<i>implementasi</i>
+<i>Implementation</i>
 ```console
     @foreach (App\Helpers\Fitures::getFiturAktif() as $fiturView)
         @include($fiturView)
     @endforeach
 ```
-file fitur di simpan di View->inc->fitur
+feature files are saved in View -> inc -> fitur
 
 -   Mainmenu Show   
 
