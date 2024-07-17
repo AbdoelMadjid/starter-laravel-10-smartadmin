@@ -26,13 +26,8 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
+    <li><a href="#flat-form">Flat Form</a></li>
+    <li><a href="#installation">Installation</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -51,6 +46,13 @@ Aplikasi ini menggunakan template [smartadmin](https://wrapbootstrap.com/user/My
 Aplikasi Capaian Kompetensi Siswa (LCKS) di buat untuk mempermudah proses penilaian KBM di SMKN 1 Kadipaten. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FLAT FORM -->
+## Flat Form
+- Laravel v10.42.0
+- PHP v8.2.3
+- Template SmartAdmin 
+
 
 <!-- INSTALLATION -->
 ## Installation
