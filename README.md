@@ -222,7 +222,7 @@ Several menu groups are created so that they can be displayed or not.
         </td>
         <td>
             Halaman Login <br>
-            <img src="https://github.com/user-attachments/assets/08c1fb4f-26e3-4b06-aefc-08664d10fc52" width='225'/>
+            <img src="https://github.com/user-attachments/assets/08c1fb4f-26e3-4b06-aefc-08664d10fc52" width='235'/>
         </td>
     </tr>
 </table>
