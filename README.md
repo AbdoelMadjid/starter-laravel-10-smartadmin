@@ -216,7 +216,19 @@ Several menu groups are created so that they can be displayed or not.
 ## Example
 <table>
     <tr>
-        <td width='50%'>
+        <td width='70%'>
+            Halaman Awal <br>
+            <img src="https://github.com/user-attachments/assets/496c4633-fff1-486b-bba3-e8bbe789ebdf" />
+        </td>
+        <td>
+            Halaman Login <br>
+            <img src="https://github.com/user-attachments/assets/08c1fb4f-26e3-4b06-aefc-08664d10fc52" />
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>
             Halaman Awal <br>
             <img src="https://github.com/user-attachments/assets/496c4633-fff1-486b-bba3-e8bbe789ebdf" />
         </td>
@@ -226,7 +238,6 @@ Several menu groups are created so that they can be displayed or not.
         </td>
     </tr>
 </table>
-
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
