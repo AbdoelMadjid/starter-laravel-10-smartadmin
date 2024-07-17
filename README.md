@@ -146,6 +146,36 @@ Opsi Login dengan Aktif dan Non Aktifkan, untuk role jika posisi tidak aktif tid
 Route::get('/dashboard', [TemplateController::class, 'index'])->middleware(['auth', 'check.role.status']);
 ```
 
+### Fitur Show
+-   Content Setting and Other Fiturs
+Beberapa Fitur yang di setting untuk di tampilkan atau tidak
+<i>Middleware Fitur</i>
+```console
+    public static function getFiturAktif()
+    {
+        $fitur = AppFitur::where('aktif', 'Y')->get();
+        $hasil = [];
+
+        foreach ($fitur as $f) {
+            // Mengambil view berdasarkan nama_fitur
+            if (view()->exists("inc.fitur.{$f->nama_fitur}")) {
+                $hasil[] = "inc.fitur.{$f->nama_fitur}";
+            }
+        }
+
+        return $hasil;
+    }
+```
+<i>implementasi</i>
+```console
+    @foreach (App\Helpers\Fitures::getFiturAktif() as $fiturView)
+        @include($fiturView)
+    @endforeach
+```
+file fitur di simpan di View->inc->fitur
+
+-   Mainmenu Show   
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## License
