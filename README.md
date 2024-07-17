@@ -19,40 +19,63 @@
 [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://x.com/AbdoelMadjid)
 [![Instagram](https://img.shields.io/badge/Instagram-%405DE6.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://x.com/AbdoelMadjid)
 
-
 </div>
 
+## Fitur yang di tambahkan
+
+<table>
+<tr>
+<th>No.</th>
+<th>Fitur</th>
+<th>Keterangan</th>
+</tr>
+<tr>
+<td>1.</td>
+<td>Multi User</td>
+<td>
+Dengan role yaitu Admin, Wali Kelas, Guru Mapel, Siswa <br>
+- Admin : abdulmadjid@gmail.com/password <br>
+- Wali Kelas : tabiin@gmail.com/password <br>
+- Guru Mapel : adelina@gmail.com/password <br>
+- Siswa : ikbara@gmail.com/password <br>
+</td>
+</tr>
+</table>
 ## Installer Laravel v10.42.0 (PHP v8.2.3)
+
 ```console
 git clone https://github.com/AbdoelMadjid/starter-laravel-10-smartadmin.git
 ```
+
 ```console
 composer install
 ```
+
 ```console
 composer dump-autoload
 ```
+
 ```console
 cp .env.example .env
 ```
+
 ```console
 php artisan key:generate
 ```
+
 ```html
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=??
-DB_USERNAME=root
-DB_PASSWORD=
+DB_CONNECTION=mysql DB_HOST=127.0.0.1 DB_PORT=3306 DB_DATABASE=??
+DB_USERNAME=root DB_PASSWORD=
 ```
+
 ```console
 php artisan migrate
 ```
+
 ```console
 php artisan db:seed
 ```
-  
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
