@@ -74,6 +74,10 @@ git clone https://github.com/AbdoelMadjid/starter-laravel-10-smartadmin.git
 ```
 
 ```console
+cd starter-laravel-10-smartadmin
+```
+
+```console
 composer install
 ```
 
@@ -166,7 +170,7 @@ Route::get('/dashboard', [TemplateController::class, 'index'])->middleware(['aut
 
 Several features are set to be displayed or not
 
-<i>Middleware Fitur</i>
+<i>Helper Fitures.php</i>
 ```console
     public static function getFiturAktif()
     {
