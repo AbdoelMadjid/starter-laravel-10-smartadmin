@@ -51,6 +51,10 @@ The Student Competency Achievement application was created to simplify the proce
 - PHP v8.2.3
 - Template SmartAdmin 
 
+- <a href="https://sweetalert2.github.io/#usage" target="_blank"> Sweetalert2 </a>
+- <a href="https://github.com/CodeSeven/toastr" target="_blank"> Toastr </a>
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Application Development Plan
