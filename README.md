@@ -230,7 +230,7 @@ Several menu groups are created so that they can be displayed or not.
 </table>
 <table>
     <tr>
-        <td>
+        <td width="250">
             Sidebar <br>
             <img src="https://github.com/user-attachments/assets/d924923a-cb37-469b-ad24-05ccf83c9e68" />
         </td>        
