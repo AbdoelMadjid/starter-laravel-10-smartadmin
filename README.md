@@ -216,11 +216,11 @@ Several menu groups are created so that they can be displayed or not.
 ## Example
 <table>
     <tr>
-        <td width='100'>
-            <img src="https://github.com/user-attachments/assets/496c4633-fff1-486b-bba3-e8bbe789ebdf" width="100"/>
-            ![2024-07-17_102541](https://github.com/user-attachments/assets/496c4633-fff1-486b-bba3-e8bbe789ebdf)
+        <td width='50%'>
+            <img src="https://github.com/user-attachments/assets/496c4633-fff1-486b-bba3-e8bbe789ebdf" />
         </td>
         <td>
+            <img src="https://github.com/user-attachments/assets/08c1fb4f-26e3-4b06-aefc-08664d10fc52" />
         </td>
     </tr>
 </table>
