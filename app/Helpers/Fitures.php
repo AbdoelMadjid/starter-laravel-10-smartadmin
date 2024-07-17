@@ -20,4 +20,10 @@ class Fitures
 
         return $hasil;
     }
+
+    public static function isMainMenuTemplateActive()
+    {
+        $fitur = AppFitur::where('nama_fitur', '_mainmenu_template')->first();
+        return $fitur && $fitur->aktif === 'Y';
+    }
 }

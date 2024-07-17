@@ -30,8 +30,8 @@ Route::get('/login', [AuthController::class, 'index'])->name('login')->middlewar
 Route::post('/login', [AuthController::class, 'authenticate']);
 Route::post('/logout', [AuthController::class, 'logout']);
 
-Route::get('/dashboard', [TemplateController::class, 'index'])->middleware('auth');
-Route::get('/about', [TemplateController::class, 'about'])->middleware('auth');
+Route::get('/dashboard', [TemplateController::class, 'index'])->middleware(['auth', 'check.role.status']);
+Route::get('/about', [TemplateController::class, 'about'])->middleware(['auth', 'check.role.status']);
 
 require __DIR__ . '/mainmenu-template.php';
 require __DIR__ . '/mainmenu-master.php';

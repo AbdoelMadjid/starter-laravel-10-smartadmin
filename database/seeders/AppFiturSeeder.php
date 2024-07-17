@@ -38,6 +38,12 @@ class AppFiturSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'nama_fitur' => '_mainmenu_template',
+                'aktif' => 'Y',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ];
 
         // Insert data into the 'fitur' table

@@ -69,4 +69,9 @@ class Kernel extends HttpKernel
         'gmp' => \App\Http\Middleware\IsGuruMapel::class,
         'siswa' => \App\Http\Middleware\IsSIswa::class,
     ];
+
+    protected $routeMiddleware = [
+        // middleware lainnya
+        'check.role.status' => \App\Http\Middleware\CheckRoleStatus::class,
+    ];
 }
