@@ -113,49 +113,49 @@ Role : <br>
 - Siswa : ikbara@gmail.com/password <br>
 
 ### User Access
-The access used is to sort roles, by filtering the submenu section with the following script:
-
-```console
-@if (auth()->user()->role == 'Admin')
-    @include('inc.mainmenu._menu_master')
-@endif
-@if (auth()->user()->role == 'Wali Kelas')
-    @include('inc.mainmenu._menu_walikelas')
-@endif
-@if (auth()->user()->role == 'Guru Mapel')
-    @include('inc.mainmenu._menu_gurumapel')
-@endif
-@if (auth()->user()->role == 'Siswa')
-    @include('inc.mainmenu._menu_siswa')
-@endif
-```
-
-Active and Deactivated Login Options, for roles if the position is inactive you cannot log in
-
--   Middleware CheckRoleStatus
-
-```console
-    public function handle(Request $request, Closure $next)
-    {
-        if (Auth::check()) {
-            $user = Auth::user();
-            $roleStatus = OpsiLogin::where('peran', $user->role)->first();
-
-            if ($roleStatus && $roleStatus->aktif === 'N') {
-                Auth::logout();
-                return back()->with('error', 'Peran Anda sedang dinonaktifkan. Silakan hubungi administrator.');
+    The access used is to sort roles, by filtering the submenu section with the following script:
+    
+    ```console
+    @if (auth()->user()->role == 'Admin')
+        @include('inc.mainmenu._menu_master')
+    @endif
+    @if (auth()->user()->role == 'Wali Kelas')
+        @include('inc.mainmenu._menu_walikelas')
+    @endif
+    @if (auth()->user()->role == 'Guru Mapel')
+        @include('inc.mainmenu._menu_gurumapel')
+    @endif
+    @if (auth()->user()->role == 'Siswa')
+        @include('inc.mainmenu._menu_siswa')
+    @endif
+    ```
+    
+    Active and Deactivated Login Options, for roles if the position is inactive you cannot log in
+    
+    -   Middleware CheckRoleStatus
+    
+    ```console
+        public function handle(Request $request, Closure $next)
+        {
+            if (Auth::check()) {
+                $user = Auth::user();
+                $roleStatus = OpsiLogin::where('peran', $user->role)->first();
+    
+                if ($roleStatus && $roleStatus->aktif === 'N') {
+                    Auth::logout();
+                    return back()->with('error', 'Peran Anda sedang dinonaktifkan. Silakan hubungi administrator.');
+                }
             }
+    
+            return $next($request);
         }
-
-        return $next($request);
-    }
-```
-
--   Implementation
-
-```console
-Route::get('/dashboard', [TemplateController::class, 'index'])->middleware(['auth', 'check.role.status']);
-```
+    ```
+    
+    -   Implementation
+    
+    ```console
+    Route::get('/dashboard', [TemplateController::class, 'index'])->middleware(['auth', 'check.role.status']);
+    ```
 
 ### Show feature
 -   Content Setting and Other Features
