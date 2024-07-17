@@ -47,7 +47,7 @@ The Student Competency Achievement application was created to simplify the proce
 
 <!-- FLAT FORM -->
 ## Flat Form
-- <a href="https://laravel.com" target="_blank">Laravel v10.42.0</a>
+- <a href="https://laravel.com/docs/10.x" target="_blank">Laravel v10.42.0</a>
 - <a href="https://www.php.net/releases/8_2_3.php" target="_blank">PHP v8.2.3</a>
 - Template <a href="https://wrapbootstrap.com/user/MyOrange" target="_blank">SmartAdmin</a> 
 - <a href="https://sweetalert2.github.io/#usage" target="_blank"> Sweetalert2 </a>
