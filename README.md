@@ -41,6 +41,56 @@ Role : <br>
 </td>
 </tr>
 <tr>
+<td valign='top'>2.</td>
+<td valign='top'>Akses User</td>
+<td>
+Akses yang di gunakan memilah role, dengan memfilter bagian submenu dengan script berikut :<br>
+
+```console
+@if (auth()->user()->role == 'Admin')
+    @include('inc.mainmenu._menu_master')
+@endif
+@if (auth()->user()->role == 'Wali Kelas')
+    @include('inc.mainmenu._menu_walikelas')
+@endif
+@if (auth()->user()->role == 'Guru Mapel')
+    @include('inc.mainmenu._menu_gurumapel')
+@endif
+@if (auth()->user()->role == 'Siswa')
+    @include('inc.mainmenu._menu_siswa')
+@endif
+```
+
+Opsi Login dengan Aktif dan Non Aktifkan, untuk role jika posisi tidak aktif tidak bisa login
+
+-   Middleware CheckRoleStatus
+
+```console
+    public function handle(Request $request, Closure $next)
+    {
+        if (Auth::check()) {
+            $user = Auth::user();
+            $roleStatus = OpsiLogin::where('peran', $user->role)->first();
+
+            if ($roleStatus && $roleStatus->aktif === 'N') {
+                Auth::logout();
+                return back()->with('error', 'Peran Anda sedang dinonaktifkan. Silakan hubungi administrator.');
+            }
+        }
+
+        return $next($request);
+    }
+```
+
+-   Implementasi
+
+```console
+Route::get('/dashboard', [TemplateController::class, 'index'])->middleware(['auth', 'check.role.status']);
+```
+
+</td>
+</tr>
+<tr>
 <td>2.</td>
 <td>Akses User</td>
 <td>
@@ -48,17 +98,17 @@ Akses yang di gunakan memilah role, dengan memfilter bagian submenu dengan scrip
 
 ```console
 @if (auth()->user()->role == 'Admin')
-        @include('inc.mainmenu._menu_master')
-    @endif
-    @if (auth()->user()->role == 'Wali Kelas')
-        @include('inc.mainmenu._menu_walikelas')
-    @endif
-    @if (auth()->user()->role == 'Guru Mapel')
-        @include('inc.mainmenu._menu_gurumapel')
-    @endif
-    @if (auth()->user()->role == 'Siswa')
-        @include('inc.mainmenu._menu_siswa')
-    @endif
+    @include('inc.mainmenu._menu_master')
+@endif
+@if (auth()->user()->role == 'Wali Kelas')
+    @include('inc.mainmenu._menu_walikelas')
+@endif
+@if (auth()->user()->role == 'Guru Mapel')
+    @include('inc.mainmenu._menu_gurumapel')
+@endif
+@if (auth()->user()->role == 'Siswa')
+    @include('inc.mainmenu._menu_siswa')
+@endif
 ```
 
 </td>
