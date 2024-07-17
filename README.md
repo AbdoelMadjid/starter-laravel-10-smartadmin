@@ -148,7 +148,9 @@ Route::get('/dashboard', [TemplateController::class, 'index'])->middleware(['aut
 
 ### Fitur Show
 -   Content Setting and Other Fiturs
+
 Beberapa Fitur yang di setting untuk di tampilkan atau tidak
+
 <i>Middleware Fitur</i>
 ```console
     public static function getFiturAktif()
@@ -166,6 +168,7 @@ Beberapa Fitur yang di setting untuk di tampilkan atau tidak
         return $hasil;
     }
 ```
+
 <i>implementasi</i>
 ```console
     @foreach (App\Helpers\Fitures::getFiturAktif() as $fiturView)
