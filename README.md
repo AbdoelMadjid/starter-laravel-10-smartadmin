@@ -236,9 +236,9 @@ Several menu groups are created so that they can be displayed or not.
         </td>        
         <td>
             Features <br>
-            <img src="https://github.com/user-attachments/assets/0d218750-807e-4846-a32a-1ff28f9884a5" />
+            <img src="https://github.com/user-attachments/assets/0d218750-807e-4846-a32a-1ff28f9884a5" /> <br><br>
             CRUD Features <br>
-            <img src="https://github.com/user-attachments/assets/a382728a-af23-40fb-b2e6-dacbd5db1471" width="75%" />
+            <img src="https://github.com/user-attachments/assets/a382728a-af23-40fb-b2e6-dacbd5db1471" width="85%" />
         </td>
     </tr>
 </table>
