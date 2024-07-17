@@ -242,7 +242,14 @@ Several menu groups are created so that they can be displayed or not.
         </td>
     </tr>
 </table>
-
+<table>
+    <tr>
+        <td valign="top">
+            Notification <br>
+            <img src="https://github.com/user-attachments/assets/a382728a-af23-40fb-b2e6-dacbd5db1471"  width="100%" />
+        </td>
+    </tr>
+</table>
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
