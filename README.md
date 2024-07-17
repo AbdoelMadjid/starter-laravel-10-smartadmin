@@ -238,12 +238,13 @@ Several menu groups are created so that they can be displayed or not.
             Features <br>
             <img src="https://github.com/user-attachments/assets/0d218750-807e-4846-a32a-1ff28f9884a5" />
 
-            CRUD Features <br>
-            <img src="https://github.com/user-attachments/assets/a382728a-af23-40fb-b2e6-dacbd5db1471"  width="75%"/>
             
         </td>
     </tr>
 </table>
+
+            CRUD Features <br>
+            <img src="https://github.com/user-attachments/assets/a382728a-af23-40fb-b2e6-dacbd5db1471" width="75%"/>
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
