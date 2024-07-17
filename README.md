@@ -60,7 +60,7 @@ The following is the development plan, the points of which will continue to be u
 - Menu options to be displayed or not
 - ...
 
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- INSTALLATION -->
 ## Installation
