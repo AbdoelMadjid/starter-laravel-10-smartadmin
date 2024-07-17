@@ -26,18 +26,41 @@
 <table>
 <tr>
 <th>No.</th>
-<th>Fitur</th>
+<th>Project</th>
 <th>Keterangan</th>
 </tr>
 <tr>
 <td>1.</td>
 <td>Multi User</td>
 <td>
-Dengan role yaitu Admin, Wali Kelas, Guru Mapel, Siswa <br>
+Role : <br>
 - Admin : abdulmadjid@gmail.com/password <br>
 - Wali Kelas : tabiin@gmail.com/password <br>
 - Guru Mapel : adelina@gmail.com/password <br>
 - Siswa : ikbara@gmail.com/password <br>
+</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>Akses User</td>
+<td>
+Akses yang di gunakan memilah role, dengan memfilter bagian submenu dengan script berikut :<br>
+
+```console
+@if (auth()->user()->role == 'Admin')
+        @include('inc.mainmenu._menu_master')
+    @endif
+    @if (auth()->user()->role == 'Wali Kelas')
+        @include('inc.mainmenu._menu_walikelas')
+    @endif
+    @if (auth()->user()->role == 'Guru Mapel')
+        @include('inc.mainmenu._menu_gurumapel')
+    @endif
+    @if (auth()->user()->role == 'Siswa')
+        @include('inc.mainmenu._menu_siswa')
+    @endif
+```
+
 </td>
 </tr>
 </table>
