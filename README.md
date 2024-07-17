@@ -170,7 +170,7 @@ Route::get('/dashboard', [TemplateController::class, 'index'])->middleware(['aut
 
 Several features are set to be displayed or not
 
-<i>Middleware Fitur</i>
+<i>Helper Fitures.php</i>
 ```console
     public static function getFiturAktif()
     {
