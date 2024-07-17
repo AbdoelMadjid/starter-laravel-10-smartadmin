@@ -217,8 +217,10 @@ Several menu groups are created so that they can be displayed or not.
 <table>
     <tr>
         <td width='70%'>
+            <center>
             Halaman Awal <br>
             <img src="https://github.com/user-attachments/assets/496c4633-fff1-486b-bba3-e8bbe789ebdf" width="80%" />
+                </center>
         </td>
         <td>
             Halaman Login <br>
