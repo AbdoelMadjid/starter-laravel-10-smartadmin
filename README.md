@@ -28,12 +28,8 @@
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#flat-form">Flat Form</a></li>
     <li><a href="#installation">Installation</a></li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#roadmap-project">Roadmap Project</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -53,6 +49,7 @@ Aplikasi Capaian Kompetensi Siswa (LCKS) di buat untuk mempermudah proses penila
 - PHP v8.2.3
 - Template SmartAdmin 
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- INSTALLATION -->
 ## Installation
@@ -90,32 +87,18 @@ php artisan migrate
 php artisan db:seed
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-## Fitur yang di tambahkan
-
-<table>
-<tr>
-<th>No.</th>
-<th>Project</th>
-<th>Keterangan</th>
-</tr>
-<tr>
-<td>1.</td>
-<td>Multi User</td>
-<td>
+## Roadmap Project
+### Multi User
 Role : <br>
 - Admin : abdulmadjid@gmail.com/password <br>
 - Wali Kelas : tabiin@gmail.com/password <br>
 - Guru Mapel : adelina@gmail.com/password <br>
 - Siswa : ikbara@gmail.com/password <br>
-</td>
-</tr>
-<tr>
-<td valign='top'>2.</td>
-<td valign='top'>Akses User</td>
-<td>
-Akses yang di gunakan memilah role, dengan memfilter bagian submenu dengan script berikut :<br>
+
+### Akses User
+Akses yang di gunakan memilah role, dengan memfilter bagian submenu dengan script berikut :
 
 ```console
 @if (auth()->user()->role == 'Admin')
@@ -157,68 +140,6 @@ Opsi Login dengan Aktif dan Non Aktifkan, untuk role jika posisi tidak aktif tid
 
 ```console
 Route::get('/dashboard', [TemplateController::class, 'index'])->middleware(['auth', 'check.role.status']);
-```
-
-</td>
-</tr>
-<tr>
-<td>2.</td>
-<td>Akses User</td>
-<td>
-Akses yang di gunakan memilah role, dengan memfilter bagian submenu dengan script berikut :<br>
-
-```console
-@if (auth()->user()->role == 'Admin')
-    @include('inc.mainmenu._menu_master')
-@endif
-@if (auth()->user()->role == 'Wali Kelas')
-    @include('inc.mainmenu._menu_walikelas')
-@endif
-@if (auth()->user()->role == 'Guru Mapel')
-    @include('inc.mainmenu._menu_gurumapel')
-@endif
-@if (auth()->user()->role == 'Siswa')
-    @include('inc.mainmenu._menu_siswa')
-@endif
-```
-
-</td>
-</tr>
-</table>
-
-## Installer Laravel v10.42.0 (PHP v8.2.3)
-
-```console
-git clone https://github.com/AbdoelMadjid/starter-laravel-10-smartadmin.git
-```
-
-```console
-composer install
-```
-
-```console
-composer dump-autoload
-```
-
-```console
-cp .env.example .env
-```
-
-```console
-php artisan key:generate
-```
-
-```html
-DB_CONNECTION=mysql DB_HOST=127.0.0.1 DB_PORT=3306 DB_DATABASE=??
-DB_USERNAME=root DB_PASSWORD=
-```
-
-```console
-php artisan migrate
-```
-
-```console
-php artisan db:seed
 ```
 
 ## License
