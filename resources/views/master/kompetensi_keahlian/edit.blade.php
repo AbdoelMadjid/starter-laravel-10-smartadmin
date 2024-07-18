@@ -19,12 +19,21 @@
             ])
             @endcomponent
         </div>
-
-        <div class="fs-lg fw-300 p-5 bg-white border-faded rounded mb-g">
-            <h1>Edit Kompetensi Keahlian</h1>
-            <form action="{{ route('kompetensi-keahlian.update', $kompetensiKeahlian->kode_paket) }}" method="POST">
-                @csrf
-                @method('PUT')
+        <form action="{{ route('kompetensi-keahlian.update', $kompetensiKeahlian->kode_paket) }}" method="POST">
+            @csrf
+            @method('PUT')
+            <x-panel.show title="Edit" subtitle="Kompetensi Keahlian">
+                <x-slot name="paneltoolbar">
+                    <x-panel.tool-bar>
+                        <button class="btn btn-toolbar-master" type="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <i class="fal fa-ellipsis-v"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right">
+                            <a class="dropdown-item" href="/akademik/kompetensi-keahlian">Kembali</a>
+                        </div>
+                    </x-panel.tool-bar>
+                </x-slot>
                 <div class="form-group">
                     <label for="kode_paket">Kode Paket</label>
                     <input type="text" class="form-control" id="kode_paket" name="kode_paket"
@@ -60,8 +69,10 @@
                     <input type="text" class="form-control" id="singkatan" name="singkatan"
                         value="{{ $kompetensiKeahlian->singkatan }}" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Update</button>
-            </form>
-        </div>
+                <x-slot name="panelcontentfoot">
+                    <button type="submit" class="btn btn-primary btn-sm ml-auto">Update</button>
+                </x-slot>
+            </x-panel.show>
+        </form>
     </main>
 @endsection

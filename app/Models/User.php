@@ -60,6 +60,6 @@ class User extends Authenticatable
 
     public function biodataPtk()
     {
-        return $this->hasOne(BiodataPtk::class, 'user_id');
+        return $this->hasOne(BiodataPtk::class, 'id_user');
     }
 }

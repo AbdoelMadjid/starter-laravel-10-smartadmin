@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('biodata_ptks', function (Blueprint $table) {
-            $table->char('id_guru', 20)->primary();
+            $table->string('id_guru')->primary();
+            $table->unsignedBigInteger('id_user'); // Menambahkan kolom id_user untuk relasi dengan tabel users
             $table->char('nip', 50)->nullable();
             $table->string('gelardepan', 15)->nullable();
             $table->string('namalengkap', 100);
@@ -36,10 +37,10 @@ return new class extends Migration
             $table->string('alamat_kab', 50);
             $table->char('alamat_kodepos', 7)->nullable();
             $table->enum('aktif', ['Aktif', 'Tidak Aktif', 'Pensiun', 'Pindah', 'Keluar']);
-            $table->unsignedBigInteger('user_id')->nullable(); // Add this line
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
+            // Menambahkan foreign key constraint
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

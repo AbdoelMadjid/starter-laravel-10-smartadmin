@@ -20,103 +20,77 @@
             ])
             @endcomponent
         </div>
-        <div class="row">
-            <div class="col-xl-12">
-                <div id="panel-1" class="panel">
-                    <div class="panel-hdr">
-                        <h2>
-                            Daftar <span class="fw-300"><i>Guru dan Tata Usaha</i></span>
-                        </h2>
-                        <div class="panel-toolbar">
-                            <a href="{{ route('biodata_ptk.create') }}" class="btn btn-primary">Tambah Data</a>
-                        </div>
-                    </div>
-                    <div class="panel-container show">
-                        <div class="panel-content">
-                            <!-- datatable start -->
-                            <table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
-                                <thead>
-                                    <tr>
-                                        <th>ID Guru</th>
-                                        <th>Nama Lengkap</th>
-                                        <th>Jenis Kelamin</th>
-                                        <th>Email</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($biodata_ptks as $biodata_ptk)
-                                        <tr>
-                                            <td>{{ $biodata_ptk->id_guru }}</td>
-                                            <td>{{ $biodata_ptk->namalengkap }}</td>
-                                            <td>{{ $biodata_ptk->jeniskelamin }}</td>
-                                            <td>{{ $biodata_ptk->email }}</td>
-                                            <td>
-                                                <a href="{{ route('biodata_ptk.show', $biodata_ptk->id_guru) }}"
-                                                    class="btn btn-info btn-sm"><i class="fal fa-eye"></i></a>
-                                                <a href="{{ route('biodata_ptk.edit', $biodata_ptk->id_guru) }}"
-                                                    class="btn btn-primary btn-sm"><i
-                                                        class="fal fa-money-check-edit"></i></a>
-                                                <!-- Form untuk delete jika diperlukan -->
-                                                <form action="{{ route('biodata_ptk.destroy', $biodata_ptk->id_guru) }}"
-                                                    method="POST">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"
-                                                        onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i
-                                                            class="fal fa-trash-alt"></i></button>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>ID Guru</th>
-                                        <th>Nama Lengkap</th>
-                                        <th>Jenis Kelamin</th>
-                                        <th>Email</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                            <!-- datatable end -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <x-panel.show title="Daftar" subtitle="Guru dan Tata Usaha">
+            <x-slot name="paneltoolbar">
+                <x-panel.tool-bar>
+                    <a href="{{ route('biodata_ptk.create') }}" class="btn btn-primary btn-sm">Tambah Data</a>
+                </x-panel.tool-bar>
+            </x-slot>
+            <table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
+                <thead>
+                    <tr>
+                        <th>ID Guru</th>
+                        <th>Nama Lengkap</th>
+                        <th>Email</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Jenis Guru</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($biodata_ptks as $biodataPtk)
+                        <tr>
+                            <td>{{ $biodataPtk->id_guru }}</td>
+                            <td>{{ $biodataPtk->namalengkap }}</td>
+                            <td>{{ $biodataPtk->email }}</td>
+                            <td>{{ $biodataPtk->jeniskelamin }}</td>
+                            <td>{{ $biodataPtk->jenisguru }}</td>
+                            <td>
+                                <a href="{{ route('biodata_ptk.show', $biodataPtk->id_guru) }}"
+                                    class="btn btn-info">Lihat</a>
+                                <a href="{{ route('biodata_ptk.edit', $biodataPtk->id_guru) }}"
+                                    class="btn btn-warning">Edit</a>
+                                <form action="{{ route('biodata_ptk.destroy', $biodataPtk->id_guru) }}" method="POST"
+                                    class="d-inline">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Hapus</button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </x-panel.show>
     </main>
 @endsection
 @section('pages-script')
-    {{-- <!--
-    datatble responsive bundle contains:
-    + jquery.dataTables.js
-    + dataTables.bootstrap4.js
-    + dataTables.autofill.js
-    + dataTables.buttons.js
-    + buttons.bootstrap4.js
-    + buttons.html5.js
-    + buttons.print.js
-    + buttons.colVis.js
-    + dataTables.colreorder.js
-    + dataTables.fixedcolumns.js
-    + dataTables.fixedheader.js
-    + dataTables.keytable.js
-    + dataTables.responsive.js
-    + dataTables.rowgroup.js
-    + dataTables.rowreorder.js
-    + dataTables.scroller.js
-    + dataTables.select.js
-    + datatables.styles.app.js
-    + datatables.styles.buttons.app.js
-    --> --}}
+    <script>
+        function confirmDelete(id) {
+            bootbox.confirm({
+                message: "Apakah yakin akan di hapus kompetensi keahlian ini?",
+                buttons: {
+                    confirm: {
+                        label: 'Yes',
+                        className: 'btn-danger'
+                    },
+                    cancel: {
+                        label: 'No',
+                        className: 'btn-secondary'
+                    }
+                },
+                callback: function(result) {
+                    if (result) {
+                        document.getElementById('delete-form-' + id).submit();
+                    }
+                }
+            });
+        }
+    </script>
     <script src="/admin/js/datagrid/datatables/datatables.bundle.js"></script>
     <script>
         /* demo scripts for change table color */
         /* change background */
-
-
         $(document).ready(function() {
             $('#dt-basic-example').dataTable({
                 responsive: true
@@ -135,12 +109,5 @@
             });
 
         });
-
-        @if (session('success'))
-            toastr.success("{{ session('success') }}")
-        @endif
-        @if (session('error'))
-            toastr.error("{{ session('error') }}")
-        @endif
     </script>
 @endsection

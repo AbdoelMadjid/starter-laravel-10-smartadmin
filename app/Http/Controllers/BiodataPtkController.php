@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\BiodataPtk;
 use App\Models\User;
-use Flasher\Toastr\Laravel\Facade\Toastr;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class BiodataPtkController extends Controller
 {
@@ -22,83 +22,132 @@ class BiodataPtkController extends Controller
 
     public function store(Request $request)
     {
-        /*         $request->validate([
+        // Validasi data input
+        $request->validate([
+            // sesuaikan dengan aturan validasi yang dibutuhkan
+            'nip' => 'nullable|string|max:50',
+            'gelardepan' => 'nullable|string|max:15',
             'namalengkap' => 'required|string|max:100',
+            'gelarbelakang' => 'required|string|max:15',
             'jeniskelamin' => 'required|in:Laki-laki,Perempuan',
-            'email' => 'required|email|max:100|unique:biodata_ptks,email',
+            'jenisguru' => 'required|in:Kepala Sekolah,Produktif,Umum,BP/BK,Tata Usaha',
+            'tempatlahir' => 'required|string|max:30',
+            'tanggallahir' => 'required|date',
+            'agama' => 'required|string|max:15',
+            'email' => 'required|email|unique:biodata_ptks,email',
             'nomorhp' => 'required|string|max:100',
-            // tambahkan validasi sesuai dengan kebutuhan Anda
-        ]); */
-
-        $biodata_ptk = BiodataPtk::create($request->all());
-
-        // Buat user jika belum ada
-        $user = User::create([
-            'name' => $biodata_ptk->namalengkap,
-            'email' => $biodata_ptk->email,
-            'password' => bcrypt('defaultpassword'), // atau generate password secara acak
-            'role' => 'Guru Mapel', // sesuaikan dengan kebutuhan aplikasi
+            'photo' => 'nullable|image|max:2048', // max 2MB, bisa disesuaikan
+            'motto' => 'nullable|string',
+            'alamat_dusun' => 'nullable|string|max:50',
+            'alamat_jalan' => 'nullable|string|max:50',
+            'alamat_norumah' => 'nullable|string|max:3',
+            'alamat_rt' => 'nullable|string|max:3',
+            'alamat_rw' => 'nullable|string|max:3',
+            'alamat_desa' => 'required|string|max:50',
+            'alamat_kec' => 'required|string|max:50',
+            'alamat_kab' => 'required|string|max:50',
+            'alamat_kodepos' => 'nullable|string|max:7',
+            'aktif' => 'required|in:Aktif,Tidak Aktif,Pensiun,Pindah,Keluar',
         ]);
 
-        // Hubungkan user dengan biodata_ptk
-        $biodata_ptk->user_id = $user->id;
-        $biodata_ptk->save();
+        // Proses tambah data biodata PTK
+        $biodataPtk = new BiodataPtk();
+        $biodataPtk->id_guru = $this->generateIdGuru();
+        $biodataPtk->fill($request->except(['_token', 'photo']));
 
-        return redirect()->route('biodata_ptk.index')
-            ->with('success', 'Data Biodata PTK berhasil disimpan.');
+        // Simpan foto jika ada
+        if ($request->hasFile('photo')) {
+            $photoPath = $request->file('photo')->store('photos', 'public');
+            $biodataPtk->photo = $photoPath;
+        }
+
+        $biodataPtk->save();
+
+        // Buat akun user
+        $user = new User();
+        $user->name = $biodataPtk->namalengkap;
+        $user->email = $biodataPtk->email;
+        $user->password = Hash::make('password'); // ganti dengan password yang sesuai
+        $user->role = 'Guru Mapel'; // sesuaikan role sesuai kebutuhan
+        $user->save();
+
+        return redirect()->route('biodata_ptks.index')->with('success', 'Biodata PTK berhasil ditambahkan.');
     }
 
     public function show($id)
     {
-        $biodata_ptk = BiodataPtk::findOrFail($id);
-        return view('master.biodata_ptk.show', compact('biodata_ptk'));
+        $biodataPtk = BiodataPtk::findOrFail($id);
+        return view('master.biodata_ptk.show', compact('biodataPtk'));
     }
 
     public function edit($id)
     {
-        $biodata_ptk = BiodataPtk::findOrFail($id);
-        return view('master.biodata_ptk.edit', compact('biodata_ptk'));
+        $biodataPtk = BiodataPtk::findOrFail($id);
+        return view('master.biodata_ptk.edit', compact('biodataPtk'));
     }
 
     public function update(Request $request, $id)
     {
-        /*         $request->validate([
+        // Validasi data input
+        $request->validate([
+            // sesuaikan dengan aturan validasi yang dibutuhkan
+            'nip' => 'nullable|string|max:50',
+            'gelardepan' => 'nullable|string|max:15',
             'namalengkap' => 'required|string|max:100',
+            'gelarbelakang' => 'required|string|max:15',
             'jeniskelamin' => 'required|in:Laki-laki,Perempuan',
-            'email' => 'required|email|max:100|unique:biodata_ptks,email,' . $id,
+            'jenisguru' => 'required|in:Kepala Sekolah,Produktif,Umum,BP/BK,Tata Usaha',
+            'tempatlahir' => 'required|string|max:30',
+            'tanggallahir' => 'required|date',
+            'agama' => 'required|string|max:15',
+            'email' => 'required|email|unique:biodata_ptks,email,' . $id,
             'nomorhp' => 'required|string|max:100',
-            // tambahkan validasi sesuai dengan kebutuhan Anda
-        ]); */
+            'photo' => 'nullable|image|max:2048', // max 2MB, bisa disesuaikan
+            'motto' => 'nullable|string',
+            'alamat_dusun' => 'nullable|string|max:50',
+            'alamat_jalan' => 'nullable|string|max:50',
+            'alamat_norumah' => 'nullable|string|max:3',
+            'alamat_rt' => 'nullable|string|max:3',
+            'alamat_rw' => 'nullable|string|max:3',
+            'alamat_desa' => 'required|string|max:50',
+            'alamat_kec' => 'required|string|max:50',
+            'alamat_kab' => 'required|string|max:50',
+            'alamat_kodepos' => 'nullable|string|max:7',
+            'aktif' => 'required|in:Aktif,Tidak Aktif,Pensiun,Pindah,Keluar',
+        ]);
 
-        $biodata_ptk = BiodataPtk::findOrFail($id);
-        $biodata_ptk->update($request->all());
+        // Proses update data biodata PTK
+        $biodataPtk = BiodataPtk::findOrFail($id);
+        $biodataPtk->fill($request->except(['_token', 'photo']));
 
-        // Perbarui juga user jika diperlukan
-        $user = $biodata_ptk->user;
-        $user->name = $biodata_ptk->namalengkap;
-        $user->email = $biodata_ptk->email;
-        $user->save();
+        // Simpan foto jika ada
+        if ($request->hasFile('photo')) {
+            $photoPath = $request->file('photo')->store('photos', 'public');
+            $biodataPtk->photo = $photoPath;
+        }
 
-        return redirect()->route('biodata_ptk.index')
-            ->with('success', 'Data Biodata PTK berhasil diperbarui.');
+        $biodataPtk->save();
+
+        return redirect()->route('biodata_ptks.index')->with('success', 'Biodata PTK berhasil diperbarui.');
     }
 
     public function destroy($id)
     {
-        $biodata_ptk = BiodataPtk::findOrFail($id);
+        $biodataPtk = BiodataPtk::findOrFail($id);
+        $biodataPtk->delete();
 
-        // Hapus juga user jika diperlukan
-        $user = $biodata_ptk->user;
-        if ($user) {
-            $user->delete();
-        }
+        return redirect()->route('biodata_ptks.index')->with('success', 'Biodata PTK berhasil dihapus.');
+    }
 
-        if ($biodata_ptk->delete()) {
-            Toastr::success('Data Biodata PTK berhasil dihapus.', 'Sukses');
+    // Method untuk generate ID Guru secara otomatis
+    private function generateIdGuru()
+    {
+        $lastId = BiodataPtk::max('id_guru');
+        if ($lastId) {
+            $number = (int) substr($lastId, 5) + 1;
+            return 'guru_' . str_pad($number, 4, '0', STR_PAD_LEFT);
         } else {
-            Toastr::error('Gagal menghapus data Biodata PTK.', 'Error');
+            return 'guru_0001';
         }
-
-        return redirect()->route('biodata_ptk.index');
     }
 }

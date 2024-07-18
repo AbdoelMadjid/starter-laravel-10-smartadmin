@@ -4,6 +4,7 @@
     <link rel="stylesheet" media="screen, print" href="/admin/css/fa-solid.css">
     <link rel="stylesheet" media="screen, print" href="/admin/css/theme-demo.css">
     <link rel="stylesheet" media="screen, print" href="/admin/css/notifications/toastr/toastr.css">
+    <link rel="stylesheet" media="screen, print" href="/admin/css/datagrid/datatables/datatables.bundle.css">
 @endsection
 @section('pages-content')
     <main id="js-page-content" role="main" class="page-content">
@@ -19,17 +20,12 @@
         <x-panel.show title="Fiturs" subtitle="Application">
             <x-slot name="paneltoolbar">
                 <x-panel.tool-bar class="ml-2">
-                    <button class="btn btn-toolbar-master" type="button" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
-                        <i class="fal fa-ellipsis-v"></i>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right">
-                        <a class="dropdown-item" href="/dashboard">Kembali</a>
-                    </div>
+                    <button class="btn btn-primary ml-auto" data-toggle="modal" data-target="#createModal">Tambah
+                        Fitur</button>
                 </x-panel.tool-bar>
             </x-slot>
 
-            <table class="table table-sm table-bordered table-striped table-hover m-0">
+            <table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -53,9 +49,9 @@
                                 </div>
                             </td>
                             <td>
-                                <button class="btn btn-primary btn-sm" data-toggle="modal"
+                                <button class="btn btn-primary btn-xs" data-toggle="modal"
                                     data-target="#editModal{{ $fitur->id_fitur }}">Edit</button>
-                                <button class="btn btn-danger btn-sm"
+                                <button class="btn btn-danger btn-xs"
                                     onclick="confirmDelete({{ $fitur->id_fitur }})">Delete</button>
                                 <form id="delete-form-{{ $fitur->id_fitur }}"
                                     action="{{ route('app_fiturs.destroy', $fitur->id_fitur) }}" method="POST"
@@ -103,10 +99,6 @@
                     @endforeach
                 </tbody>
             </table>
-            <x-slot name="panelcontentfoot">
-                <button class="btn btn-primary ml-auto" data-toggle="modal" data-target="#createModal">Create New
-                    Fitur</button>
-            </x-slot>
         </x-panel.show>
         <!-- Create Modal -->
         <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
@@ -195,6 +187,29 @@
                     }
                 });
             });
+        });
+    </script>
+    <script src="/admin/js/datagrid/datatables/datatables.bundle.js"></script>
+    <script>
+        /* demo scripts for change table color */
+        /* change background */
+        $(document).ready(function() {
+            $('#dt-basic-example').dataTable({
+                responsive: true
+            });
+
+            $('.js-thead-colors a').on('click', function() {
+                var theadColor = $(this).attr("data-bg");
+                console.log(theadColor);
+                $('#dt-basic-example thead').removeClassPrefix('bg-').addClass(theadColor);
+            });
+
+            $('.js-tbody-colors a').on('click', function() {
+                var theadColor = $(this).attr("data-bg");
+                console.log(theadColor);
+                $('#dt-basic-example').removeClassPrefix('bg-').addClass(theadColor);
+            });
+
         });
     </script>
 @endsection
