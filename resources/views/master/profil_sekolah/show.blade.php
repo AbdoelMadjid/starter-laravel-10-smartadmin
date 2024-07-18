@@ -17,30 +17,9 @@
                 'heading1' => 'Identitas',
                 'heading2' => 'Sekolah',
             ])
-                <div class="subheader-block d-lg-flex align-items-center">
-                    <div class="d-inline-flex flex-column justify-content-center mr-3">
-                        <span class="fw-300 fs-xs d-block opacity-50">
-                            <small>Selamat Datang</small>
-                        </span>
-                        <span class="fw-500 fs-xl d-block color-primary-500">
-                            {{ auth()->user()->name }}
-                        </span>
-                    </div>
-                </div>
-                <div
-                    class="subheader-block d-lg-flex align-items-center border-faded border-right-0 border-top-0 border-bottom-0 ml-3 pl-3">
-                    <div class="d-inline-flex flex-column justify-content-center mr-3">
-                        <span class="fw-300 fs-xs d-block opacity-50">
-                            <small>Status</small>
-                        </span>
-                        <span class="fw-500 fs-xl d-block color-danger-500">
-                            {{ auth()->user()->role }}
-                        </span>
-                    </div>
-                </div>
             @endcomponent
         </div>
-        <x-col :size1="4" :size2="8">
+        <x-col :size1="5" :size2="7">
             <x-slot name='content1'>
                 <div class="card mb-g shadow-5">
                     <div class="card-header pr-3 d-flex align-items-center flex-wrap">
@@ -48,25 +27,8 @@
                         <div class="card-title mb-0 fs-xl fw-700"> <i class="fal fa-university color-primary-700"></i>
                             Identitas Sekolah
                         </div>
-                        {{-- <button type="button" class="btn btn-info" data-toggle="modal"
-                            data-target="#editModal">Edit</button> --}}
-                        <x-button href="{{ route('profil-sekolah.edit') }}" size="sm" :label="__('Edit')"
+                        <x-button href="{{ route('profil-sekolah.edit') }}" icon="edit" size="sm" :label="__('Edit')"
                             class="ml-auto" />
-                        {{-- <button class="btn btn-icon btn-xs ml-auto fs-xl" data-toggle="dropdown">
-                            <i class="fal fa-ellipsis-v"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-animated dropdown-menu-right">
-                            <button class="dropdown-item">
-                                Option 1
-                            </button>
-                            <button class="dropdown-item">
-                                Option 2
-                            </button>
-                            <div class="dropdown-divider m-0"></div>
-                            <button class="dropdown-item">
-                                Refresh
-                            </button>
-                        </div> --}}
                     </div>
                     <div class="row row-grid no-gutters">
                         <div class="col-12">
@@ -190,7 +152,7 @@
                         <div class="card-title mb-0 fs-xl fw-700"> <i class="fal fa-user color-primary-700"></i>
                             Kepala Sekolah
                         </div>
-                        <x-button color="primary" icon="plus-square" size="xs" pills :label="__('Tambah')"
+                        <x-button color="primary" icon="plus-square" size="sm" pills :label="__('Tambah')"
                             class="ml-auto" />
                     </div>
                     <div class="row row-grid no-gutters">

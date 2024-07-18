@@ -13,42 +13,10 @@
                 'icon' => 'home',
                 'heading1' => 'Dashboard',
             ])
-                <div class="subheader-block d-lg-flex align-items-center">
-                    <div class="d-inline-flex flex-column justify-content-center mr-3">
-                        <span class="fw-300 fs-xs d-block opacity-50">
-                            <small>Selamat Datang</small>
-                        </span>
-                        <span class="fw-500 fs-xl d-block color-primary-500">
-                            {{ auth()->user()->name }}
-                        </span>
-                    </div>
-                </div>
-                <div
-                    class="subheader-block d-lg-flex align-items-center border-faded border-right-0 border-top-0 border-bottom-0 ml-3 pl-3">
-                    <div class="d-inline-flex flex-column justify-content-center mr-3">
-                        <span class="fw-300 fs-xs d-block opacity-50">
-                            <small>Status</small>
-                        </span>
-                        <span class="fw-500 fs-xl d-block color-danger-500">
-                            {{ auth()->user()->role }}
-                        </span>
-                    </div>
-                </div>
             @endcomponent
         </div>
         <div class="card mb-g p-2">
             <div class="card-body">
-                @if ($tahunAjaranAktif)
-                    <h2 class="fw-700 m-0" name="pluginreference">
-                        Tahun Ajaran {{ $tahunAjaranAktif->tahunajaran }}
-                        <small>
-                            Semester <strong>{{ $tahunAjaranAktif->semester }}</strong>
-                        </small>
-                    </h2>
-                @else
-                    <p>Tidak ada tahun ajaran aktif saat ini.</p>
-                @endif
-
                 <div class="row">
                     <div class="col-sm-6 col-xl-3">
                         <div class="p-3 bg-primary-300 rounded overflow-hidden position-relative text-white mb-g">

@@ -17,4 +17,5 @@
         </small>
     @endisset
 </h1>
+@include('inc._role_name')
 {{ $slot }}

@@ -89,9 +89,9 @@
                         render: function(data, type, full, meta) {
 
                             /*
-                                                                -- ES6
-                                                                -- convert using https://babeljs.io online transpiler
-                                                                return `
+                                                                    -- ES6
+                                                                    -- convert using https://babeljs.io online transpiler
+                                                                    return `
                         <div class='d-flex mt-2'>
                             <a href='javascript:void(0);' class='btn btn-sm btn-outline-danger mr-2' title='Delete Record'>
                                 <i class="fal fa-times"></i> Delete Record
@@ -110,9 +110,9 @@
                             </div>
                         </div>`;
 
-                                                                ES5 example below:
+                                                                    ES5 example below:
 
-                                                                */
+                                                                    */
                             return "\n\t\t\t\t\t\t<div class='d-flex mt-2'>\n\t\t\t\t\t\t\t<a href='javascript:void(0);' class='btn btn-sm btn-outline-danger mr-2' title='Delete Record'><i class=\"fal fa-times\"></i> Delete Record</a>\n\t\t\t\t\t\t\t<a href='javascript:void(0);' class='btn btn-sm btn-outline-primary mr-2' title='Edit'><i class=\"fal fa-edit\"></i> Edit</a>\n\t\t\t\t\t\t\t<div class='dropdown d-inline-block'>\n\t\t\t\t\t\t\t\t<a href='#'' class='btn btn-sm btn-outline-primary mr-2' data-toggle='dropdown' aria-expanded='true' title='More options'><i class=\"fal fa-plus\"></i></a>\n\t\t\t\t\t\t\t\t<div class='dropdown-menu'>\n\t\t\t\t\t\t\t\t\t<a class='dropdown-item' href='javascript:void(0);'>Change Status</a>\n\t\t\t\t\t\t\t\t\t<a class='dropdown-item' href='javascript:void(0);'>Generate Report</a>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>";
                         },
                     },

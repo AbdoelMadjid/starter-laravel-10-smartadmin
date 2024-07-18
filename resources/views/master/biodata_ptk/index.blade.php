@@ -25,7 +25,7 @@
                 <div id="panel-1" class="panel">
                     <div class="panel-hdr">
                         <h2>
-                            Example <span class="fw-300"><i>Table</i></span>
+                            Daftar <span class="fw-300"><i>Guru dan Tata Usaha</i></span>
                         </h2>
                         <div class="panel-toolbar">
                             <a href="{{ route('biodata_ptk.create') }}" class="btn btn-primary">Tambah Data</a>

@@ -31,13 +31,15 @@
                     </p>
                     @if ($tahunAjaranAktif)
                         <p class="text-white opacity-50">
-                            Tahun Ajaran : {{ $tahunAjaranAktif->tahunajaran }} <br>
-                            Semester : {{ $tahunAjaranAktif->semester }}
+                            Tahun Ajaran : {{ $tahunAjaranAktif->tahunajaran ?? 'N/A' }} <br>
+                            Semester : {{ $tahunAjaranAktif->semester ?? 'N/A' }}
                         </p>
                     @else
-                        <p>Tidak ada tahun ajaran aktif saat ini.</p>
+                        <p class="text-white opacity-50">Tidak ada tahun ajaran aktif saat ini.</p>
                     @endif
-                    <div class="d-sm-flex flex-column align-items-center justify-content-center d-md-block">
+                    <div
+                        class="d-sm-flex
+                            flex-column align-items-center justify-content-center d-md-block">
                         <div class="px-0 py-1 mt-5 text-white fs-nano opacity-50">
                             Find us on social media
                         </div>
