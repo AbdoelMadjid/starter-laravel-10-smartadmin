@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             AppFiturSeeder::class,
             AppProfileSeeder::class,
+            TahunAjaranSeeder::class,
             UserSeeder::class,
             OpsiLoginSeeder::class,
             BidangKeahlianSeeder::class,
