@@ -5,6 +5,7 @@ use App\Http\Controllers\AppProfileController;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\TahunAjaranController;
 use App\Http\Controllers\ProfilSekolahController;
+use App\Http\Controllers\KompetensiKeahlianController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -66,6 +67,14 @@ Route::middleware('admin')->prefix('akademik')->group(function () {
     Route::get('profil-sekolah', [ProfilSekolahController::class, 'show'])->name('profil-sekolah.index');
     Route::get('profil-sekolah/edit', [ProfilSekolahController::class, 'edit'])->name('profil-sekolah.edit');
     Route::put('profil-sekolah', [ProfilSekolahController::class, 'update'])->name('profil-sekolah.update');
+
+    //Route::resource('kompetensi-keahlian', KompetensiKeahlianController::class);
+
+    Route::get('kompetensi-keahlian', [ProfilSekolahController::class, 'index'])->name('kompetensi-keahlian.index');
+    Route::get('kompetensi-keahlian/edit', [ProfilSekolahController::class, 'edit'])->name('kompetensi-keahlian');
+    Route::put('kompetensi-keahlian', [ProfilSekolahController::class, 'update'])->name('kompetensi-keahlian.update');
+
+
 
     Route::get('/indentitas_sekolah', [MasterController::class, 'akademik_indentitas_sekolah'])->name('indentitas_sekolah');
     Route::get('/tenaga_pendidik', [MasterController::class, 'akademik_tenaga_pendidik'])->name('tenaga_pendidik');

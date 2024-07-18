@@ -63,9 +63,10 @@
                 <span class="nav-link-text" data-i18n="nav.akademik_tenaga_pendidik">Tenaga Pendidik</span>
             </a>
         </li>
-        <li class="{{ Request::is('akademik/paket_keahlian*') ? 'active' : '' }}">
-            <a href="{{ route('paket_keahlian') }}" title="Paket Keahlian" data-filter-tags="akademik paket keahlian">
-                <span class="nav-link-text" data-i18n="nav.akademik_paket_keahlian">Paket Keahlian</span>
+        <li class="{{ Request::is('akademik/kompetensi-keahlian*') ? 'active' : '' }}">
+            <a href="{{ route('kompetensi-keahlian.index') }}" title="Kompetensi Keahlian"
+                data-filter-tags="akademik kompetensi keahlian">
+                <span class="nav-link-text" data-i18n="nav.akademik_kompetensi_keahlian">Kompetensi Keahlian</span>
             </a>
         </li>
         <li class="{{ Request::is('akademik/mata_pelajaran*') ? 'active' : '' }}">
