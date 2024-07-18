@@ -63,8 +63,9 @@ Route::middleware('admin')->prefix('admin')->group(function () {
 //AKADEMIK
 Route::middleware('admin')->prefix('akademik')->group(function () {
 
-    Route::get('profil-sekolah', [ProfilSekolahController::class, 'index'])->name('profil-sekolah.index');
-    Route::put('profil-sekolah/{npsn}', [ProfilSekolahController::class, 'update'])->name('profil-sekolah.update');
+    Route::get('profil-sekolah', [ProfilSekolahController::class, 'show'])->name('profil-sekolah.index');
+    Route::get('profil-sekolah/edit', [ProfilSekolahController::class, 'edit'])->name('profil-sekolah.edit');
+    Route::put('profil-sekolah', [ProfilSekolahController::class, 'update'])->name('profil-sekolah.update');
 
     Route::get('/indentitas_sekolah', [MasterController::class, 'akademik_indentitas_sekolah'])->name('indentitas_sekolah');
     Route::get('/tenaga_pendidik', [MasterController::class, 'akademik_tenaga_pendidik'])->name('tenaga_pendidik');

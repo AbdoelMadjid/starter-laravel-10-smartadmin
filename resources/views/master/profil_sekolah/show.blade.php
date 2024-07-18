@@ -17,6 +17,27 @@
                 'heading1' => 'Identitas',
                 'heading2' => 'Sekolah',
             ])
+                <div class="subheader-block d-lg-flex align-items-center">
+                    <div class="d-inline-flex flex-column justify-content-center mr-3">
+                        <span class="fw-300 fs-xs d-block opacity-50">
+                            <small>Selamat Datang</small>
+                        </span>
+                        <span class="fw-500 fs-xl d-block color-primary-500">
+                            {{ auth()->user()->name }}
+                        </span>
+                    </div>
+                </div>
+                <div
+                    class="subheader-block d-lg-flex align-items-center border-faded border-right-0 border-top-0 border-bottom-0 ml-3 pl-3">
+                    <div class="d-inline-flex flex-column justify-content-center mr-3">
+                        <span class="fw-300 fs-xs d-block opacity-50">
+                            <small>Status</small>
+                        </span>
+                        <span class="fw-500 fs-xl d-block color-danger-500">
+                            {{ auth()->user()->role }}
+                        </span>
+                    </div>
+                </div>
             @endcomponent
         </div>
         <x-col :size1="4" :size2="8">
@@ -29,8 +50,8 @@
                         </div>
                         {{-- <button type="button" class="btn btn-info" data-toggle="modal"
                             data-target="#editModal">Edit</button> --}}
-                        <x-button type="button" color="primary" icon="edit" size="xs" pills :label="__('Edit')"
-                            class="ml-auto" data-toggle="modal" data-target="#editModal" />
+                        <x-button href="{{ route('profil-sekolah.edit') }}" size="sm" :label="__('Edit')"
+                            class="ml-auto" />
                         {{-- <button class="btn btn-icon btn-xs ml-auto fs-xl" data-toggle="dropdown">
                             <i class="fal fa-ellipsis-v"></i>
                         </button>
