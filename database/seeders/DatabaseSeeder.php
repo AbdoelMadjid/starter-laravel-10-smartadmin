@@ -25,6 +25,11 @@ class DatabaseSeeder extends Seeder
             AppProfileSeeder::class,
             UserSeeder::class,
             OpsiLoginSeeder::class,
+            BidangKeahlianSeeder::class,
+            ProgramKeahlianSeeder::class,
+            KompetensiKeahlianSeeder::class,
+            ProfilSekolahSeeder::class,
+            BiodataPtkSeeder::class,
         ]);
     }
 }

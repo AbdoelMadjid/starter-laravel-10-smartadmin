@@ -57,4 +57,9 @@ class User extends Authenticatable
                 ->orWhere('email', 'like', '%' . $search . '%');
         });
     }
+
+    public function biodataPtk()
+    {
+        return $this->hasOne(BiodataPtk::class, 'user_id');
+    }
 }

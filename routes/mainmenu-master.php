@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AppFiturController;
 use App\Http\Controllers\AppProfileController;
+use App\Http\Controllers\BiodataPtkController;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\TahunAjaranController;
 use App\Http\Controllers\ProfilSekolahController;
@@ -68,16 +69,12 @@ Route::middleware('admin')->prefix('akademik')->group(function () {
     Route::get('profil-sekolah/edit', [ProfilSekolahController::class, 'edit'])->name('profil-sekolah.edit');
     Route::put('profil-sekolah', [ProfilSekolahController::class, 'update'])->name('profil-sekolah.update');
 
-    //Route::resource('kompetensi-keahlian', KompetensiKeahlianController::class);
+    Route::resource('kompetensi-keahlian', KompetensiKeahlianController::class);
 
-    Route::get('kompetensi-keahlian', [ProfilSekolahController::class, 'index'])->name('kompetensi-keahlian.index');
-    Route::get('kompetensi-keahlian/edit', [ProfilSekolahController::class, 'edit'])->name('kompetensi-keahlian');
-    Route::put('kompetensi-keahlian', [ProfilSekolahController::class, 'update'])->name('kompetensi-keahlian.update');
+    Route::resource('biodata_ptk', BiodataPtkController::class);
 
-
-
-    Route::get('/indentitas_sekolah', [MasterController::class, 'akademik_indentitas_sekolah'])->name('indentitas_sekolah');
-    Route::get('/tenaga_pendidik', [MasterController::class, 'akademik_tenaga_pendidik'])->name('tenaga_pendidik');
+    //Route::get('/indentitas_sekolah', [MasterController::class, 'akademik_indentitas_sekolah'])->name('indentitas_sekolah');
+    //Route::get('/tenaga_pendidik', [MasterController::class, 'akademik_tenaga_pendidik'])->name('tenaga_pendidik');
     Route::get('/paket_keahlian', [MasterController::class, 'akademik_paket_keahlian'])->name('paket_keahlian');
     Route::get('/mata_pelajaran', [MasterController::class, 'akademik_mata_pelajaran'])->name('mata_pelajaran');
     Route::get('/capaian_pembelajaran', [MasterController::class, 'akademik_capaian_pembelajaran'])->name('capaian_pembelajaran');
@@ -92,7 +89,7 @@ Route::middleware('admin')->prefix('kurikulum')->group(function () {
     Route::resource('tahun_ajaran', TahunAjaranController::class);
 
     Route::get('/versi', [MasterController::class, 'kurikulum_versi'])->name('versi');
-    Route::get('/tahunajaran', [MasterController::class, 'kurikulum_tahunajaran'])->name('tahunajaran');
+    //Route::get('/tahunajaran', [MasterController::class, 'kurikulum_tahunajaran'])->name('tahunajaran');
     Route::get('/pengumuman', [MasterController::class, 'kurikulum_pengumuman'])->name('pengumuman');
     Route::get('/perakat_ujian', [MasterController::class, 'kurikulum_perakat_ujian'])->name('perakat_ujian');
     Route::get('/proses_kbm_perkelas', [MasterController::class, 'kurikulum_proses_kbm_perkelas'])->name('proses_kbm_perkelas');

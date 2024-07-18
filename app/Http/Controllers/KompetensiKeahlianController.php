@@ -11,6 +11,7 @@ class KompetensiKeahlianController extends Controller
 {
     public function index()
     {
+        $kompetensiKeahlians = KompetensiKeahlian::with('bidangKeahlian')->get();
         $kompetensiKeahlians = KompetensiKeahlian::all();
         return view('master.kompetensi_keahlian.index', compact('kompetensiKeahlians'));
     }

@@ -38,8 +38,8 @@
                     @foreach ($kompetensiKeahlians as $kompetensiKeahlian)
                         <tr>
                             <td>{{ $kompetensiKeahlian->kode_paket }}</td>
-                            <td>{{ $kompetensiKeahlian->kode_bidang }}</td>
-                            <td>{{ $kompetensiKeahlian->kode_program }}</td>
+                            <td>{{ $kompetensiKeahlian->bidangKeahlian->nama_bidang }}</td>
+                            <td>{{ $kompetensiKeahlian->programKeahlian->nama_program }}</td>
                             <td>{{ $kompetensiKeahlian->nama_paket }}</td>
                             <td>{{ $kompetensiKeahlian->singkatan }}</td>
                             <td>
