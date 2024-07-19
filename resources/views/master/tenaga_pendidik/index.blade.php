@@ -23,7 +23,7 @@
         <x-panel.show title="Daftar" subtitle="Guru dan Tata Usaha">
             <x-slot name="paneltoolbar">
                 <x-panel.tool-bar>
-                    <a href="{{ route('biodata_ptk.create') }}" class="btn btn-primary btn-sm">Tambah Data</a>
+                    <a href="{{ route('tenaga_pendidik.create') }}" class="btn btn-primary btn-sm">Tambah Data</a>
                 </x-panel.tool-bar>
             </x-slot>
             <table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
@@ -31,27 +31,27 @@
                     <tr>
                         <th>ID Guru</th>
                         <th>Nama Lengkap</th>
-                        <th>Email</th>
                         <th>Jenis Kelamin</th>
                         <th>Jenis Guru</th>
-                        <th>Action</th>
+                        <th>Email</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($biodata_ptks as $biodataPtk)
+                    @foreach ($dataGurus as $dataGuru)
                         <tr>
-                            <td>{{ $biodataPtk->id_guru }}</td>
-                            <td>{{ $biodataPtk->namalengkap }}</td>
-                            <td>{{ $biodataPtk->email }}</td>
-                            <td>{{ $biodataPtk->jeniskelamin }}</td>
-                            <td>{{ $biodataPtk->jenisguru }}</td>
+                            <td>{{ $dataGuru->id_guru }}</td>
+                            <td>{{ $dataGuru->namalengkap }}</td>
+                            <td>{{ $dataGuru->jeniskelamin }}</td>
+                            <td>{{ $dataGuru->jenisguru }}</td>
+                            <td>{{ $dataGuru->email }}</td>
                             <td>
-                                <a href="{{ route('biodata_ptk.show', $biodataPtk->id_guru) }}"
-                                    class="btn btn-info">Lihat</a>
-                                <a href="{{ route('biodata_ptk.edit', $biodataPtk->id_guru) }}"
+                                <a href="{{ route('tenaga_pendidik.show', $dataGuru->id_guru) }}"
+                                    class="btn btn-info">Detail</a>
+                                <a href="{{ route('tenaga_pendidik.edit', $dataGuru->id_guru) }}"
                                     class="btn btn-warning">Edit</a>
-                                <form action="{{ route('biodata_ptk.destroy', $biodataPtk->id_guru) }}" method="POST"
-                                    class="d-inline">
+                                <form action="{{ route('tenaga_pendidik.destroy', $dataGuru->id_guru) }}" method="POST"
+                                    style="display:inline-block;">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger">Hapus</button>

@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\AppFiturController;
 use App\Http\Controllers\AppProfileController;
-use App\Http\Controllers\BiodataPtkController;
+use App\Http\Controllers\DataGuruController;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\TahunAjaranController;
 use App\Http\Controllers\ProfilSekolahController;
@@ -71,7 +71,7 @@ Route::middleware('admin')->prefix('akademik')->group(function () {
 
     Route::resource('kompetensi-keahlian', KompetensiKeahlianController::class);
 
-    Route::resource('biodata_ptk', BiodataPtkController::class);
+    Route::resource('tenaga_pendidik', DataGuruController::class);
 
     //Route::get('/indentitas_sekolah', [MasterController::class, 'akademik_indentitas_sekolah'])->name('indentitas_sekolah');
     //Route::get('/tenaga_pendidik', [MasterController::class, 'akademik_tenaga_pendidik'])->name('tenaga_pendidik');

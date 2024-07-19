@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\OpsiLogin;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -30,7 +29,7 @@ class DatabaseSeeder extends Seeder
             ProgramKeahlianSeeder::class,
             KompetensiKeahlianSeeder::class,
             ProfilSekolahSeeder::class,
-            BiodataPtkSeeder::class,
+            DataGuruSeeder::class,
         ]);
     }
 }

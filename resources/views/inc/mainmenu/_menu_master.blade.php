@@ -57,8 +57,8 @@
                 <span class="nav-link-text" data-i18n="nav.akademik_profil_sekolah">Profil Sekolah</span>
             </a>
         </li>
-        <li class="{{ Request::is('akademik/biodata_ptk*') ? 'active' : '' }}">
-            <a href="{{ route('biodata_ptk.index') }}" title="Tenaga Pendidik"
+        <li class="{{ Request::is('akademik/tenaga_pendidik*') ? 'active' : '' }}">
+            <a href="{{ route('tenaga_pendidik.index') }}" title="Tenaga Pendidik"
                 data-filter-tags="akademik tenaga pendidik">
                 <span class="nav-link-text" data-i18n="nav.akademik_tenaga_pendidik">Tenaga Pendidik</span>
             </a>

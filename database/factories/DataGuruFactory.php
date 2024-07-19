@@ -2,15 +2,19 @@
 
 namespace Database\Factories;
 
-use App\Models\BiodataPtk;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 
-class BiodataPtkFactory extends Factory
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\BiodataTenagaPendidik>
+ */
+class DataGuruFactory extends Factory
 {
-    protected $model = BiodataPtk::class;
-
-    public function definition()
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition(): array
     {
         return [
             'id_guru' => $this->faker->unique()->numerify('Gr_#####'),
