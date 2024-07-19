@@ -30,7 +30,7 @@ class ProfilSekolahSeeder extends Seeder
                 'alamat_telepon' => '6614343',
                 'alamat_website' => 'http://smkn1kadipaten.sch.id',
                 'alamat_email' => 'info@smkn1kadipaten.sch.id',
-                'logo_sekolah' => 'logo.png',
+                'logo_sekolah' => 'logoprofil.png',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
